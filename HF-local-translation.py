@@ -1,4 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+import gtts_t2s
 import torch
 import numpy as np
 from tqdm.auto import tqdm
@@ -105,6 +106,9 @@ def separate_sentences(text):
 
 
 if __name__ == "__main__":
+    # gtts language tokens
+    gtts_token = gtts_t2s.langs
+
     # NLLB LANGUAGE TOKENS
     nllb_token = {
         "acehnese": "ace_Latn",
@@ -163,19 +167,19 @@ if __name__ == "__main__":
         "guarani": "grn_Latn",
         "gujarati": "guj_Gujr",
         "hausa": "hau_Latn",
-        "hebre": "heb_Hebr",
-        "hind": "hin_Deva",
+        "hebrew": "heb_Hebr",
+        "hindi": "hin_Deva",
         "hungarian": "hun_Latn",
         "icelandic": "isl_Latn",
         "igbo": "ibo_Latn",
         "ilocano": "ilo_Latn",
-        "indonesia": "ind_Latn",
+        "indonesian": "ind_Latn",
         "irish": "gle_Latn",
         "italian": "ita_Latn",
         "japanese": "jpn_Jpan",
-        "javanes": "jav_Latn",
+        "javanese": "jav_Latn",
         "jingpho": "kac_Latn",
-        "kannad": "kan_Knda",
+        "kannada": "kan_Knda",
         "kanuri": "knc_Latn",
         "kazakh": "kaz_Cyrl",
         "khmer": "khm_Khmr",
@@ -203,6 +207,7 @@ if __name__ == "__main__":
         "mizo": "lus_Latn",
         "mongolian": "khk_Cyrl",
         "nepali": "npi_Deva",
+        "norwegian": "nob_Latn",
         "nuer": "nus_Latn",
         "nyanja": "nya_Latn",
         "occitan": "oci_Latn",
@@ -283,48 +288,63 @@ if __name__ == "__main__":
 
     if to == "taglish":
         # No Multiprocessing
+        out = ""
         start = time.perf_counter()
         for sentence in split_sentences:
-            print(toTaglish(sentence), end=" ")
+            out += (toTaglish(sentence) + " ")
+            # print(toTaglish(sentence), end=" ")
+        print(out)
         end = time.perf_counter()
         print(f"\nTime 1: {end - start:.2f}")
 
-        # With Multiprocessing
-        start = time.perf_counter()
-        processes = []
-        semaphore = Semaphore(4)
-        for sentence in split_sentences:
-            processes.append(Process(target=toTaglish_multiprocessing, args=(sentence, taglish_tokenizer, taglish_model, semaphore)))
+        # Text-to-Speech
+        gtts_t2s.speech_text(out, "translation.mp3", "tl")
 
-        for process in processes:
-            process.start()
+        # # With Multiprocessing
+        # start = time.perf_counter()
+        # processes = []
+        # semaphore = Semaphore(4)
+        # for sentence in split_sentences:
+        #     processes.append(Process(target=toTaglish_multiprocessing, args=(sentence, taglish_tokenizer, taglish_model, semaphore)))
 
-        for process in processes:
-            process.join()
+        # for process in processes:
+        #     process.start()
+
+        # for process in processes:
+        #     process.join()
     
-        end = time.perf_counter()
-        print(f"\nTime 2: {end - start:.2f}")
+        # end = time.perf_counter()
+        # print(f"\nTime 2: {end - start:.2f}")
     else:
-        target = nllb_token.get(to)
+        nllb_target = nllb_token.get(to) # NLLB target token
+        gtts_target = gtts_token.get(to) # gtts target token
+
         # No Multiprocessing
+        out = ""
         start = time.perf_counter()
         for sentence in split_sentences:
-            print(translate(sentence, target), end=" ")
+            out += (translate(sentence, nllb_target) + " ")
+            # print(translate(sentence, nllb_target), end=" ")
+        print(out)
         end = time.perf_counter()
         print(f"\nTime 1: {end - start:.2f}")
 
-        # With Multiprocessing
-        start = time.perf_counter()
-        processes = []
-        semaphore = Semaphore(4)
-        for sentence in split_sentences:
-            processes.append(Process(target=translate_multiprocessing, args=(sentence, target, NLLB_tokenizer, NLLB_model, semaphore)))
+        # Text-to-Speech
+        gtts_t2s.speech_text(out, "translation.mp3", gtts_target)
 
-        for process in processes:
-            process.start()
 
-        for process in processes:
-            process.join()
+        # # With Multiprocessing
+        # start = time.perf_counter()
+        # processes = []
+        # semaphore = Semaphore(4)
+        # for sentence in split_sentences:
+        #     processes.append(Process(target=translate_multiprocessing, args=(sentence, nllb_target, NLLB_tokenizer, NLLB_model, semaphore)))
+
+        # for process in processes:
+        #     process.start()
+
+        # for process in processes:
+        #     process.join()
     
-        end = time.perf_counter()
-        print(f"\nTime 2: {end - start:.2f}")
+        # end = time.perf_counter()
+        # print(f"\nTime 2: {end - start:.2f}")
