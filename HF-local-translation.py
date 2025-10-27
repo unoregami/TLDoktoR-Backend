@@ -2,6 +2,7 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import gtts_t2s
 import torch
 import spacy
+import pandas as pd
 import numpy as np
 from tqdm.auto import tqdm
 import time
@@ -276,7 +277,7 @@ if __name__ == "__main__":
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Taglish model
-    taglish_model_name = "touno/english_to_taglish_4616_CD"
+    taglish_model_name = "touno/english_to_taglish_8483_v2"
     taglish_tokenizer = AutoTokenizer.from_pretrained(taglish_model_name)
     taglish_model = AutoModelForSeq2SeqLM.from_pretrained(taglish_model_name).to(device)
 
@@ -290,21 +291,22 @@ if __name__ == "__main__":
     to = input("to Language (refer to list): ").lower()
 
     doc = nlp(text)
-    split_sentences = [sent.text for sent in doc.sents]#separate_sentences(text)
+    split_sentences = [sent.text for sent in doc.sents] #separate_sentences(text)
 
+    start = time.perf_counter()
     if to == "taglish":
-        # No Multiprocessing
-        out = ""
-        start = time.perf_counter()
-        for sentence in split_sentences:
-            out += (toTaglish(sentence) + " ")
-            # print(toTaglish(sentence), end=" ")
-        print(out)
-        end = time.perf_counter()
-        print(f"\nTime 1: {end - start:.2f}")
+        gtts_target = "tl"
 
-        # With Multiprocessing
-        # start = time.perf_counter()
+        # # No Multiprocessing
+        # out = ""
+        # for sentence in split_sentences:
+        #     out += (toTaglish(sentence) + " ")
+        #     # print(toTaglish(sentence), end=" ")
+        # print(out)
+        # end = time.perf_counter()
+        # print(f"\nTime 1: {end - start:.2f}")
+
+        # # With Multiprocessing
         # processes = []
         # semaphore = Semaphore(4)
         # for sentence in split_sentences:
@@ -319,13 +321,25 @@ if __name__ == "__main__":
         # end = time.perf_counter()
         # print(f"\nTime 2: {end - start:.2f}")
 
-        # Text-to-Speech
-        gtts_t2s.speech_text(out, "translation.mp3", "tl")
+        # Batch Processing
+        start = time.perf_counter()
+        out = ""
+        batch = 2
+        for i in range(0, len(split_sentences), batch):
+            to_be_translated = split_sentences[i]       # Gets first sentence per batch
+            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
+            out += toTaglish(to_be_translated)
+
+        print(out)
+        end = time.perf_counter()
+        print(f"Time: {end - start:.2f}")
     else:
         nllb_target = nllb_token.get(to) # NLLB target token
         gtts_target = gtts_token.get(to) # gtts target token
         if gtts_target == None:# edge case for lang with no tts (Sanskrit, Santali, Shan, Uyghur, Yiddish are conlang (Constructed Language))
             match to:
+                case "malagasy":
+                    gtts_target = "af"
                 case "tigrinya":
                     gtts_target = "am"
                 case "tamazight":
@@ -360,9 +374,9 @@ if __name__ == "__main__":
                     gtts_target = "sk"
                 case "macedonian":
                     gtts_target = "sr"
-                case "somali" | "swati" | "xhosa" | "zulu" | "tsonga" | "tswana" | "shona" | "nyanja" | "rundi" | "bemba" | "tumbuka" | "ganda" | "luo" | "dinka_sw" | "nuer" | "dyula" | "bambara" | "igbo" | "malagasy" | "wolof":
+                case "somali" | "swati" | "xhosa" | "zulu" | "tsonga" | "tswana" | "shona" | "nyanja" | "rundi" | "bemba" | "tumbuka" | "ganda" | "luo" | "dinka_sw" | "nuer" | "igbo":
                     gtts_target = "sw"
-                case "fon" | "ewe" | "kanuri" | "lingala" | "oromo" | "sango" | "yoruba":
+                case "fon" | "ewe" | "kanuri" | "lingala" | "oromo" | "sango" | "yoruba" | "dyula" | "bambara" | "wolof":
                     gtts_target = "ha"
                 case "mizo" | "sanskrit":
                     gtts_target = "hi"
@@ -381,18 +395,15 @@ if __name__ == "__main__":
                 case _:
                     gtts_target = "en"
 
-        # No Multiprocessing
-        out = ""
-        start = time.perf_counter()
-        for sentence in split_sentences:
-            out += (translate(sentence, nllb_target) + " ")
-            # print(translate(sentence, nllb_target), end=" ")
-        print(out)
-        end = time.perf_counter()
-        print(f"\nTime 1: {end - start:.2f}")
+        # # No Multiprocessing
+        # out = ""
+        # for sentence in split_sentences:
+        #     out += (translate(sentence, nllb_target) + " ")
+        # print(out)
+        # end = time.perf_counter()
+        # print(f"\nTime 1: {end - start:.2f}")
 
         # # With Multiprocessing
-        # start = time.perf_counter()
         # processes = []
         # semaphore = Semaphore(4)
         # for sentence in split_sentences:
@@ -407,5 +418,20 @@ if __name__ == "__main__":
         # end = time.perf_counter()
         # print(f"\nTime 2: {end - start:.2f}")
 
-        # Text-to-Speech
-        gtts_t2s.speech_text(out, "translation.mp3", gtts_target)
+        # Batch Processing
+        start = time.perf_counter()
+        out = ""
+        batch = 2
+        for i in range(0, len(split_sentences), batch):
+            to_be_translated = split_sentences[i]       # Gets first sentence per batch
+            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
+            out += translate(to_be_translated, nllb_target)
+
+        print(out)
+        end = time.perf_counter()
+        print(f"Batch {i}: {end - start:.2f}")
+
+
+    
+    # Text-to-Speech
+    gtts_t2s.speech_text(out, "translation.mp3", gtts_target)
