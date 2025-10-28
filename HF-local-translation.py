@@ -2,10 +2,10 @@ from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import gtts_t2s
 import torch
 import spacy
+import time
 import pandas as pd
 import numpy as np
 from tqdm.auto import tqdm
-import time
 from multiprocessing import Process, Semaphore
 
 
@@ -107,7 +107,163 @@ def separate_sentences(text):
     return split_sentence
 
 
+def translate_main():
+    text = input("Input Text: ")
+    to = input("to Language (refer to list): ").lower()
+    while to not in langs_list:
+        print("LANGUAGE NOT AVAILABLE")
+        to = input("to Language (refer to list): ").lower()
+
+    doc = nlp(text)
+    split_sentences = [sent.text for sent in doc.sents] #separate_sentences(text)
+
+    start = time.perf_counter()
+    if to == "taglish":
+        gtts_target = "tl"
+
+        # # No Multiprocessing
+        # out = ""
+        # for sentence in split_sentences:
+        #     out += (toTaglish(sentence) + " ")
+        #     # print(toTaglish(sentence), end=" ")
+        # print(out)
+        # end = time.perf_counter()
+        # print(f"\nTime 1: {end - start:.2f}")
+
+        # # With Multiprocessing
+        # processes = []
+        # semaphore = Semaphore(4)
+        # for sentence in split_sentences:
+        #     processes.append(Process(target=toTaglish_multiprocessing, args=(sentence, taglish_tokenizer, taglish_model, semaphore)))
+
+        # for process in processes:
+        #     process.start()
+
+        # for process in processes:
+        #     process.join()
+
+        # end = time.perf_counter()
+        # print(f"\nTime 2: {end - start:.2f}")
+
+        # Batch Processing
+        start = time.perf_counter()
+        out = ""
+        batch = 2
+        for i in range(0, len(split_sentences), batch):
+            to_be_translated = split_sentences[i]       # Gets first sentence per batch
+            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
+            out += toTaglish(to_be_translated)
+
+        print(out)
+        end = time.perf_counter()
+        print(f"Time: {end - start:.2f}")
+    else:
+        nllb_target = nllb_token.get(to) # NLLB target token
+        gtts_target = gtts_token.get(to) # gtts target token
+        if gtts_target == None:# edge case for lang with no tts (Sanskrit, Santali, Shan, Uyghur, Yiddish are conlang (Constructed Language))
+            match to:
+                case "malagasy" | "swati" | "xhosa" | "zulu" | "tsonga":
+                    gtts_target = "af"
+                case "tigrinya":
+                    gtts_target = "am"
+                case "tamazight" | "bambara" | "wolof":
+                    gtts_target = "ar"
+                case "assamese":
+                    gtts_target = "bn"
+                case "yiddish":
+                    gtts_target = "de"
+                case "armenian" | "georgian":
+                    gtts_target = "el"
+                case "ayacucho_quechua" | "central_aymara" | "papiamento" | "guarani":
+                    gtts_target = "es"
+                case "occitan":
+                    gtts_target = "fr"
+                case "bhojpuri" | "maithili" | "awadhi" | "santali":
+                    gtts_target = "hi"
+                case "minangkabau" | "balinese" | "acehnese":
+                    gtts_target = "id"
+                case "sicilian" | "friulian" | "ligurian" | "lombard" | "venetian" | "maltese":
+                    gtts_target = "it"
+                case "latgalian":
+                    gtts_target = "lt"
+                case "shan" | "jingpho":
+                    gtts_target = "my"
+                case "limburgish" | "luxembourgish":
+                    gtts_target = "nl"
+                case "faroese":
+                    gtts_target = "no"
+                case "belarusian" | "kazakh" | "kyrgyz" | "tatar" | "bashkir" | "mongolian" | "crimean_tatar":
+                    gtts_target = "ru"
+                case "slovenian":
+                    gtts_target = "sk"
+                case "macedonian":
+                    gtts_target = "sr"
+                case "somali" | "tswana" | "shona" | "lingala" | "nyanja" | "rundi" | "bemba" | "tumbuka" | "luo":
+                    gtts_target = "sw"
+                case "fon" | "ewe" | "kanuri" | "oromo" | "sango" | "yoruba" | "dyula" | "ganda" | "dinka_sw" | "nuer" | "igbo":
+                    gtts_target = "ha"
+                case "mizo" | "sanskrit":
+                    gtts_target = "hi"
+                case "silesian":
+                    gtts_target = "pl"
+                case "odia":
+                    gtts_target = "ta"
+                case "lao" | "dzongkha" | "tibetan":
+                    gtts_target = "th"
+                case "ilocano" | "cebuano" | "pangasinan" | "waray":
+                    gtts_target = "tl"
+                case "azerbaijani_north" | "azerbaijani_south" | "turkmen" | "uyghur" | "uzbek":
+                    gtts_target = "tr"
+                case "sindhi" | "pashto" | "persian" | "dari" | "central_kurdish" | "tajik":
+                    gtts_target = "ur"
+                case _:
+                    gtts_target = "en"
+
+        # # No Multiprocessing
+        # out = ""
+        # for sentence in split_sentences:
+        #     out += (translate(sentence, nllb_target) + " ")
+        # print(out)
+        # end = time.perf_counter()
+        # print(f"\nTime 1: {end - start:.2f}")
+
+        # # With Multiprocessing
+        # processes = []
+        # semaphore = Semaphore(4)
+        # for sentence in split_sentences:
+        #     processes.append(Process(target=translate_multiprocessing, args=(sentence, nllb_target, NLLB_tokenizer, NLLB_model, semaphore)))
+
+        # for process in processes:
+        #     process.start()
+
+        # for process in processes:
+        #     process.join()
+
+        # end = time.perf_counter()
+        # print(f"\nTime 2: {end - start:.2f}")
+
+        # Batch Processing
+        start = time.perf_counter()
+        out = ""
+        batch = 2
+        for i in range(0, len(split_sentences), batch):
+            to_be_translated = split_sentences[i]       # Gets first sentence per batch
+            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
+            out += translate(to_be_translated, nllb_target)
+
+
+        print(out)
+        end = time.perf_counter()
+        print(f"Time: {end - start:.2f}")
+
+    return out, gtts_target
+
+
+
 if __name__ == "__main__":
+    # Time startup
+    start = time.perf_counter()
+
     # for sentence splitting
     nlp = spacy.load("en_core_web_sm")
 
@@ -274,6 +430,9 @@ if __name__ == "__main__":
         "yoruba": "yor_Latn",
         "zulu": "zul_Latn"
     }
+    langs_list = list(nllb_token.keys())
+    langs_list.append('taglish')
+
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     
     # Taglish model
@@ -286,152 +445,10 @@ if __name__ == "__main__":
     NLLB_tokenizer = AutoTokenizer.from_pretrained(NLLB_model_name)
     NLLB_model = AutoModelForSeq2SeqLM.from_pretrained(NLLB_model_name).to(device)
 
+    print(f"Startup time: {time.perf_counter() - start:.2f}")
 
-    text = input("Input Text: ")
-    to = input("to Language (refer to list): ").lower()
+    while True:
+        out, gtts_target = translate_main()
 
-    doc = nlp(text)
-    split_sentences = [sent.text for sent in doc.sents] #separate_sentences(text)
-
-    start = time.perf_counter()
-    if to == "taglish":
-        gtts_target = "tl"
-
-        # # No Multiprocessing
-        # out = ""
-        # for sentence in split_sentences:
-        #     out += (toTaglish(sentence) + " ")
-        #     # print(toTaglish(sentence), end=" ")
-        # print(out)
-        # end = time.perf_counter()
-        # print(f"\nTime 1: {end - start:.2f}")
-
-        # # With Multiprocessing
-        # processes = []
-        # semaphore = Semaphore(4)
-        # for sentence in split_sentences:
-        #     processes.append(Process(target=toTaglish_multiprocessing, args=(sentence, taglish_tokenizer, taglish_model, semaphore)))
-
-        # for process in processes:
-        #     process.start()
-
-        # for process in processes:
-        #     process.join()
-
-        # end = time.perf_counter()
-        # print(f"\nTime 2: {end - start:.2f}")
-
-        # Batch Processing
-        start = time.perf_counter()
-        out = ""
-        batch = 2
-        for i in range(0, len(split_sentences), batch):
-            to_be_translated = split_sentences[i]       # Gets first sentence per batch
-            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
-            out += toTaglish(to_be_translated)
-
-        print(out)
-        end = time.perf_counter()
-        print(f"Time: {end - start:.2f}")
-    else:
-        nllb_target = nllb_token.get(to) # NLLB target token
-        gtts_target = gtts_token.get(to) # gtts target token
-        if gtts_target == None:# edge case for lang with no tts (Sanskrit, Santali, Shan, Uyghur, Yiddish are conlang (Constructed Language))
-            match to:
-                case "malagasy":
-                    gtts_target = "af"
-                case "tigrinya":
-                    gtts_target = "am"
-                case "tamazight":
-                    gtts_target = "ar"
-                case "assamese":
-                    gtts_target = "bn"
-                case "yiddish":
-                    gtts_target = "de"
-                case "armenian" | "georgian":
-                    gtts_target = "el"
-                case "ayacucho_quechua" | "central_aymara" | "papiamento" | "guarani":
-                    gtts_target = "es"
-                case "occitan":
-                    gtts_target = "fr"
-                case "bhojpuri" | "maithili" | "awadhi" | "santali":
-                    gtts_target = "hi"
-                case "minangkabau" | "balinese" | "acehnese":
-                    gtts_target = "id"
-                case "sicilian" | "friulian" | "ligurian" | "lombard" | "venetian" | "maltese":
-                    gtts_target = "it"
-                case "latgalian":
-                    gtts_target = "lt"
-                case "shan" | "jingpho":
-                    gtts_target = "my"
-                case "limburgish" | "luxembourgish":
-                    gtts_target = "nl"
-                case "faroese":
-                    gtts_target = "no"
-                case "belarusian" | "kazakh" | "kyrgyz" | "tatar" | "bashkir" | "mongolian" | "crimean_tatar":
-                    gtts_target = "ru"
-                case "slovenian":
-                    gtts_target = "sk"
-                case "macedonian":
-                    gtts_target = "sr"
-                case "somali" | "swati" | "xhosa" | "zulu" | "tsonga" | "tswana" | "shona" | "nyanja" | "rundi" | "bemba" | "tumbuka" | "ganda" | "luo" | "dinka_sw" | "nuer" | "igbo":
-                    gtts_target = "sw"
-                case "fon" | "ewe" | "kanuri" | "lingala" | "oromo" | "sango" | "yoruba" | "dyula" | "bambara" | "wolof":
-                    gtts_target = "ha"
-                case "mizo" | "sanskrit":
-                    gtts_target = "hi"
-                case "silesian":
-                    gtts_target = "pl"
-                case "odia":
-                    gtts_target = "ta"
-                case "lao" | "dzongkha" | "tibetan":
-                    gtts_target = "th"
-                case "ilocano" | "cebuano" | "pangasinan" | "waray":
-                    gtts_target = "tl"
-                case "azerbaijani_north" | "azerbaijani_south" | "turkmen" | "uyghur" | "uzbek":
-                    gtts_target = "tr"
-                case "sindhi" | "pashto" | "persian" | "dari" | "central_kurdish" | "tajik":
-                    gtts_target = "ur"
-                case _:
-                    gtts_target = "en"
-
-        # # No Multiprocessing
-        # out = ""
-        # for sentence in split_sentences:
-        #     out += (translate(sentence, nllb_target) + " ")
-        # print(out)
-        # end = time.perf_counter()
-        # print(f"\nTime 1: {end - start:.2f}")
-
-        # # With Multiprocessing
-        # processes = []
-        # semaphore = Semaphore(4)
-        # for sentence in split_sentences:
-        #     processes.append(Process(target=translate_multiprocessing, args=(sentence, nllb_target, NLLB_tokenizer, NLLB_model, semaphore)))
-
-        # for process in processes:
-        #     process.start()
-
-        # for process in processes:
-        #     process.join()
-
-        # end = time.perf_counter()
-        # print(f"\nTime 2: {end - start:.2f}")
-
-        # Batch Processing
-        start = time.perf_counter()
-        out = ""
-        batch = 2
-        for i in range(0, len(split_sentences), batch):
-            to_be_translated = split_sentences[i]       # Gets first sentence per batch
-            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
-            out += translate(to_be_translated, nllb_target)
-
-        print(out)
-        end = time.perf_counter()
-        print(f"Batch {i}: {end - start:.2f}")
-
-
-    
-    # Text-to-Speech
-    gtts_t2s.speech_text(out, "translation.mp3", gtts_target)
+        # Text-to-Speech
+        gtts_t2s.speech_text(out, "translation.mp3", gtts_target)

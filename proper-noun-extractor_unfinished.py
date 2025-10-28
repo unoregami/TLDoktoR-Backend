@@ -32,11 +32,11 @@ for sentence in split_sentences:
         word_index += 1
 
         if word[0].isupper():
-
             word = re.sub(r'^[^\w\'&.-]+', '', word)
             word = re.sub(r'[^\w\'&.-]+$', '', word)
+            word = re.sub(r'[]')
 
-            if word_index - 1 == latest_proper_noun_index:
+            if word_index - 1 == latest_proper_noun_index:  # checks if proper noun are adjacent
                 capitalized[-1] += f" {word}"
             else:
                 capitalized.append(word)
