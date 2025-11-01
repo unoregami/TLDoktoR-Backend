@@ -94,6 +94,8 @@ except:
   text = "NO CAPTIONS AVAILABLE"
 
 print(text)
+with open(f"transcript.txt", "a", encoding="utf-8") as f:
+  f.write(str(text))
 
 print()
 print("YouTube Video ID:", url)

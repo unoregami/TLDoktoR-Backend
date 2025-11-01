@@ -1,0 +1,4383 @@
+In early 1972, a probe known as
+Pioneer 10 was launched into space
+on a mission to the largest
+planet in the Solar System.
+After millennia of
+speculation and wonder,
+humanity got its first
+close-up view of Jupiter.
+Accelerated by the
+immense gravity of the planet,
+Pioneer 10 was then
+catapulted into deep space,
+destined to leave the Solar System
+and roam the galaxy for billions of years.
+On the off-chance that this
+vestige of humanity
+should one day be intercepted
+by an alien intelligence,
+it was affixed with a message.
+A message designed to answer
+three central questions.
+[Carl Sagan]
+Where we are, when we are, and who we are.
+More than half a century
+has now passed
+since the launch of our
+first galactic emissary,
+and in that time, we've made numerous
+attempts to communicate with life beyond.
+Either by attaching greeting cards
+to probes headed for interstellar space
+or by targeting our cosmic neighbors
+with high-powered beams of light.
+So far, humanity's been left on read,
+but that could change at any moment.
+As long as we keep making noise,
+there's always a chance we'll be heard.
+An exceedingly slim chance, as we'll see,
+but a non-zero chance nonetheless.
+Given the paradigm-shifting potential
+of contacting beings from another world,
+it sure would be nice to know what exactly
+we've been telling them all these years.
+I mean, don't get me wrong,
+"Where we are, when we are,
+and who we are",
+sounds really neat and all,
+but it's not exactly rich in detail.
+So let's start with
+that plaque on Pioneer 10.
+What does it say,
+and more importantly,
+to whom should I direct my anger when
+the aliens arrive to harvest my bones?
+The idea to attach
+a nmessage to Pioneer 10
+was the brainchild of journalist
+and author Eric Burgess.
+Less than four months before
+the probe was scheduled to launch,
+Burgess approached famed astronomer
+and science communicator Carl Sagan,
+who, in turn, relayed
+the proposal to NASA.
+Sagan was given three
+weeks to devise the message,
+and with the help of
+his wife and artist Linda
+as well as fellow
+astronomer Frank Drake,
+they scrambled together
+a series of pictograms
+etched into a gold-laden
+plate of aluminum.
+In the words of Sagan...
+Near the upper-left corner,
+we find a diagram of hydrogen,
+the simplest and most abundant
+element in the universe.
+One electron
+bound to a proton.
+More specifically, the diagram
+depicts a single atom of hydrogen
+transitioning from one
+energy state to another,
+which is meant to be conveyed by this
+horizontal line here in the middle.
+This shift in energy is known
+as a hyperfine transition,
+and it's accompanied
+by the emission of a radio wave.
+That radio wave has
+a very specific frequency
+that's so prominent across the universe
+that we've given it a name,
+the hydrogen line.
+Something that beings
+of sufficient intelligence
+to capture a
+drifting spacecraft
+would no doubt
+be aware of as well.
+In human terms, it has a frequency
+of about 1420 megahertz
+which means that each cycle of the wave
+has a period of about 0.7 nanoseconds
+and a corresponding length
+of roughly 21 centimeters.
+The recipients would obviously
+express their measurements
+using something other than
+nanoseconds and centimeters,
+but what's important here is that
+they're measuring the same thing
+and that that thing
+never changes.
+The duration of one wavecycle and
+the distance covered during that cycle
+remains the same
+across the universe.
+This allows us to establish a
+shared unit of both time and length.
+We're basically telling the
+aliens to treat their measurement
+of the hyperfine transition
+of neutral hydrogen
+as one unit of time
+and one unit of length.
+That's why there's a vertical
+line here in the middle,
+which is meant to convey
+the concept of one in binary.
+But, of course, hydrogen
+is merely one of many
+possible interpretations
+of this diagram.
+The aliens could just as easily
+think it's some sort of language,
+technology, star system,
+or literally anything else.
+To help them narrow down the list, the
+plaque includes three outlined silhouettes
+of a man, a woman,
+and Pioneer 10.
+These illustrations
+were drawn to scale,
+so the aliens can use the
+spacecraft's diameter
+as a basis for deriving the height
+of the two figures in the foreground.
+In human terms, that would make
+the man approximately 182 centimeters
+and the woman about 169.
+The woman's height has
+been further emphasized
+by two demarcation marks
+along the right edge here.
+Between them is a sequence of four lines
+representing the number eight in binary.
+The purpose of this number
+is to communicate to the aliens
+that the woman is eight times as tall
+as the wavelength of the hydrogen line.
+In human terms,
+that's about 169,
+just like the woman's height
+relative to the probe's diameter.
+In other words, the interpretation
+of this as a schematic of hydrogen
+and the interpretation of this
+as an outline of the spacecraft
+are mutually corroborative.
+They provide the aliens with a means
+of deriving the height of this figure
+on the basis of two
+distinct measurements,
+which should help them narrow
+down the list of possible interpretations.
+At least, that was the idea.
+But when you actually measure
+the height of the couple
+relative to this
+sketch of the probe,
+you quickly realize they're
+about 10 centimeters too tall.
+While I have no way of confirming this,
+I suspect the source of this discrepancy
+is that the reflector dish on
+Pioneer 10 is not a perfect circle.
+It's slightly wider in this
+dimension than in this one,
+known as a major
+and minor axis.
+If we assume that this
+outline of the probe
+is oriented with the minor
+axis along the vertical,
+the relative height of the couple
+is indeed what you'd expect.
+But if that is what the
+Sagans and Drake intended,
+only two of the three antenna struts
+should be visible here in the front.
+The fact that all three have
+been drawn on the plaque,
+implies the probe is oriented with
+the major axis along the vertical,
+thereby increasing the couples'
+height by roughly 10 centimeters.
+Nevertheless, it's hardly surprising for
+an oversight like this to go unnoticed
+given they only had three weeks
+to assemble everything,
+and Sagan acknowledged
+they could have done a better job
+had they not been
+so pressed for time.
+Moving on to the
+left side of the plaque,
+we find a starburst pattern of 15 straight
+lines emanating from a central point.
+This is a galactic
+map of pulsars
+that's meant to help the aliens
+pinpoint the Solar System.
+Pulsars are rapidly rotating neutron
+stars that can easily be spotted
+from thousands or even
+millions of lightyears away.
+They're often described
+as cosmic clocks or
+lighthouses because they're
+not only extremely bright
+but pulsate at very
+consistent rates.
+This red line shooting
+off to the right
+represents the distance between the Sun
+and the center of the galaxy,
+while the green lines
+represent the relative distance
+between the Sun and 14 pulsars.
+To make it easier to
+identify the pulsars,
+each line is accompanied by the star's
+rotation period expressed in binary,
+marked here in blue.
+Take this one,
+for instance.
+This star is known as the Vela Pulsar,
+and it's about 1 000 lightyears from Earth.
+Its rotation period has been expressed
+in waveperiods of the hydrogen line
+and reads 126 726 823 when
+translated from binary to decimal.
+What that means is that
+it takes the Vela Pulsar
+almost 127 million times
+longer to complete one rotation
+than the waveperiod of a hydrogen
+atom undergoing hyperfine transition.
+In human terms, that's about
+89 million nanoseconds or
+eleven rotations every second,
+which is about this fast.
+By scouring the
+galaxy for pulsars
+that match the information
+embedded within this map,
+the aliens could theoretically
+triangulate the Solar System.
+In fact, the chart not only discloses
+our location in space but also in time.
+As Sagan put it...
+[Carl Sagan]
+Where we are, when we are, and who we are.
+This goes back to the
+cosmic clock analogy
+because pulsars gradually wind
+down at highly predictable rates.
+So even though the Vela Pulsar
+will have a much slower rate of spin
+by the time it's observed
+by our hypothetical aliens,
+they could simply wind back
+the clock until its rotation period
+matched the one
+etched into the plaque.
+Repeating that process for
+at least some of the other pulsars
+would enable them to figure
+out not just from where,
+but also when Pioneer 10
+was launched.
+At least, that was the idea.
+But when the plaque
+was created,
+the existence of pulsars had only
+been known for about four years.
+Astronomers have since
+learned a lot more about them,
+and they're not nearly as rare, stable,
+and long-lived as once believed.
+They can only be observed from
+very specific vantage points, and
+unpredictable speedups,
+slowdowns, and glitches
+challenge the
+cosmic clock analogy.
+Sagan and Drake were
+aware of at least
+some of these issues, but there
+was only so much they could've foreseen
+with the limited data
+available at the time.
+In fact, there was
+such great uncertainty
+regarding the distance of
+some of the featured pulsars
+that they added these
+breaks in the lines,
+indicating they're based on rough
+estimates rather than exact figures.
+Finally, on the
+bottom of the plaque,
+we find a plain schematic
+of the Solar System.
+These binary numbers represent
+the orbital distance of each planet
+expressed as multiples of one tenth of the
+mean distance between the Sun and Mercury.
+For instance, the number above
+Earth reads 26 in decimal,
+which means it is
+26 times further away
+than 10% of the distance
+between the Sun and Mercury.
+The obvious problem
+with this approach
+is that it requires the recipients to
+already be familiar with the Solar System.
+Otherwise, one tenth of the distance
+between the Sun and Mercury
+is completely meaningless.
+We might as well have expected them
+to be familiar with kilometers or miles.
+To quote the creators of the plaque...
+It's unclear why the
+Sagans and Drake
+knowingly used an
+indecipherable unit of length
+when they had already gone through the
+trouble of creating a universal yardstick
+with this schematic of hydrogen.
+My best guess is that the wavelength
+of a state-shifting hydrogen atom
+was simply too small a unit to
+represent interplanetary distances,
+and the resulting binary strings became
+too long to neatly fit on the plaque.
+Again, they only had three
+weeks to do all of this.
+Last but not least, the trajectory of the
+spacecraft has been traced with an arrow,
+and the probe's main antenna
+is pointing at home.
+Over half a century later,
+Pioneer 10 is now more than
+20 billion kilometers from the Sun.
+That might sound like a lot, especially
+given how I just emphasized that number,
+but it's only about three
+times further away than Pluto,
+and it takes less than a day for a
+light beam to cover the same distance.
+Even though it's darting through
+space at several kilometers per second,
+the probe won't surpass even
+the nearest star to the Sun
+for many tens of
+thousands of years.
+But it gets worse because Pioneer 10
+is not headed for any particular star.
+It's expected to pass within a few trillion
+kilometers of a relatively nearby system
+in about 90 000 years or so
+when this star, all the way out here,
+will come closer to the Sun
+than Proxima Centauri is today.
+While an exoplanet has yet
+to be detected around this star,
+if one does exist, and that planet
+just so happens to be inhabited
+by intelligent beings in possession of
+technology that allows them to detect a
+perfectly silent and practically invisible
+speck gently gliding by their system
+at a distance greater than
+a thousand times the orbit of Pluto,
+then, yeah...
+...maybe they'll see it.
+A nearly identical probe was launched
+in 1973 known as Pioneer 11,
+and it was outfitted with the exact
+same plaque as Pioneer 10.
+Much like its predecessor, Pioneer 11
+was just kind of hurtled into deep space
+with no particular
+target in mind.
+While a chance encounter with another
+planetary system is not impossible,
+even across timescales
+of many billions of years,
+Sagan and Drake believed
+it was more likely
+for the probes to be
+scooped up by an alien spaceship
+traveling between the stars.
+Some studies have shown
+that space is, in fact,
+a tiny bit big.
+It's very easy to criticize
+the Pioneer Plaques.
+Any message designed to be understood by
+beings of which we know nothing about will
+unavoidably rely upon assumptions
+that could easily be false.
+Will the aliens understand
+the meaning of an arrow?
+Will they comprehend
+binary notation?
+Will they even grasp the concept
+of conveying information
+using two-dimensional pictograms?
+While questions like
+these are perfectly valid,
+they're ultimately quite pointless
+because the answer is always the same.
+We don't know.
+We don't know what the aliens look like,
+how they think, or even if they exist.
+The plaque could be so at odds with
+how they perceive and navigate the universe
+they fail to even
+recognize it as a message
+or we might be foolish for thinking
+a civilization so technologically advanced
+they're able to locate and retrieve a
+derelict spacecraft from the dead of space
+will be stumped by an
+interstellar cave painting.
+While many believe the
+recipients will be nothing like us,
+we could just as easily
+have a lot in common.
+After all, we share
+the same universe
+and are therefore shaped and bound
+by the same physical laws of nature.
+In fact, that's what
+some people fear the most.
+That the aliens
+could be just like us.
+That they could inflict upon us what we
+inflict upon members of our own species.
+The Sagans and Drake tried
+to get ahead of these concerns
+by emphasizing the
+improbability of interception.
+They stressed that, even if the
+probes were to fall into the tentacles
+of a hostile intelligence
+in some distant future,
+they'd be too far
+away to pose a threat.
+But statistics and
+probability only get you so far
+because fear is a
+powerful emotion.
+[George Wald]
+And may I say so that we can have a
+somewhat warmer and livelier
+conversation as this meeting goes on.
+I can conceive of no nightmare as terrifying
+as establishing such communication
+with a so-called superior or, if you wish,
+advanced technology in outer space.
+A year after the launch of Pioneer 11,
+the Arecibo Radio Observatory,
+located deep within the jungles of
+Puerto Rico, received a major facelift.
+The telescope was not only resurfaced
+to greatly increase its sensitivity,
+but also outfitted with
+a powerful transmitter.
+As it happens, the man in charge of the
+research center overseeing the facility
+was none other
+than Frank Drake.
+To celebrate the telescope's
+upgraded capabilities,
+Drake's assistant,
+Jane Allen,
+suggested they transmit
+an interstellar message
+during the upcoming
+rededication ceremony.
+Unlike the tangible
+Pioneer Plaques,
+the Arecibo Message had to be
+communicated using invisible radio waves.
+Drake had previously
+experimented with the idea
+of transmitting an
+image coded in binary,
+and with the help of some colleagues and
+graduate students, he came up with this.
+Now, this may not look like much,
+but if we fill in all the
+zeros with black squares
+and all the ones
+with white squares,
+a highly pixelated
+image will emerge.
+I'll explain the different
+parts in just a moment,
+but first, it's important to
+understand how an image like this
+is converted
+into radio waves.
+It starts with a grid that, in this case,
+is 23 columns wide and 73 rows tall
+for a total of 1 679 cells.
+We then fill in the cells
+needed to create the image.
+Because the image is composed
+of only two shades, black and white,
+that means it's binary,
+and each cell can also be described
+as a binary digit, or bit for short.
+By convention, binary code is
+expressed using zeros and ones,
+but it works just as well with two
+different shapes, two different colors,
+two different rocks, or literally any
+combination of two contrasting values.
+In fact, that's why binary code
+is so frequently used
+to write interstellar messages.
+It's not because aliens are
+guaranteed to understand it.
+No, it's simply one of the
+least complicated methods
+of conveying information
+that we can imagine.
+Chinese is composed of
+thousands of characters,
+English has 26 letters,
+while decimal demands
+10 unique numerals.
+Binary only requires two.
+Not two letters, not two symbols, literally
+just two of something, which we call bits.
+For instance, instead of
+black and white squares,
+we could just as easily express this
+bitmap using two different frequencies.
+If a cell is black,
+that's one frequency.
+If it's white,
+that's another.
+There you go.
+That's all there's to it.
+This long sequence of two
+flip-flopping frequencies
+can now be transmitted
+using a radio telescope.
+When that signal is picked
+up by an alien astronomer,
+they may find it difficult to ascribe such
+an unnatural pattern to a natural source.
+This will hopefully draw attention to the
+number of frequency fluctuations because
+1 679 is what's
+known as a semiprime.
+It's disappointingly not the
+half-brother of Optimus Prime,
+but rather the product of
+precisely two prime numbers.
+In this case, those
+prime numbers are 23 and 73,
+which happens to be the
+dimensions of the original grid.
+If the aliens were to plot the
+frequencies onto a grid of that size
+and fill in all the cells
+occupied by one of the values,
+they would uncover the image.
+As for the contents
+of the message,
+it starts off easy enough with the
+numbers 1 through 10 expressed in binary
+and written from right-to-left.
+So 0-0-1, 0-1-0, 0-1-1,
+and so on.
+Moving on to this large cluster of pixels,
+we find a bunch of binary formulations for
+the building blocks of life as we know it.
+It starts with the atomic numbers
+of five basic elements:
+hydrogen, carbon, nitrogen,
+oxygen, and phosphorus.
+These numbers are then used to
+describe essential components of DNA.
+For instance, a carbon
+atom has six protons,
+which means it has an
+atomic number of six.
+0-1-1-0 is binary for decimal 6.
+Because carbon is in the
+second column from the right,
+it means the second column
+of these molecules underneath
+indicates how many
+carbon atoms they contain.
+So these four represent an organic
+compound known as deoxyribose,
+which has five carbon atoms,
+and 1-0-1 is binary for decimal 5.
+In the center of the image, we find a
+crude rendition of the DNA double helix
+enclosing a
+large binary value
+denoting the number of nucleotide
+base pairs in the human genome.
+In simpler terms, it's a way
+of expressing the complexity or
+size of our genetic makeup.
+However, more recent measurements have
+since reduced that number by over a billion,
+so this figure is no longer accurate.
+A bit further down, we find
+a simple sketch of a human,
+alongside an expression
+of their height on the right
+and the estimated global
+population in 1974 on the left.
+Directly underneath the human is
+a schematic of the Solar System,
+followed by an illustration
+of the Arecibo Telescope.
+Now, you might be wondering,
+"How the hell were the aliens
+supposed to understand any of that?"
+The simple answer is,
+they weren't really.
+Unlike the Pioneer Plaques'
+commendable attempt
+to establish some sort of common ground
+using shared units of measurement
+and a galactic map of pulsars,
+the Arecibo Message was much
+more of a publicity stunt.
+For instance, the
+length of the message
+was largely determined by
+the presumed attention span
+of those invited to the
+rededication ceremony.
+The concern was that,
+if the message was too long,
+attendees might be annoyed
+by the sound of the transmission,
+which was planned to be broadcast
+over loudspeakers at the event.
+In the end, the message was
+constrained to about three minutes
+to mitigate the risk
+of a dull afternoon.
+Likewise, the selection of a target for
+the transmission was entirely dictated
+by what happened to be visible
+in the sky during the ceremony.
+Drake ultimately selected a bright
+cluster of stars known as Messier 13,
+which is about
+24 000 lightyears from Earth.
+While this meant the message would
+take 24 000 years to reach its destination,
+the density of M13 also meant
+the signal could sweep over many
+thousands of stars upon arrival.
+At the time, this was thought to maximize
+the odds of the transmission being received,
+and Carl Sagan
+even told a reporter
+that he believed there was a 50% chance
+that M13 was home to an alien civilization.
+But as it turns out, more stars
+does not necessarily mean
+more opportunities for life.
+Not only are globular clusters like M13
+typically starved of heavier elements
+essential for planetary formation,
+but the proximity of the stars makes it
+challenging for any planets that do form
+to maintain stable orbits.
+Considering it took billions of years
+before humans evolved on Earth,
+a region as densely
+packed and chaotic as M13
+is probably not the most conducive
+environment for life as we know it.
+While there is some optimism
+that small planets like Earth
+could survive in very tight orbits,
+out of six thousand exoplanets
+discovered to date,
+only two are located
+within a globuluster.
+Nevertheless, on
+November 16, 1974,
+a small crowd of astronomers,
+dignitaries, and others
+bopped along to a three-minute
+concert of two warbling tones
+as humanity's first interstellar
+radiotelegram was beamed into space.
+A common misconception
+about the Arecibo Message
+is that it will miss its target because the
+telescope was aimed at the position of M13
+at the time of transmission, rather than
+where it will be in 24 000 years.
+In reality, when Drake crunched
+the numbers back in 1974,
+he realized that the cluster was
+so enormous and slow-moving
+that even if they aimed the
+telescope at its location at the time,
+the message would simply strike slightly
+off-center rather than a bullseye.
+Presuming against all odds that M13
+is home to an alien civilization
+in possession of an extremely sensitive
+instrument that's not only designed
+to pick up radio waves at the
+exact same frequency and bandwidth
+at which the Arecibo Message
+was transmitted,
+but also pointed squarely at the
+Solar System at just the right time,
+Messierian astronomers will
+have a non-zero chance
+to detect a non-repeating burst of energy
+lasting for less than three minutes
+some 24 000 years from now.
+Even though they're unlikely
+to decode the message,
+they might still suspect it's
+an attempt at communication.
+It's a bit like,
+even if you don't speak Swedish...
+*SWEDISH NOISES*
+If they suspect it's a transmission
+from another civilization,
+the aliens may
+choose to respond.
+Presuming there's no way
+to overcome the speed of light,
+such a response would obviously
+take just as long to reach us
+as it took the Arecibo Message
+to reach them.
+Based on the most recent measurements of
+the distance between the Solar System and M13,
+the earliest possible date
+we can expect a reply
+is the year 50370.
+Don't forget to mark your calendars.
+There are even more
+hopelessly optimistic scenarios,
+like a star or spaceship crossing paths
+with the signal somewhere along the way.
+But the odds of that happening
+are so vanishingly small
+it might as well
+be impossible.
+Not least of all because,
+as you can see,
+M13 is actually floating far
+above the galactic disc,
+and there's a whole lot
+of nothing in between.
+But, once again, these
+astronomical improbabilities
+were not enough to allay
+concerns of an alien invasion.
+A prominent radio astronomer in
+Britain at the time, Sir Martin Ryle,
+feared the Arecibo Message might
+attract a more advanced civilization
+seeking to colonize the Earth
+and mine its resources.
+He took issue with the fact that a small
+group of people had transmitted a message
+that could endanger
+all of humanity,
+and called for an international discussion
+in advance of any future transmissions.
+While these concerns largely
+fell on deaf ears at the time,
+Ryle was far from the
+only one urging caution.
+By the mid-1970s, NASA was
+gearing up to launch two spacecraft
+known as Voyager 1 and 2.
+Much like the Pioneer
+probes before them,
+the Voyager twins would be slingshot
+into deep space by granddaddy Jupiter
+on their way to explore
+the outer Solar System.
+Due to the similarity
+between the two programs
+and the public interest
+generated by the Pioneer Plaques,
+NASA engineer John Casani
+thought a similar message
+ought to be carried
+by the Voyagers.
+When Casani reached out
+to Carl Sagan in late 1976,
+he jumped at the chance to
+scribe another cosmic postcard.
+But this time, he wanted to impress upon
+the recipients not just how we think,
+but also how we feel.
+After consulting numerous
+people on how to proceed,
+two propositions stood above
+the rest: music and pictures.
+Sagan was partial to music while
+fellow astronomer Frank Drake
+thought nothing could capture the human
+condition like a series of photographs.
+After some additional brainstorming,
+it was Drake who finally realized
+they could accommodate both ideas
+using a phonograph record.
+A phonograph record is an
+analog storage medium,
+primarily used to record
+and replay sound.
+To record, you simply press a needle against
+the surface of a slow-spinning disc.
+By generating a sound,
+like strumming a guitar...
+...the needle will start to
+vibrate as it carves a thin
+undulating groove
+into the disc.
+To replay the sound, you
+simply create a copy of the disc
+using a less
+malleable material,
+place the needle back at
+the beginning of the groove,
+and spin the disc
+back up again.
+As the needle
+collides with the
+hundreds of microscopic
+indentations in the groove,
+it generates the same
+vibrations used to create it.
+When those vibrations reach your ears,
+you'll hear a guitar being strummed.
+The process is a bit more
+complicated in practice, of course,
+but honestly,
+not by much.
+Whether it's a single
+vibrating guitar string
+or the deafening crescendo
+of an entire orchestra,
+all of it can be recorded and
+replayed by tiny bumps in a grove.
+Yes, magic is real,
+and this is it.
+But what about the photographs?
+How do you get visual information
+onto a storage medium made for sound?
+It's surprisingly simple, actually.
+Remember how the
+Arecibo Message painted a picture
+by treating black and white
+squares as two different frequencies?
+I mean, it would be
+a bit concerning if you don't.
+That was just 12 minutes ago.
+You better get that checked out.
+Anyway, they basically did that,
+but instead of just two frequencies,
+they used a whole range of them.
+Take a gradient
+like this, for instance.
+If we assign a low
+frequency to black...
+...and a high frequency to white...
+...then every shade
+of gray in between
+will be mapped to a
+corresponding frequency of sound.
+With that translation
+scheme in mind,
+converting an entire
+photograph becomes trivial.
+For instance, this is a black-and-white image
+of Mercury that's actually on the record.
+All we have to do is scan
+every pixel in this image,
+one by one,
+column by column,
+and translate every shade of gray
+into its audible equivalent.
+Once we've translated every frequency
+of light into a frequency of sound,
+we end up with a brief
+sample of incoherent noise
+that acts like an acoustic
+fingerprint of the image.
+Again, I'm simplifying a lot here, and
+the actual process used analog signals
+rather than quantized pixel values, but it
+gives you a rough idea of how it was done.
+Some photographs were actually
+recorded three times in a row
+using filters for
+red, green, and blue.
+ When recombined
+in just the right way,
+they produce an image
+full of vibrant colors,
+even though, individually,
+they're all black and white.
+Again, magic is real.
+In an effort to save
+space, they also recorded
+two simultaneous streams
+of images into the same groove.
+This was accomplished by using
+the side-to-side motion of the needle
+to record one stream,
+and the up-and-down motion
+to record another.
+The end result was this echoey stereo sound
+of two image streams playing at once.
+To provide the aliens with
+the best possible chance
+of decoding this cryptic disc
+of gold-plated copper,
+the record's aluminum cover was
+engraved with some basic instructions.
+First of all, the pulsar
+map makes a return,
+and so, too, does the diagram showing the
+hyperfine transition of neutral hydrogen.
+The latter of which is,
+once again, used to establish
+a shared unit of
+both time and length.
+Near the top left, we find
+an overhead view of the record
+circumscribed by a binary number.
+It's telling the aliens to spin the
+record about five billion times faster
+than the hyperfine
+transition period.
+In human terms, that's equivalent
+to roughly one rotation every 3.6 seconds.
+To ensure the aliens have something
+with which to play the record,
+a ceramic cartridge holding
+a diamond-tipped needle
+was attached to the
+mounting bracket.
+An outline of this cartridge has also
+been drawn along the right edge here
+to indicate the playback
+starting position.
+Underneath the overhead view,
+there's also a side view,
+accompanied by
+another binary number.
+This time, it's telling the aliens
+how long it takes to play
+one full side of the record,
+which is about 54 minutes.
+Moving on to the top right,
+we find a step-by-step guide
+for decoding the images.
+The waveform at the very top
+corresponds to three vertical slices
+of the record's first image,
+while the zigzag
+pattern underneath
+means the slices are meant to be stacked
+side-by-side, one after the other.
+As we already know, this angelic
+symphony of beeps and buzzings
+are mapped to
+different shades of gray
+according to a very specific
+translation scheme.
+A scheme the aliens are
+meant to reverse engineer
+with the help of
+these binary numbers.
+There are three slices
+labeled 1, 2, 3,
+and each one corresponds to
+roughly 8 milliseconds of audio.
+A full image is 512 slices wide
+and should form a rectangular
+shape with a 4:3 aspect ratio.
+Simple as that.
+On the off-chance that the
+aliens should somehow be
+confused by these
+crystal clear instructions,
+the record's first image has also
+been outlined here at the bottom
+to show them what it's supposed to
+look like when properly decoded.
+In fact, this calibration circle
+is the very first piece of data
+the aliens would
+find on the record.
+It's followed by more than a hundred
+images, starting with some basic math,
+units of measurement, and a
+speedrun of the human experience.
+The sequence ends with this image of a violin
+floating above a page of musical notation.
+It shows the beginning of a somber
+classical piece known as Cavatina,
+and once the image fades, legendary emcee
+Ludwig van Beethoven kicks off the mixtape.
+But the minutes-long performance
+of Cavatina only plays for a few seconds
+before it's interrupted by
+even more beeps and buzzings.
+You see, six additional images
+were squeezed onto the
+record at the very last moment,
+including a written statement by then
+President of the United States, Jimmy Carter,
+and a tedious listing of nearly
+a hundred members of Congress.
+This bureaucratic theme
+then segues back into audio
+with a speech by then Secretary General
+of the United Nations, Kurt Waldheim.
+The aliens will then be treated
+to a series of greetings
+spoken in
+58 different languages.
+This is followed by various sounds of things
+like weather, animals, and technology
+before the record ends with a playlist
+of nearly 90 minutes of music
+covering a vast array of
+instruments, styles, and cultures.
+It starts about halfway
+through the A side of the record
+with an uplifting
+composition by Johann Bach.
+After another nine tracks, including
+a famous American rock single and
+many obscure folk songs
+from around the world,
+the music picks up again on the record's
+B side with another banger by Johann Bach.
+After nearly an hour's worth of
+additional music from countries like
+Germany, Peru, Russia, China,
+and India, just to name a few,
+the Golden Record comes to a somnific end
+with a full rendition of Beethoven's Cavatina
+Nearly half a century later,
+Voyager 1 is now the most
+distant spacecraft ever launched.
+Even though it was preceded by
+the Pioneer probes by several years
+and even its own
+twin by two weeks,
+Voyager 1 attained a greater escape
+velocity and has since overtaken them all.
+Amazingly, both Voyagers
+are still transmitting to this day,
+although they're fast approaching
+their operational limits.
+Once they go offline
+and fall out of range,
+they'll join their
+pioneering brethren
+in a timeless and destinationless
+trek between the stars.
+Because the interstellar medium is sparsely
+populated with tiny dust particles,
+the exposed surfaces of
+both the Pioneer Plaques
+and the Golden Records
+will erode over time.
+While the former is somewhat
+protected by its inward-facing placement,
+it's still exposed to
+the vacuum of space.
+On the other hand,
+the Golden Records are
+firmly pressed up against
+the body of the spacecraft.
+According to one estimate,
+the outward-facing B side
+could survive for at least
+a few billion years,
+whereas the lifespan of the
+concealed A side is anyone's guess.
+It's not impossible that many tens or even
+hundreds of billions of years from now,
+all the photographs, greetings, and one
+third of the music will still be intact.
+While the response to the Golden Records
+was overwhelmingly positive,
+they did nonetheless
+receive a bit of criticism.
+Much like before, some people
+were completely undeterred
+by the near-impossibility
+of interception
+and feared the Voyagers might
+attract a hostile intelligence.
+Others focused more on
+the contents of the message
+because they felt it was disingenuous
+to paint humanity in such a positive light
+when war, crime,
+and cruelty
+are as much a part of the human condition
+as music, sports, and science.
+As one of the makers of the record, Jon
+Lomberg, so succinctly points out...
+The decision to exclude the
+uglier sides of humanity was
+partly to avoid potential backlash
+from people here on Earth,
+but also an attempt to make us seem
+less hostile to any future recipients.
+While a mushroom
+cloud does convey a
+shameful yet significant
+part of who we are,
+it could also be
+perceived as a threat.
+On the other hand, the
+exclusion of such imagery
+could, by itself,
+be quite revealing
+as we expose our casual
+willingness to deceive
+through tactful omission.
+Dating profiles, job interviews,
+meeting someone for the first time.
+I don't know if this is what the
+Golden Records team had in mind, but
+being selective with the truth
+to make a good first impression,
+how terribly
+human of them.
+The three initiatives
+mentioned so far
+are likely to be the only
+ones you've heard of before.
+The Pioneer Plaques, the Arecibo Message,
+and especially the Golden Records
+generated immense public interest at the
+time and remain well known to this day.
+But our attempts to
+communicate with life beyond
+did not end with
+the Golden Records.
+In fact, just a few years later,
+the silence was broken yet again,
+and this time,
+the target was so close,
+the minimum response time
+was measured not in eons
+but decades.
+In early 1983, Japanese
+publishing company Shueisha
+was looking for ways to
+commemorate the 15th anniversary
+of their most popular
+manga anthology magazine,
+known as
+Weekly Shōnen Jump.
+Due to the recent success of
+the film E.T. by Steven Spielberg,
+and the fact that 1983 had been
+declared the World Communications Year
+by the United Nations,
+they decided to launch a
+competition dubbed Call to the Cosmos.
+The price was a trip
+across the Pacific
+to visit a large radio telescope
+in Stanford, California,
+from which a message
+would be transmitted
+to a nearby star system.
+To win, all you had to do was submit a
+proposal for what the message should say.
+With a readership in the millions,
+the magazine received
+nearly 50 000 message ideas
+from children across the country.
+These were then compiled into
+one abbreviated message,
+and 15 lucky winners were
+selected to tag along on the trip.
+For the selection of
+a transmission target,
+the organizers turned
+to two radio astronomers
+named Masaki Morimoto
+and Hisashi Hirabayashi.
+They eventually
+chose the star Altair
+because it's very bright
+and relatively close.
+It was also selected because the
+message was planned to be transmitted
+during an annual Japanese
+festival known as Tanabata
+which celebrates the meeting
+of two celestial deities
+represented by the
+stars Vega and Altair.
+Furthermore, Morimoto and Hirabayashi
+were asked to create their own message,
+and after three days of work,
+they came up with this.
+A sequence of 13 bitmaps
+measuring 71x71 pixels
+that were clearly inspired
+by the Arecibo Message.
+The first four images depict
+things like natural numbers,
+prime numbers, basic math,
+common elements,
+the Solar System,
+and essential
+building blocks of DNA.
+The next eight illustrate
+the evolution of life
+from simple organisms
+to jellyfish,
+fish,
+amphibians,
+dinosaurs,
+apparently not Bigfoot,
+a family of humans,
+and a close-up
+of a woman's face.
+The final bitmap
+depicts a crude illustration
+of the Stanford radio telescope
+alongside information like its radius,
+wavelength of the transmission,
+and total number of
+bits in the message.
+We also find the word "TOAST"
+written in plain English.
+According to Hirabayashi,
+during the three-day stint
+when he and Morimoto
+conceived of these images,
+they weren't necessarily
+sober the whole way through.
+This may or may not have
+influenced their decision to include
+the Japanese and English
+word for "TOAST"
+equated to the chemical
+formula for ethanol.
+Because Weekly Shōnen Jump
+targets a very young demographic,
+the magazine tried
+to clean this up a bit
+by reframing what was
+clearly an afterthought
+by two half-drunk
+astronomers as...
+Nevertheless, for about
+an hour on August 15, 1983,
+the 13 bitmaps and an audio recording
+of the abridged fan-submitted greetings
+ were beamed towards Altair.
+Altair is among the brightest
+stars in the night sky,
+and at a distance of
+less than 17 lightyears,
+it's only, what, a few quadrillion
+stone throws away?
+In fact, Altair is so cosmically close
+that enough time has now passed
+for the transmission to
+have made a full round trip.
+That is to say, the message reached
+Altair back around the millennium shift,
+and we could have received
+a reply as early as 2017.
+Now, the fact that we never did does not
+necessarily mean there's nobody home.
+Perhaps they missed
+the brief 60-minute window
+when the message
+swept across their system?
+Perhaps they did pick it up, but
+they're still drafting a response?
+Perhaps they took one quick look at
+Earth and humanity, and were like...
+While all of these scenarios
+are, of course, equally probable,
+the most equal is,
+unfortunately, the first one.
+Not only have astronomers failed
+to detect a planet around Altair, but
+even if one does exist, the star's only
+been around for about 100 million years.
+Compare that to a 4.6 billion-year
+veteran like the Sun,
+and things start
+to look a bit bleak.
+Sure, there's always the
+possibility that intelligent life
+typically evolves much faster
+than it did here on Earth,
+but we currently have no good
+reason to think that's the case.
+But it gets worse because even
+if the Altairians did respond,
+the odds of us even
+noticing are extremely remote
+because telescopes are expensive,
+in low supply, and high demand.
+Sacrificing years, months, or even
+just days worth of observation time
+to screen a single planetless star for
+alien signals ain't exactly top priority.
+It wasn't until
+the summer of 2023
+that a team led by
+astronomer Shin-ya Narusawa
+secured a brief time slot at the
+Usuda Deep Space Center in Japan
+to search for a belated
+response to the Altair Message.
+Scheduled once again to coincide
+with the annual Tanabata festival,
+the search began late in
+the evening on August 22
+and lasted for a
+grand total of 60...
+...minutes.
+Remaining optimistic, Narusawa told
+reporters the following morning
+that they wouldn't immediately know
+if an alien signal had been detected
+because it would take a long time
+to analyze the terabytes of collected data.
+But given the lack of updates since then,
+I wouldn't keep my hopes up on this one.
+If nothing else, the Message to Altair
+was received loud and clear
+by thousands of
+children across Japan.
+In fact, Call to the Cosmos seems
+to have had a bit of a rippling effect
+because a whole series of messages
+designed by Japanese children
+would later be transmitted
+for several years in a row.
+But before we get to all that,
+we're gonna take a brief detour
+into the dazzling world of censorship.
+As mentioned before,
+when the public became aware
+that NASA had bolted a plaque to the side
+of Pioneer 10, not everyone approved.
+But it wasn't just about the risk
+of attracting dangerous aliens.
+It was also about modesty.
+You see, some people
+were absolutely mortified
+to learn that the plaques featured
+line drawings of two naked humans
+engaged in the scandalous
+act of standing there.
+As amusing as that is, the controversy
+surrounding the plaques' nudity
+has been somewhat
+exaggerated over the years.
+These puritanical takes were
+"muted and few", to quote Carl Sagan,
+and it's genuinely difficult to find
+examples like the one you just heard.
+There were a handful
+of reductive headlines,
+and some newspapers opted for the
+Barbie- and Ken-doll treatment, but
+the vast majority published
+the full uncensored image and
+barely even
+mentioned the couple.
+In fact, some criticized the plaques
+not for showing the human form,
+but for not showing enough.
+More specifically, people took
+issue with the complete
+absence of visible
+female genitalia,
+considering that no such neutering
+had been applied to the man.
+It's unclear if the lack of anatomical
+detail on the lower half of the woman
+was demanded by prudish NASA officials, or
+a decision made by the Sagans themselves.
+Conflicting accounts makes it difficult
+to know exactly who's to blame.
+Nevertheless, when it came
+time to select material
+for the Golden Records
+a few years later,
+these concerns
+flared up again.
+Fearing a repeat of
+the previous debacle,
+NASA religiously vetted every
+song, soundbite, and image
+that Sagan and co
+sought to include.
+They ultimately rejected
+a nude photograph
+of a young man
+and pregnant woman
+intended to show both human
+anatomy and procreation.
+The reason I'm bringing
+this up is because, in 1986,
+an American artist
+by the name of Joe Davis
+decided to fight back against
+all this pearl-clutching
+with a project known
+as Poetica Vaginal.
+With the help of a few ballerinas
+and other volunteers,
+Davis used a custom-made
+device to record...
+...how do I put this...
+...contractions from within
+the female reproductive system.
+Those pressure oscillations were
+then artistically manipulated
+to create something that's
+meant to resemble human speech.
+After obtaining access
+to a radio telescope
+near the Massachusetts
+Institute of Technology,
+Davis and his team began
+transmitting the sounds into space.
+However, the broadcast only
+lasted for about 15 to 20 minutes
+before the project was prematurely
+terminated by an Air Force Colonel,
+who was apparently
+overseeing the facility.
+Nevertheless,
+according to Davis,
+those few minutes were enough
+to transmit brief snippets of audio
+to each of the four
+selected targets.
+Two of them were never publicly
+identified, as far as I can tell,
+while the other two are known
+as Epsilon Eridani and Tau Ceti.
+Epsilon Eridani is home
+to one confirmed planet
+with a mass nearly
+identical to that of Jupiter.
+While additional
+planets could exist,
+including ones that
+resemble Earth,
+Eridani is a relative newcomer
+to the Milky Way family
+at approximately half
+a billion years young.
+On the other hand,
+Tau Ceti is certifiably ancient.
+Its precise age remains unclear,
+but it's definitely older than the Sun
+and home to not just one,
+but four confirmed planets.
+On top of that, there's a slim
+chance that two of them
+are grazing the inner and outer
+bounds of the habitable zone.
+That being the
+distance from the star
+at which water could remain liquid
+on the surface of an earthlike planet.
+Unfortunately, both of these stars are
+surrounded by immense belts of debris,
+not unlike the Asteroid and Kuiper
+belts in the Solar System.
+The difference is that Epsilon
+Eridani and Tau Ceti
+retain asteroidal and
+cometary populations
+many times greater than what
+currently orbits the Sun.
+While this makes perfect sense
+for a youngster like Eridani,
+it's a lot more concerning for a
+galactic grandparent like Tau Ceti.
+It implies that something is either
+preventing that material from
+coalescing into planets
+across billions of years
+or that the system has suffered
+a recent cascade of instability.
+In either case, more stuff almost
+certainly means more impact events
+like the one that nearly
+wiped out the dinosaurs.
+But even if we optimistically assume
+that none of that's a problem,
+the mass and size of the planets orbiting
+Tau Ceti are highly uncertain.
+There's a good chance they
+have less in common with Earth
+and more so with
+Uranus and Neptune.
+But even if that
+isn't the case,
+the chemical makeup of Tau Ceti
+appears to be quite different from the Sun,
+suggesting its planets
+are composed of materials
+quite different from those that
+spawned life in the Solar System.
+In summary,
+it's not looking great.
+Now, it may seem pointless to consider
+the habitability of these distant worlds
+when the message we sent towards
+them is completely indecipherable.
+I mean, if you thought the aliens were
+gonna struggle with the Golden Records,
+good luck to them
+figuring this out.
+But just like the Arecibo Message,
+the artificial nature of the signal
+is a message in
+and of itself.
+If you want to believe there's a
+naturally occurring phenomenon
+capable of producing the
+exact same radio waves
+as those emitted by Joe Davis
+and his team back in 1986,
+you go right ahead.
+But somehow, I have
+my doubts about that.
+Presuming the message was received and
+correctly identified as a technosignature,
+we could've received a reply from
+the Eridanians as early as 2007
+or the Cetinites
+as early as 2010.
+I did some checking and
+regretfully have to inform you
+that humanity's been
+ghosted once again.
+About a decade after
+the Message to Altair,
+the National Space
+Development Agency of Japan
+began hosting an annual space
+camp event for young children
+known as the Cosmic College.
+Students could choose from
+a bunch of different activities
+over the course
+of multiple days,
+including a class on how to write
+and send interstellar messages.
+In fact, one of the astronomers
+invited to lecture at these events
+was none other than Hisashi Hirabayashi,
+one of the creators of the Altair Message.
+But it wasn't just a
+theoretical exercise.
+NASDA actually arranged for some of those
+messages to be transmitted into space.
+Once a year between
+at least 1995 and 1998,
+simple bitmap images
+measuring 11x11 pixels
+were sent from the Usuda Deep Space Center
+to various locations across the galaxy.
+These transmissions received
+next to no publicity at the time
+and are virtually
+unknown to this day.
+This makes it difficult to know exactly
+what was sent where and when.
+Here's what we do know.
+The first Cosmic College was
+held in August 1995,
+during which this image of
+two parents and a child
+was beamed towards some unknown
+destination within the constellation Libra.
+Even less is known about this image of
+an alien holding hands with a human,
+transmitted sometime
+in August 1996.
+This time, we don't even know
+the general region of the sky
+to which it might
+have been sent.
+In August 1997, two bitmaps were beamed
+towards a binary star system known as Spica.
+The first image
+depicts a smiley face,
+while the other shows a Japanese
+dumpling known as a dango
+next to a steaming
+cup of tea.
+Unfortunately, Spica
+is a ticking time bomb
+because the two stars are expected
+to slowly encroach upon one another,
+which could trigger a supernova
+at some point in the future.
+Even if that wasn't the case, they're far
+too young to host an earthlike planet,
+and even if that wasn't the case, it
+would take another five centuries for
+any replies to reach us.
+Finally, this image that
+simply says 1 + 1 = 2
+was transmitted to some
+unknown location in August 1998.
+Now, there could be more of these
+transmissions that have been lost to time.
+For instance, an image of a leaf to
+symbolize the nature of Earth
+appears to have been designed
+during the Cosmic College of 1999.
+But I couldn't find any information on
+whether it was actually beamed into space.
+While competitions, art projects,
+and recreational programs
+certainly could generate
+an alien response,
+their primary function is to elicit a
+response from us down here on Earth.
+They're inspiring, provocative,
+and generally attract a lot of attention.
+So it was only a matter of time
+before someone came along
+and began charging a fee.
+In early 1998, American
+entrepreneur Charles Chafer
+announced a commercial
+venture known as Encounter 2001.
+The project sought to crowdfund the
+launch of a tiny light-sailing spacecraft
+that wouldcarry samples of human
+DNA beyond the Solar System.
+For only $50, anyone could
+submit a few strands of hair
+along with a brief
+message and their portrait
+and join the so-called
+Millennial Voyage.
+Market analysis by
+Chafer and his team
+projected sales of anywhere
+between 1.5 and 4.5 million tickets
+before the launch date.
+If those figures
+seem a bit optimistic,
+they were nothing compared to the
+expectations of their customers.
+This idea that aliens might one day
+use your DNA to clone your body
+was surprisingly prevalent.
+For instance, the
+greeting submitted
+by renowned science fiction
+author Sir Arthur C. Clarke
+simply read,
+"Fare well, my clone!"
+While the Millennial Voyage was
+the project's main objective,
+they also promised to beam participants'
+greetings into space ahead of the launch
+using a radio telescope.
+A side project that would come
+to be known as the Cosmic Calls.
+By spring of 1999, some 43 000 people
+had signed up for Encounter 2001,
+including two Canadian astrophysicists
+named Yvan Dutil and Stéphane Dumas.
+Dutil and Dumas had been given the task
+of creating what's known as a primer.
+A primer attempts to gradually introduce
+the recipients to more complex ideas
+using some sort of
+step-by-step process.
+For instance, the primer
+of the Message to Altair
+were the 13 bitmaps sent alongside the
+far more complicated greeting in Japanese.
+Dutil and Dumas did something
+similar for the Cosmic Calls.
+They created a primer
+composed of 23 bitmaps,
+and this first one starts off by listing
+the ten digits of our decimal system
+using three different notations:
+unary, binary, and decimal.
+An idea they appear to have lifted
+from this image on the Golden Records,
+which did almost
+the exact same thing.
+But there is, of course, one
+very noticeable difference.
+The one from the Golden Records uses
+the familiar glyphs of Arabic numerals,
+whereas the primer to the Cosmic Calls
+uses these alien-looking symbols.
+That's because Dutil and Dumas
+decided to create their own
+rudimentary language of sorts.
+Now, this might seem
+like an odd choice
+because whether, say, a two,
+looks like this or like this,
+it's not gonna make any
+difference to the recipients.
+But it's not about readability.
+It's about redundancy.
+You see, there's a lot of naturally
+occurring radiation that could
+interfere with a radio transmission
+between the source and destination.
+Imagine, for instance, that we
+transmitted fifteen bits arranged like this
+to represent the number 8.
+If this one bit in the middle
+was flipped along the way,
+the recipients would
+pick up a 0 instead of an 8.
+Flip this bit, and
+the 8 becomes a 6.
+Flip these two,
+and it becomes a 5.
+In other words, this transmission
+has no redundancy whatsoever.
+Lose one bit and the entire
+message could become corrupted.
+The glyphs created by Dutil and Dumas
+were designed to be as
+fault-tolerant and
+noise-resistant as possible.
+There are several bits of difference
+between all the symbols,
+and that still holds true even if
+they were to be mirrored or rotated.
+But apart from the
+symbolic difference,
+the Cosmic Call primer follows a structure
+that should be very familiar at this point.
+The first five pages cover
+various mathematical concepts that
+gradually increase
+in complexity.
+The next six delve into
+chemistry and physics,
+including a schematic
+of the Solar System.
+The next eight are all about
+Earth, humanity, and biology,
+including a rendition of the Pioneer couple
+and a two-page map of the continents.
+Page 21 contains information about
+the transmission and telescope,
+while page 22 brags about our cosmological
+knowledge, like the age of the universe.
+The 23rd and final page
+invites the aliens to respond
+by asking them
+a series of questions,
+using this flower-looking glyph
+as a stand-in for a question mark.
+For instance, this means velocity
+while this means photon,
+so this question could be read as,
+"What is the speed of light?"
+But how could the
+aliens possibly know
+that these symbols mean
+question, velocity, and photon?
+Well, it all comes down
+to that first page of numbers
+to which everything
+else is anchored.
+The aliens would start by
+hypothesizing that these ten symbols
+represent ten digits in a
+base-ten numeral system.
+With that assumption
+locked in place,
+they'd move on to the next
+page and find 1 something 1 = 2.
+Okay, so they now suspect that this
+symbol represents addition
+and make similar assumptions regarding
+subtraction, multiplication, and division.
+Once they get to page four, they would
+know that this reads something + 2 = 3,
+while this reads
+something + 4 = 10.
+Given that the
+same symbol
+is used to represent what
+is clearly not the same value,
+they might suspect that this is a
+placeholder for a variable quantity.
+In other words, this variable
+represents something unknown,
+a bit like a question mark,
+emphasized by this symbol off to the left.
+By gradually introducing new
+symbols alongside familiar ones
+in such a way that logic and
+process of elimination
+can be used to
+fill in the blanks,
+it creates a lot of mutual
+corroboration between the pages.
+By page eight, they'd be introduced to the
+concepts of time and length via hydrogen,
+followed by velocity and
+photons via the speed of light.
+To be clear, there's still plenty of room
+for confusion and misinterpretation.
+Not least of all because a few typos
+did actually slip through the cracks.
+For instance, according to
+this line on the seventh page,
+uranium is said to have 116
+neutrons but there is no such element.
+The lightest known isotope
+of uranium has 122 neutrons
+and the most abundant
+here on Earth has 146
+which is probably
+what they meant.
+But even if the primer
+had been flawless,
+there's only so much
+hand-holding one can do
+when you don't even know if the
+recipients have hands.
+In addition to the primer, the
+language created by Dutil and Dumas
+was used to write a message
+about the Millennial Voyage.
+This was followed by a
+copy of the Arecibo Message,
+greetings by the staff
+at Encounter 2001,
+as well as the 43 000 names and
+greetings from people around the world.
+With assistance from prominent
+Russian astronomer Alexander Zaitsev,
+Chafer and his team
+then obtained access to the
+Evpatoria Deep Space
+Center in southern Ukraine,
+and the first Cosmic Call began
+broadcasting on May 24, 1999.
+Unlike many other initiatives,
+which received very little
+attention from the press and public,
+the Cosmic Calls were
+a global phenomenon.
+In fact, the project received
+so much attention
+that officials at the
+National Space Agency of Ukraine
+got a bit spooked.
+The plan was to beam the
+message to four nearby star systems,
+but after the first
+transmission on May 24,
+Ukrainian officials suddenly
+shut the whole thing down.
+According to Zaitsev,
+rumors had begun circulating
+that the reason Encounter 2001 were
+using the Evpatoria Deep Space Center
+was because they'd been denied
+access to American facilities
+out of concern it might be dangerous
+to transmit messages into space.
+In reality, other radio
+observatories like Arecibo
+were simply not available
+on the dates requested.
+It had nothing to do
+with malevolent aliens.
+Zaitsev spent over a month
+explaining this to the agency
+before Chafer and his team were
+allowed to resume broadcasting
+on the last day of June.
+The first target
+was 16 Cygni A,
+a sunlike star that's
+part of a ternary system.
+In other words, it's a system
+of three stars with Cygni A
+being encircled by a
+small red dwarf labeled C,
+and together, they orbit
+another sunlike star labeled B
+that's nearly six times further
+away than Voyager 1 is from the Sun.
+While Cygni B does
+have one confirmed planet,
+it's an enormous gas giant that
+patrols the entire habitable zone,
+making it impossible for an
+earthlike planet within that region
+to maintain a stable orbit.
+While the transmission was
+specifically directed at Cygni A,
+the situation doesn't improve
+much because, as far as we know,
+it doesn't have any planets.
+Instead, it's
+orbited by Cygni C
+at about twice the distance
+between the Sun and Pluto.
+It's definitely possible for an earthlike
+planet to be sandwiched between them,
+but it all comes down to the precise orbit
+of Cygni C, which is currently unknown.
+The second target was Gliese 746, a binary
+system composed of a sunlike primary
+and a smaller companion,
+of which very little is known.
+The distance between them is less
+than that between the Sun and Mercury,
+so there's no chance of
+finding an earthlike planet
+in a stable orbit
+around either one.
+However, there is such a
+thing as circumbinary planets
+that orbit two
+stars at once.
+With a system as tightly
+bound as Gliese 746,
+there's plenty of space for such a
+planet to exist, but so far, nothing.
+The third target
+was 15 Sagittae.
+It could be described as a
+binary system because Sagittae A
+is orbited by this tiny
+companion labeled B.
+But Sagittae B is what's
+known as a brown dwarf
+that falls somewhere
+between a planet and a star.
+It's dozens of times more massive than all
+the planets in the Solar System combined,
+but still not quite massive
+enough to shine like a star.
+Apart from Sagittae B, no other
+bodies have been detected,
+and the system is a bit
+on the younger side
+at approximately two and
+a half billion years old.
+Finally, the fourth
+target was Gliese 777 A,
+a sunlike star that is once again
+encircled by a red dwarf companion.
+Except, this time, the two are
+separated by such an enormous distance
+that it takes them upwards of
+100 000 years to complete an orbit.
+Nevertheless, the target was 777 A,
+and it's home to three confirmed planets.
+Two of them are many
+times more massive than Earth
+and are practically
+hugging the star,
+while the third is a bit more massive
+than Jupiter and is much further away.
+In between them lies
+the habitable zone,
+which does appear to be stable
+enough to host an earthlike planet,
+but none have been
+detected to date.
+While all of these stars are within
+the general solar neighborhood,
+we still have to wait
+until the 22nd century
+until any response could
+relativistically be received.
+A fact that might come
+as a disappointment to some of you,
+but no doubt
+a relief to others.
+But it wasn't just
+the general public.
+A growing number of experts had
+begun to question the ethics and wisdom
+of deliberate
+communication attempts.
+Among them was Carl Sagan,
+who, as early as 1983,
+began arguing in favor of
+"listening rather than sending."
+Not so much because
+he feared invasion,
+but because he felt that
+contacting aliens was premature.
+He wrote that
+"it is not yet clear that we have
+anything particularly interesting to say"
+due to what he described
+as our "backward status."
+In other words, a baby
+civilization like humanity
+probably won't have much
+to offer one that's been around
+for millions or
+billions of years,
+so we should prioritize
+intelligence gathering
+before we start
+shouting at the sky.
+But astronomers like Alexander Zaitsev
+strongly disagreed with that position,
+essentially arguing that we must
+not give into fear of the unknown.
+Sure enough, just a few months
+after the first Cosmic Call,
+Zaitsev and others began work
+on yet another message.
+In early 2000, a youth
+community center in Moscow
+was preparing to host a festival
+to celebrate the new millennium.
+During the preparations, an astronomy
+teacher named Boris Pschenichner
+suggested to some of his students that
+they should create an interstellar message
+to be presented during a
+space-themed portion of the event.
+The project was spearheaded
+by two teenagers
+named Egor Kiselev
+and Vladimir Filippov
+who quickly devised a message
+composed of both music and pictures.
+Once the project had been approved by a
+committee that included Alexander Zaitsev,
+it was decided to transmit the
+message sometime the following year
+to commemorate the 40th anniversary
+of the first crewed spaceflight
+by cosmonaut
+Yuri Gagarin in 1961.
+Zaitsev expanded upon the
+ideas of Kiselev and Filippov
+by suggesting the message be
+divided into three distinct signal types:
+constant,
+continuous,
+and discrete.
+The constant signal
+would be sent first
+to let the aliens know that they've
+picked up something strange.
+That probing beacon would then
+transition into a continuous signal
+conveying the musical
+component of the message.
+Finally, two discrete frequencies would
+be used to broadcast binary-coded images.
+According to Zaitsev,
+the three formats
+represented the language of
+nature, emotion, and logic.
+A total of nine musical
+compositions were selected,
+and Zaitsev proposed using an electronic
+instrument known as a theremin.
+Partly because it generates a smooth
+monophonic signal with minimal overtones,
+but also because the theremin
+was a Russian invention.
+The visual portion of the message
+was composed of 28 bitmaps
+primarily designed by
+Kiselev and Filippov.
+The first image depicts
+a wave within a circle,
+which is meant to convey to the
+aliens that the circle's diameter
+is equal to the wavelength
+of the transmission.
+If they correctly
+make that guess,
+the next image is meant to
+be scaled so that this circle
+with a human
+face in the center
+matches the diameter of the circle
+from the previous image.
+Doing so would enable them
+to decode other components,
+like how this wavelength corresponds
+to a spectral absorption line of water.
+Without going into
+too much detail here,
+it's meant to highlight the significance
+of water to life here on Earth.
+While some of the illustrations tried to
+convey information using science and logic,
+a lot of it was
+artistically motivated.
+Life inhabits the ocean,
+land, and atmosphere,
+represented by dolphins,
+humans, and birds
+that the aliens will, of course,
+have no chance of deciphering.
+The ten circles along the edge,
+numbered 1 through 10,
+not only symbolize our use
+of a base-ten numeral system,
+but also correspond
+to the next ten images.
+The first of which is this
+side-view of our galaxy
+with an arrow
+pointing at us.
+The second is a schematic
+of the Solar System.
+The third gets a bit closer.
+The fourth gets closer still.
+Then there's a family,
+a house,
+and a close-up of a person.
+Towards the end, there's also
+a yin and yang symbol,
+two games of tic-tac-toe,
+and an illustration of the telescope
+used to transmit the message.
+But it doesn't end there because the next
+image is the same emblem we saw before,
+except the ten
+outlying circles
+have now been filled in with
+the ten preceding images.
+Exactly why they're laid out in this
+circular pattern in this particular order,
+or even what
+function it all serves,
+I couldn't tell you.
+But, again, the emblem was intended
+to be both informational and artistic.
+Following the emblem sequence,
+the next three images
+contain some text written
+in both Russian and English.
+Approximately 1 000 students between the
+ages of 13 and 18 participated in the project,
+and this is an extreme abbreviation
+of their many proposed greetings.
+It very innocently ends with...
+Signed by...
+The final twelve bitmaps depict
+illustrations that we've already seen,
+each one captioned with a brief
+description in both Russian and English.
+They're meant to function
+as a sort of dictionary
+with the hopelessly
+optimistic goal
+of teaching the aliens how to
+read the aforementioned greeting.
+The three components of the message,
+starting with the probing signal,
+followed by the music,
+and the 28 bitmaps,
+were then transmitted from the Evpatoria
+Deep Space Center on August 29, 2001.
+Much like the first Cosmic Call,
+the Teenage Message was transmitted
+multiple times over multiple days.
+This time to six different targets.
+The first one was Gliese 797 A, an as
+of yet planetless but sunlike star
+that forms a wide ternary system
+with two smaller companions.
+The second target was 37 Geminorum,
+a solitary sunlike star that
+has yet to show any signs
+of hosting a
+planetary system.
+Target number three was another
+sunlike star known as 47 Ursae Majoris,
+which is home to
+three confirmed planets.
+They all appear to be gas giants,
+and the one closest to the star
+is grazing the outer edge
+of the habitable zone.
+Because it's more than
+twice the mass of Jupiter,
+its immense gravity renders nearly
+the whole outer half of the habitable zone
+completely off limits.
+An earthlike planet
+within this region
+simply wouldn't be able
+to maintain a stable orbit.
+But if such a planet were
+to be located further inwards,
+things look a lot
+more optimistic.
+The fourth target
+was Gliese 547 A.
+Once again, it's a sunlike star
+that forms a wide binary system
+with a small brown
+dwarf companion.
+Apart from that,
+no planets as of yet.
+Target number five was yet another
+sunlike star known as Gliese 327
+with no confirmed planets.
+It does, however, show signs of
+being surrounded by either one
+or multiple
+belts of debris.
+But the precise mass, composition, and
+extent of this debris remains to be seen.
+Finally, the sixth
+target was Gliese 788.
+It is yet another solar analog with
+neither stellar nor planetary companions.
+All but one of the targets are
+more than 50 lightyears away, so
+the minimum response
+time is over a century.
+The one exception is
+47 Ursae Majoris at 45 lightyears,
+so we could hear back from
+the Majorans as early as 2092.
+As the name Encounter
+2001 would seem to imply,
+the Millennial Voyage was
+scheduled to launch by the end of 2001.
+But shortly before
+the start of that year,
+the project was quietly
+rebranded as Team Encounter.
+While it's difficult to know exactly
+what was going on behind the scenes,
+it seems like they vastly
+overestimated the public's interest
+in sending
+messages into space.
+As mentioned before, the
+team expected to attract
+somewhere between
+1.5 and 4.5 million customers.
+A few months after launch,
+they had sold 45...
+...tickets.
+While sales ramped up quite a
+bit before the first Cosmic Call,
+43 000 customers was still a far cry
+from the millions they had anticipated.
+With such lackluster
+performance,
+the company had no choice but to
+push back the launch date
+of the Millennial Voyage by several years
+and changed the name to Team Encounter.
+But even after significant delays,
+a few celebrity endorsements,
+and numerous attempts
+to get people interested,
+sales lagged behind
+expectations by a wide margin.
+By the summer of 2003, the company's
+main investor finally pulled the plug,
+ and the project was
+summarily abandoned.
+While this meant the
+Millennial Voyage was dead,
+Team Encounter did at the
+very least uphold their promise
+of transmitting a
+second Cosmic Call.
+The composition of which
+was very similar to the first.
+Just like before, it
+started with a primer
+designed by Yvan Dutil
+and Stéphane Dumas.
+However, they actually
+created a new set of glyphs,
+even more
+noise-resistant than the first.
+The 23 bitmaps were also redesigned
+and combined into one large image,
+but the contents of the primer
+stayed more or less the same.
+This was followed by a
+copy of the Arecibo Message,
+a few images from
+the Teenage Message,
+a description of the now
+canceled Millennial Voyage,
+and greetings by the
+staff at Team Encounter.
+Last but not least was
+the commercial payload.
+This included not just the names and
+greetings of more than 100 000 customers,
+but also more unique contributions
+like a chatbot program called Ella,
+the contents of
+an entire website,
+and the song Starman
+by David Bowie.
+All of which was, of course,
+converted into binary
+before being
+transmitted into space
+from the Evpatoria Deep Space
+Center on July 6, 2003.
+[Hugh Downs]
+The people of the planet Earth
+send their greetings and friendship to you,
+across lightyears of interstellar space.
+The message we send to you today contains
+information about our Solar System,
+our planet,
+and ourselves.
+We invite you to contact us and to share
+your knowledge, culture, and wisdom.
+May this Cosmic Call open an exciting
+dialogue between our two stars
+here in the Milky Way galaxy.
+Much like the first Cosmic Call, the
+second was beamed toward multiple targets.
+There were five in total, and
+the first one was Gliese 67.
+It's a binary system
+composed of a sunlike primary
+and a red dwarf companion that takes
+about 20 years to complete an orbit.
+While neither one is
+known to harbor any planets,
+and the distance between
+them is less than that
+between the Sun and
+Jupiter at closest approach,
+they're still far enough
+apart for an earthlike planet
+within their respective habitable
+zones to maintain a stable orbit.
+The second target
+was Gliese 208 A,
+which is only about half
+the size and mass of the Sun
+and forms a wide binary system
+with an even smaller companion.
+No planets as of yet, and it could
+be as young as half a billion years,
+which would make it unlikely
+to host a spacefaring civilization.
+Target number three
+was 55 Cancri A,
+a star that's a bit fainter
+and colder than the Sun,
+with a distant red
+dwarf companion.
+It's the host of five
+confirmed planets,
+with the fourth one, dubbed Harriot,
+orbiting within the habitable zone.
+Now, because Harriot's mass is at
+least three times that of Neptune,
+it's not a very likely
+candidate for life as we know it.
+But it's not inconceivable for life to
+have emerged on an earthlike moon
+in orbit around Harriot.
+Not only that, but it is possible for an
+earthlike planet to maintain a stable orbit
+within the outer half
+of the habitable zone,
+although simulations suggest that such
+a planet is far more likely to have formed
+just outside of it.
+The fourth target
+was 47 Ursae Majoris,
+which was previously the
+target of the Teenage Message,
+making this the first time we've
+signaled the same star more than once.
+Finally, the fifth
+target was Gliese 49,
+which has a lot in common
+with the second target.
+It's a red dwarf about half
+the size and mass of the Sun
+that probably forms an
+extremely wide binary system
+with an even
+smaller companion.
+While a planet with a mass of
+more than five times that of Earth
+has been detected
+around the primary,
+it's unlikely to be habitable
+due to its proximity to the star.
+But even if that wasn't the case,
+the system is probably too young
+to host a communicative
+civilization in the first place.
+Nevertheless, Gliese 49 is the
+least distant of the five targets
+at 32 lightyears,
+meaning any potential replies
+could reach us no sooner than 2067.
+Now, two years after
+the second Cosmic Call
+in the small European
+Republic of San Marino,
+Hungarian astronomer Iván Almár
+proposed a ten-point scale
+for quantifying the risk
+of interstellar messages.
+According to this scale, a
+transmission like the Arecibo Message
+carries a risk of 8, which is characterized
+as a far-reaching threat to humanity.
+Meanwhile, the two
+Cosmic Calls and the Teenage Message
+supposedly carry a risk of 7,
+giving them a threat level of high.
+While the risk factor is partially
+determined by objective metrics
+like signal strength
+and duration,
+it's also based on the
+contents of a message.
+This makes the San Marino Scale
+inherently subjective,
+and it also fails to consider other
+crucial factors like the distance to
+and habitability of the target.
+That being said, the creation
+of the San Marino Scale
+is a fascinating
+development because
+it highlights just how contentious
+the transmission debate had become.
+Many prominent figures
+within the SETI community,
+that being the
+Search for Extraterrestrial Intelligence,
+had become a lot more
+hesitant or outright opposed
+to what had come
+to be known as METI,
+Messaging Extraterrestrial Intelligence.
+A term coined by none
+other than Alexander Zaitsev
+during the creation of
+the Teenage Message.
+Pushing back against this
+growing opposition to METI,
+Zaitsev reasoned that
+"in a galaxy where everyone is
+listening and no one is speaking...
+...someone has to
+make the first move."
+He called attention to a poll showing that
+78% of more than 140 000 SETI enthusiasts
+were, in fact,
+in support of METI.
+What he doesn't mention is that
+over half of those same respondents
+were still unsure if the aliens
+they were hoping to contact
+were more likely to
+be friendly or hostile.
+Throughout the 1990s,
+there was increasing demand within
+NASA to launch a mission to Pluto.
+At the time, it was the last
+unexplored planet of the Solar System,
+and even our most powerful telescopes
+could resolve nothing but a nebulous disc.
+After numerous failed attempts
+to secure the necessary funding,
+the spacecraft New Horizons was
+successfully launched on January 19, 2006.
+[Announcer]
+Five.
+[Announcer]
+Four.
+[Announcer]
+Three.
+[Announcer]
+Two
+[Announcer]
+One.
+We have ignition and liftoff of
+NASA's New Horizons spacecraft
+on a decade long voyage to visit
+the planet Pluto and then beyond.
+After borrowing some extra
+speed from the almighty Jupiter,
+New Horizons finally
+caught up with Pluto in 2015.
+At the time of the launch, Pluto
+was still recognized as a planet.
+But only seven
+months into the mission,
+it was reclassified by the
+International Astronomical Union
+as a dwarf planet.
+A decision that remains
+somewhat controversial to this day.
+Although, strictly
+semantically speaking,
+a dwarf planet
+is still a planet.
+It's right there
+in the name.
+Anyway, much like the
+Pioneer and Voyager probes,
+New Horizons continued on into deep
+space, destined to leave the Solar System
+and roam the galaxy.
+Yet unlike its predecessors,
+it does not carry a message.
+According to lead
+scientist Alan Stern,
+the inclusion of a plaque was
+brought up during the planning stages.
+But he ultimately
+rejected that proposal
+out of concern it might
+spark some sort of controversy
+that could take focus
+away from the mission.
+Not unlike what happened
+back in the '70s, when
+actual adult human beings
+realized that underneath our clothes
+is not more clothes.
+Given that New Horizons
+was but the latest
+in a long series of failed attempts
+to launch a mission to Pluto,
+Stern did not want to risk
+yet another delay or worse.
+But as stern as Stern might have
+been regarding a deliberate message,
+he was not opposed to the inclusion of
+nine symbolic items described as mementos,
+placed within the nooks and
+crannies of the spacecraft.
+The most significant of which
+was this aluminum canister
+containing the ashes
+of Clyde Tombaugh,
+the American astronomer
+who discovered Pluto in 1930.
+Shortly before his
+passing in 1997,
+Tombaugh requested that his
+cremains be launched into space,
+and what better way
+to honor that request
+than to sail him past the
+planet that he discovered.
+The other eight mementos included
+two flags of the United States;
+two state quarters, one from
+Maryland and one from Florida,
+honoring the states in which
+the probe was built and launched;
+a chunk of SpaceShipOne,
+paying tribute to the first successful
+crewed spaceflight by a private company;
+a postage stamp describing Pluto as
+the only planet "NOT YET EXPLORED";
+an off-the-shelf
+CD on the port side,
+loaded with the names of
+more than 400 000 people
+who signed up during
+an online campaign;
+and another CD on
+the starboard side,
+loaded with notes
+and photographs
+of people responsible for designing,
+building, and launching New Horizons.
+According to Stern,
+these artifacts were
+"more efforts of the
+heart than the head"
+and were intended
+for us here on Earth,
+not whomever might stumble
+upon the probe in the distant future.
+In fact, commercial
+CDs degrade over time
+and become unreadable within
+decades or a few centuries at most.
+Although, those estimates
+assume an earthlike environment,
+not a spacecraft floating
+through the vacuum of space
+while being shielded from a lot of
+otherwise damaging ultraviolet radiation
+by a thermal blanket.
+Somehow, longevity estimates for a
+CD being stored in those conditions
+never came up in
+the search results.
+Anyway, the lack of a
+deliberate physical message
+bothered some people
+enough that in 2013,
+one of the makers of the
+Golden Records, Jon Lomberg,
+launched a campaign
+to create a digital one.
+The idea was for people
+around the world to submit
+sounds, images,
+and other material
+that could be uploaded to one of the
+memory banks aboard the spacecraft.
+While there was a lot of
+public support for the project
+and Alan Stern was
+open to the idea,
+the One Earth message
+never materialized.
+After a failed Kickstarter
+campaign in 2017,
+Lomberg stated in 2020 that
+NASA had initially said, "Yes",
+but later
+changed their minds.
+Even if the project
+had succeeded,
+the One Earth message would've been
+no less symbolic than the nine mementos
+because, just like a compact disc,
+computer memory degrades over time.
+Even in the most
+optimistic of circumstances,
+we're talking centuries,
+possibly a few millennia at best.
+While it is a bit disappointing
+that no deliberate
+lasting message was
+included with New Horizons,
+let's not forget that the
+probe itself is a message.
+One that would provide any
+recipients with immediate confirmation
+that they're not alone.
+Although, that's presuming, of
+course, the probe is ever found.
+As I'm recording this,
+New Horizons has not been directed
+towards any particular star system,
+but that could
+change in the future.
+Following its encounter
+with Pluto in 2015
+and this malformed
+space-potato in 2019,
+the probe is now gliding
+through empty space
+while astronomers keep
+searching for additional flyby targets.
+So far, none have
+been detected,
+but the probe has enough juice to
+keep going until at least the 2040s.
+So a few decades from now,
+shortly before it runs out of power,
+NASA could choose to steer
+the probe towards a star system
+in its general
+direction of travel.
+While such a course-corrected
+voyage would still take untold eons, and
+humanity could be long
+gone by the time it arrives,
+I think it would be quite exciting to know
+that one of our foremost ambassadors
+was headed for something
+rather than nothing.
+In early 2008, a man
+named Martin Lewis
+approached NASA with the idea of beaming
+The Beatles song Across the Universe
+across the universe.
+As a Beatles historian,
+Lewis sought to commemorate the
+40th anniversary of the song's recording,
+and NASA seems to have agreed
+because the year also happened to mark
+the 50th anniversary
+of the agency's founding.
+Using a massive antenna at the
+Deep Space Communications Complex
+located west of Madrid
+in the middle of Spain,
+the nearly 4-minute song was beamed
+towards Polaris, the famous North Star,
+ on February 4, 2008.
+Former Beatles member Paul McCartney
+approved of the message by saying...
+But it's highly unlikely
+for Polaris to be inhabited.
+For one thing, it's not a solitary
+star but a system of three.
+The primary is a supergiant that's about
+two and a half thousand times brighter
+and nearly fifty times
+larger than the Sun.
+Placed at the center
+of the Solar System,
+its radius would extend
+about halfway to Mercury.
+Meanwhile, its closest companion
+is a bit more massive than the Sun
+and takes nearly 30 years
+to complete an orbit.
+This tight-knit binary system
+is then encircled by a third star
+that's many tens
+of Pluto orbits away.
+No planets have been
+discovered as of yet, but
+even if an earthlike
+planet with a stable orbit
+could be found within one
+of the stars' habitable zones,
+Polaris probably hasn't
+existed long enough
+for intelligent life
+to have emerged.
+While the two companions
+could be as old as two billion years,
+it seems like the primary has only
+been around for a few tens of millions.
+As if that was
+not bad enough,
+Across the Universe won't arrive
+until the middle of the 25th century
+because Polaris is more
+than 400 lightyears away.
+In the spring of 2008,
+the brand Doritos launched a
+campaign in the United Kingdom called
+You Make It, We Play It.
+The idea was for members of the public
+to create a short commercial about Doritos,
+and the winning entry would not
+only be played on national television,
+but also
+beamed into space.
+From a radar station in the middle
+of Svalbard in the Arctic Circle,
+a six-hour loop of the 30-second
+advert departed Earth on June 12, 2008.
+The target was, once
+again, 47 Ursae Majoris,
+meaning we've now dispatched three
+separate messages to this singular star.
+Presuming the
+Majorans are listening,
+they'll be hearing the
+Teenage Message in late 2046,
+the second
+Cosmic Call in late 2048,
+and an unprompted admission
+that we like to hasten our mortal doom
+by voluntarily consuming
+dusty triangles of death
+sometime in late 2053.
+Response time?
+Let's hope not.
+In the summer of 2008,
+a now-defunct social
+media platform named Bebo
+launched a project known
+as A Message From Earth.
+It primarily functioned as a publicity
+stunt to advertise the website,
+and like so many initiatives before it,
+crowdsourced the creation of a message
+by inviting its users to
+submit text and images.
+Some untold number of submissions,
+and several months later,
+the 501 most upvoted entries
+were beamed into space
+from the Evpatoria Deep
+Space Center on October 9, 2008.
+Considering that this
+was open to the internet,
+I strongly suspect many messages were a
+lot less sanitized than what we just heard.
+But since participation required you to
+be logged in and Bebo went offline in 2013,
+very little of A Message From Earth
+has been preserved.
+Nevertheless, the target was a
+red dwarf known as Gliese 581
+that's a lot smaller, lighter,
+fainter, and colder than the Sun.
+What this means is that an
+earthlike planet within this system
+has to orbit very
+close to its star
+to receive the same amount
+of energy as the Earth.
+So close, in fact, that the outer edge
+of the habitable zone around Gliese 581
+is closer than Mercury is
+to the Sun by a wide margin.
+With planets orbiting so close, it
+makes them vulnerable to flaring events,
+and it just so happens that red dwarfs have
+a penchant for sudden bursts of radiation.
+Not only can these eruptions have a
+sterilizing effect on nearby planets,
+but if there's one thing that life
+on Earth does not appreciate,
+it's sudden and dramatic
+changes to the climate.
+Not that we would know anything
+about that, now, would we?
+The good news
+is that Gliese 581
+has a better chance than most
+of hosting an earthlike planet
+because it's very old, and
+therefore a lot less active
+than many of its
+younger siblings.
+It's also quite close at
+less than 21 lightyears,
+meaning a reply could
+arrive as early as 2049.
+Even more promising
+is that shortly before
+and after A Message From Earth
+was transmitted,
+astronomers discovered
+not just one, but two planets
+a few times more
+massive than Earth
+orbiting within the
+star's habitable zone.
+Unfortunately, follow-up studies
+failed to corroborate those findings,
+suggesting the initially planet-looking
+signals were nothing more than noise.
+Unless additional planets
+can be found in the future,
+any remaining
+hope of life
+falls to the three confirmed
+planets that lie a bit further inward.
+However, due to their even
+greater proximity to the star with
+orbital periods of
+only a few days,
+chances are they're less
+earthlike and more mercurylike.
+To commemorate
+the 400th anniversary
+of astronomical contributions made by
+Galileo Galilei and Johannes Kepler in 1609,
+the United Nations along with the
+International Astronomical Union
+declared 2009 the
+International Year of Astronomy.
+Unsure of how best to
+celebrate this milestone,
+a representative of the
+Australian government
+reached out to a popular science
+magazine known as Cosmos.
+The magazine's editor-in-chief,
+Wilson da Silva,
+suggested they transmit
+an interstellar message
+during an upcoming annual event
+known as National Science Week.
+They were soon given the
+green light by the government,
+and after consulting a bunch of
+astronomers, NASA, and others,
+Cosmos launched a website
+called Hello From Earth.
+The project was described by
+da Silva as "Twitter to the Stars"
+because the idea was to allow
+anyone to submit a brief text message
+of no more than 160
+characters in length.
+When the submission period came
+to a close less than two weeks later,
+the website had received
+nearly 26 000 messages.
+According to da Silva, less
+than 1% of the comments
+contained some sort of rule-breaking
+content like profanity, slurs, and so on.
+They were also
+forced by NASA
+to remove anything deemed
+even remotely sexual or aggressive,
+like the word "breast" and the
+phrase "all your base are belong to us",
+which is just a line from an old
+video game that later became a meme.
+As someone who's old enough to have been
+around back when this meme was still popular,
+this might be one of the most depressing
+things I've ever had to explain in a video.
+Painful reminders that we're all stuck on a
+travelator towards eternal nothingness aside,
+once all the messages had
+been vetted and approved,
+they were transmitted
+from a large antenna
+at the Canberra Deep Space
+Communications Complex
+in the Australian southeast
+on August 28, 2009.
+Much like A Message From Earth,
+Hello From Earth
+was also directed towards
+the nearby red dwarf Gliese 581.
+As mentioned before,
+observations conducted back then
+suggested the presence of two
+planets within the star's habitable zone,
+but those findings
+have since been refuted.
+Nevertheless, Gliese 581 is now the
+second star to be signaled more than once
+ after 47 Ursae Majoris.
+While the
+International Year of Astronomy
+was primarily dedicated
+to Galileo and Kepler,
+2009 also marked the 35th
+anniversary of the Arecibo Message.
+Something that American artist Joe Davis
+decided to celebrate in his own unique way.
+One of the most vital biological
+mechanisms on Earth is photosynthesis,
+the ability of some
+organisms like plants and algae
+to produce life-essential oxygen using
+water, sunlight, and carbon dioxide.
+Now, a crucial component of photosynthesis
+is a special molecule known as RuBisCO.
+RuBisCO is what's known as a protein,
+or more specifically an enzyme,
+that's been around
+for billions of years.
+Presuming the evolution of life here on
+Earth is typical rather than special,
+one possible way to
+communicate with an alien species
+would be to send them very
+basic biological information.
+If their path to intelligence bears
+any resemblance to our own,
+there's a chance they'll
+recognize an enzyme
+as ancient and
+rudimentary as RuBisCO.
+This was the idea that occurred
+to Joe Davis in late 2009.
+But instead of using something
+more conventional like binary code,
+he decided to map the RuBisCO gene sequence
+to four increasingly syllabic phrases
+alluding to an
+ancient Greek proverb.
+These were then vocalized and
+turned into a 15-minute audio sample
+using the text-to-speech
+feature on a regular iPhone.
+Now, if you feel like you couldn't
+quite follow all of that, no need to worry.
+There's zero chance
+the aliens will either.
+Much like Davis' previous project, the
+RuBisCO Stars Message was largely symbolic
+and primarily intended to evoke a
+reaction from people here on Earth.
+Nevertheless, using his
+academic connections,
+Davis managed to book
+time at the Arecibo Telescope.
+Then, on November 7, 2009,
+just over a week before the 35th
+anniversary of the Arecibo Message,
+a frequency-shifted audio
+recording of a synthetic voice
+rattling off fragmentary sentences
+representing the RuBisCO gene sequence
+was beamed towards
+three nearby stars.
+The first target was TZ Arietis, a red
+dwarf less than 15 lightyears away
+with one confirmed planet
+approaching the mass of Saturn.
+It's a very active
+flare star so
+even if an earthlike planet could be found,
+it's unlikely to host life as we know it.
+Meanwhile, the third
+target was Kappa¹ Ceti,
+a sunlike star barely
+30 lightyears from Earth.
+While it is similar to the Sun,
+it's also a lot younger,
+making it unlikely that
+sufficient time has elapsed
+for a communicative
+civilization to have emerged.
+But the second target
+is a lot more interesting.
+It's another red dwarf
+known as Teegarden's Star,
+and while it does
+exhibit occasional flaring,
+it's a lot older and much less
+active than most of its kind.
+Furthermore, it's home
+to three confirmed planets
+with masses very
+similar to that of Earth,
+and two of them orbit
+within the habitable zone.
+To quote a recent paper,
+they are "among the most
+Earth-like exoplanets currently known."
+But earthlike does not
+necessarily mean habitable
+because flares are but one obstacle
+that red dwarf planets have to overcome.
+Another potential hazard is
+something known as tidal locking.
+Without going into
+too much detail,
+the simplest form of tidal locking is
+when the rotation of a celestial body
+becomes synchronized
+with its orbital period.
+The most famous
+example of this is the Moon.
+It completes precisely one rotation
+for every orbit around the Earth,
+which is why we only ever
+see one side of the Moon.
+The reason this happens is a bit
+complicated, but it's tied to proximity.
+The tighter the orbit,
+the more likely it is for a celestial
+body to become tidally locked to its host.
+As you can imagine, planets orbiting
+red dwarfs are especially susceptible,
+as they have to orbit
+very close to their star
+to retain liquid water
+on their surface.
+Sure enough, the three
+planets orbiting Teegarden's Star
+are all believed to be tidally
+locked, just like the Moon.
+This is less than ideal
+because it means that one hemisphere
+is cooked by everlasting starlight
+while the other is
+plunged into eternal night.
+Habitability estimates
+for such bisected worlds
+range from extremely
+pessimistic to cautiously optimistic
+because some
+climate models suggest
+warm air from the dayside
+creeps into the nightside,
+which pushes cold air from the
+nightside into the dayside, and so on.
+The end result of which is a planet
+with a surprisingly temperate climate
+that keeps water at perfect equilibrium
+between freezing and evaporating.
+But even if we accept
+the more optimistic models,
+the proximity of
+red dwarf planets
+also makes them less likely to
+retain an atmosphere in the first place.
+That's because stars tend to shed
+vast quantities of material into space,
+and the closer you get, the more
+intense that stellar wind becomes.
+As if that was not bad enough,
+this wind is occasionally
+interrupted by more explosive events
+like coronal mass ejections that can expel
+billions of tons of superheated plasma
+in a matter of minutes.
+Here's one being ejected from the
+Sun with the Earth hauntingly to scale.
+In the case of
+Teegarden's Star
+the two innermost planets are
+between 9 and 15 times closer
+than Mercury is to the Sun.
+It only takes them 11 and 5 days,
+respectively, to complete an orbit.
+According to one recent study, that's
+close enough for the stellar winds alone
+to completely strip those
+planets of a lasting atmosphere.
+While atmospheric erosion could be
+mitigated by a strong magnetic field
+like the one that
+surrounds the Earth,
+the magnetosphere
+of tidally locked planets
+would likely be reduced
+by their sluggish rotation.
+All that being said, the habitability of
+red dwarf planets remains open to debate.
+There is so much
+we don't know, and
+theories, simulations,
+and mathematical models
+can only do so much
+to fill in the blanks.
+Red dwarfs account for approximately three
+quarters of all stars in the Milky Way,
+so it would be a real shame if not a single
+one of them can support life as we know it.
+It's possible that some environments
+are conducive to life while others are not.
+The tricky part is determining
+where that line should be drawn.
+Presuming the planets
+orbiting Teegarden's Star
+have, in fact, cradled beings
+of sufficient intelligence,
+a reply to the RuBisCO Stars
+Message could be heading our way
+right this very moment.
+The signal would've reached
+the Teegardenese back in 2022,
+which amounts to a
+roundtrip ETA of 2034.
+Don't forget to
+mark your calendars.
+No, genuinely this time.
+Late one evening
+on August 15, 1977,
+the Big Ear Telescope in the US state of
+Ohio performed a routine survey of the sky.
+A few days later, a
+volunteer named Jerry Ehman
+sat down to review
+the collected data.
+What he found was a
+signal so exceptionally strong
+that he encircled the
+sequence on the printout sheet
+and famously wrote "Wow!"
+in the left-hand margin.
+The Wow! Signal remains
+a mystery to this day.
+Not least of all because it
+was never detected again
+despite numerous
+attempts to do so.
+The sequence 6-E-Q-U-J-5
+is not some sort of code
+but merely the intensity
+of the signal over time,
+where numbers above 9 are
+represented by letters to save space.
+It makes a lot more sense if
+we plot it onto a graph like this.
+It begins with a value of 6,
+meaning it was six times more
+intense than normal background noise.
+The signal then jumped
+up to 14, followed by 26,
+and a peak intensity of
+30 times above background.
+The signal then fell back down to
+19 and then 5, before it disappeared.
+Each of the six samples were
+recorded 12 seconds apart
+and this 72-second
+rise and fall
+is perfectly consistent with the
+telescope panning over the source
+along with the Earth's rotation.
+In other words, the
+source of the Wow! Signal
+appears to have been more or less fixed
+in the night sky, much like a distant star.
+Had it been an earthbound source it
+would have moved with the telescope
+while things like
+airplanes and satellites
+would likely have moved too fast to
+remain visible for the whole 72 seconds.
+The Wow! Signal was
+also tantalizingly close
+to the frequency of the
+aforementioned hydrogen line.
+This makes it even less
+likely to be man-made because
+it falls within a protected band of
+frequencies reserved for radio astronomy.
+On top of that, it had a
+very narrow bandwidth.
+What this means is that,
+unlike a star, for instance,
+which emits radiation across a
+wide spectrum of frequencies,
+the Wow! Signal
+was very focused.
+It's by no means impossible for a natural
+source to produce such a concentrated beam,
+ but it is unusual.
+This is what makes the
+Wow! Signal so curious.
+It bears all the hallmarks
+of a technosignature.
+Just as we have
+identified hydrogen,
+the most abundant element in the
+universe, as a means of initiating contact,
+the aliens could've
+done the same.
+Just as we tend to transmit extremely
+brief non-repeating messages,
+the aliens could
+be doing the same.
+Unfortunately, the peculiar
+design of the Big Ear Telescope
+makes it impossible to
+pinpoint the source of the signal.
+The setup was such that two large
+swaths of sky were scanned simultaneously,
+but there's no way to tell them
+apart when looking at the data.
+Even more peculiar is that the
+signal was only detected once
+despite this
+dual-scanning design.
+This can only mean
+one of two things.
+Scenario one is that the source had
+been transmitting for some
+indeterminate amount of
+time ahead of the first scan,
+yet ceased transmitting before it
+could be detected again by the second.
+Scenario two is that the
+source began transmitting
+during the roughly three minute
+window between the two scans,
+and continued to do so
+for who knows how long.
+Now, for a signal to carry information,
+it has to exhibit some sort of pattern.
+For instance, we tend to encode our
+messages by using a binary pattern
+that shifts back and forth
+between two different frequencies
+or levels of amplitude.
+The Wow! Signal did not
+exhibit any such pattern.
+Both its frequency
+and amplitude
+had a constant unmodulated
+appearance throughout the whole thing.
+That being said, we
+can't rule out the possibility
+that a sequence of
+fluctuations were present
+but that they fell below the threshold of
+what the Big Ear telescope could detect.
+No instrument has
+infinite resolution
+and Big Ear had some
+quite significant blind spots.
+To quote Ehman...
+On the off-chance that the Wow! Signal
+was a message from another civilization,
+the National Geographic Channel decided to
+transmit a reply on its 35th anniversary.
+After collecting over 17 000 tweets and
+about a dozen video-recorded greetings
+by various celebrities
+and public figures,
+the Wow! Reply was beamed into space from
+the Arecibo Telescope on August 15, 2012.
+At least that is what
+the public was told.
+But after contacting someone who worked at
+Arecibo when this transmission took place,
+they told me that the stress of beaming
+thousands of messages into space
+had caused the aging transmitter
+to overheat and break down.
+They could not recall how many
+messages made it through, but
+it could have been as
+few as just a single one.
+Now, because the details of the project had
+already been publicized ahead of time,
+and no correction
+was ever issued,
+everyone assumed the Wow! Reply
+went off without a hitch.
+But not only is it unclear
+how many tweets were sent,
+it's also unclear where they went because
+the Wow! Reply had three intended targets.
+They were all sunlike stars known as
+HD 54351, 37 Geminorum, and 55 Cancri A.
+Very little is known
+about the first,
+and it's quite some distance
+away at 140 lightyears.
+Meanwhile, the other
+two are much closer
+and have both been targeted
+by previous METI experiments.
+The person I spoke to could not
+recall which one was targeted first, so
+my best guess
+is HD 54351
+because that's the one listed first
+in a press release about the project.
+Now, with a name
+like Wow! Reply,
+you'd think the three targets were
+located within one of the two regions
+from which the Wow! Signal
+is known to have originated.
+Well, if you did think that, it might be
+time to recalibrate your common sense
+because all three targets are not
+only located outside these regions
+but in the complete
+opposite direction.
+The reason for
+this is very simple.
+The location where the
+Wow! Signal was detected
+was beyond the reach of the upward-facing
+and stationary Arecibo Telescope.
+But if that's the case, why even call
+it the Wow! Reply in the first place?
+Apart from being transmitted
+on its 35th anniversary,
+none of this had anything
+to do with the Wow! Signal.
+While the signal does have the
+hallmarks of an alien transmission,
+there's still a very good chance it
+was caused by a natural phenomenon.
+It's just a matter of
+identifying the correct one.
+For instance, one
+recent hypothesis
+tried to blame the whole episode
+on a pair of passing comets,
+but like all previous
+explanations,
+this one has failed to
+withstand further scrutiny.
+More recently, a paper published in
+2024 hypothesized that a powerful flare
+ejected by something
+like a magnetar
+could've been amplified
+by a cloud of hydrogen,
+which would explain
+the signal's frequency.
+Whether this is the solution
+that will finally crack the case
+or be relegated to the
+mounting list of dead ends,
+only time will tell.
+In the early 2010s, a film
+editor named Pierre Fabre
+conceived of a project
+dubbed Lone Signal.
+Much like Team Encounter
+and the Cosmic Calls,
+Lone Signal was an attempt to
+commercialize interstellar messaging.
+The project was envisioned
+as a social media platform
+where anyone could submit
+text, images, audio, and video
+for direct
+transmission into space.
+Another similarity between
+Lone Signal and the Cosmic Calls
+was the inclusion of a primer written
+in a mathematical language of sorts.
+Constructed by planetary
+scientist Michael Busch,
+every component of this language is
+represented by a string of eight digits
+between 0 and 7.
+For instance,
+1 + 1 = 2 looks like this,
+and here on the right is an
+example of some basic algebra.
+Things only become more
+complicated from there,
+but I'll spare you the details
+because, according to Busch,
+the technique used to encode
+the primer into the signal
+was far too fragile to survive the
+years-long trip across interstellar space.
+While the signal
+could still be detected,
+any patterns would become
+scrambled along the way,
+making it impossible to extract and
+decode the primer at the destination.
+In other words, alien astronomers may
+end up with their own Wow! Signal
+that doesn't seem to
+fluctuate in any meaningful way
+yet whose properties may still be
+difficult to ascribe to a natural source.
+Now, what truly sets Lone Signal apart from
+every other initiative mentioned so far
+is that it wasn't
+a one-time thing.
+Instead of transmitting the primer
+and public greetings all in one go,
+Lone Signal sought to
+establish a permanent beacon
+that would continuously transmit
+for years or even decades.
+To make that happen, they couldn't
+just book time at an active observatory
+but had to obtain long-term
+exclusive control over a telescope.
+After shopping around for a bit, they
+eventually secured a 30-year lease
+on a decommissioned telescope
+in southwestern California
+called the
+Jamesburg Earth Station.
+Then, after upgrading some
+of its aging equipment,
+Lone Signal began
+transmitting on June 17, 2013.
+But the team behind Lone
+Signal had even greater ambitions.
+Their long-term plan
+was to raise $100 million
+and to establish a network of
+telescopes to continuously signal
+multiple targets
+all at once.
+They likened themselves to SpaceX
+and hoped to create a global platform
+from which anyone in the world
+could beam any random thought
+directly into
+space all day long.
+But in a classic case of
+history repeating itself,
+the team behind Lone Signal,
+much like Team Encounter before them,
+vastly overestimated the
+public's interest in METI.
+Less than two
+months after launch,
+revenue from the website barely
+covered 2% of their operational costs.
+Pierre Fabre later
+wrote in a comment...
+...and that failure led investors
+to ultimately pull the plug.
+Nevertheless, the transmission target was
+yet another red dwarf called Gliese 526.
+It's less than 18 lightyears away
+and about twice as old as the Sun.
+While it is a relatively quiescent
+star with only occasional flaring,
+a planetary system
+has yet to be detected.
+Should it be home to a
+spacefaring civilization,
+they will have upwards of two
+months to notice our cosmic shouting,
+beginning in early 2031.
+Back in prehistoric times,
+not long after you pressed
+play on this documentary,
+I mentioned a series of
+METI experiments carried out
+by the National Space Development Agency
+of Japan in the mid-to-late 1990s.
+Designed by young students
+attending a NASDA space camp,
+these five bitmap images were transmitted
+from the Usuda Deep Space Center
+to various locations
+across the galaxy.
+Fast forward to 2013,
+and the successor to NASDA,
+the Japan Aerospace
+Exploration Agency,
+decided it was
+time to try again.
+During a similar space camp event,
+and using the same telescope as before,
+JAXA retransmitted this image of two
+parents and a child on September 22, 2013.
+A similar bitmap depicting a
+human standing next to the Sun
+was then transmitted the
+following year on August 23,
+although it's unclear
+exactly what it looked like.
+Nevertheless, both images
+were directed at 55 Cancri A
+which has been
+targeted in the past
+and discussed in more
+detail in a previous chapter.
+But much like what happened back in
+the '90s, the JAXA Space Camp Messages
+flew as much through the
+radar as they did under it.
+Instead, these events were largely
+overshadowed by new developments
+in the ongoing
+transmission debate.
+Most notably, in early 2015, over two
+dozen scientists and SETI enthusiasts,
+including a
+pre-disgraced Elon Musk,
+signed a petition calling for a
+"worldwide consensus" regarding METI.
+They took issue with the fact that
+past METI experiments had been
+"based upon the wishes
+of a few individuals"
+rather than a "broadly
+representative body".
+In part because the aliens are likely to be
+"millions of years more advanced than us",
+but also because "it is impossible to predict
+whether [they] will be benign or hostile."
+The petition concluded that the
+potential "consequences of contact"
+demanded "worldwide scientific,
+political and humanitarian discussion"
+in advance of any
+future transmissions.
+To which an artist in collaboration with
+the European Space Agency responded...
+In early 2016, an artist and
+independent researcher named Paul Quast
+created a crowdsourced art project known as
+A Simple Response to an Elemental Message.
+It was similar to previous
+initiatives, except, this time,
+people were asked to frame their
+submissions as an answer to the question,
+"How will our present environmental
+interactions shape the future?"
+As the question implies, the
+project was about climate change
+and sought to capture a global portrait
+of humanity's thoughts and feelings
+about the present and
+future state of the world.
+As explained by Quast
+in a few interviews,
+the project was intended more as a
+time capsule for future generations
+than any potential
+aliens in outer space.
+This is also reflected by the selection
+of Polaris as the transmission target.
+As mentioned in
+a previous chapter,
+it's a relatively young and
+currently planetless system that's
+ highly unlikely to
+host life as we know it.
+Instead, Polaris was
+primarily selected
+due to its historical significance
+as the famous North Star.
+Nevertheless, A Simple
+Response to an Elemental Message
+received nearly 4 000 submissions
+over the course of about eight months.
+In addition to the
+public messages,
+Quast also included a few
+copies of the Arecibo Message,
+81 quotes by
+prominent figures,
+and 70 photographs
+of Earth and humanity.
+All of which was then converted into
+binary and finally blasted into space
+by the Cebreros Deep Space Ground Station
+in central Spain on October 10, 2016.
+According to a subsequent
+review by Quast,
+he found that just under 20%
+of the responses were optimistic,
+just over 42% expressed
+some form of dread or concern,
+while the remaining
+38% were largely neutral.
+In late 2017, a Spanish
+music festival known as Sónar
+began transmitting brief
+snippets of music into space
+to commemorate
+its 25th anniversary.
+Each composition was no
+more than 10 seconds in length
+and were provided by 38 musicians
+with connections to the festival.
+The first 18 were transmitted over the
+course of three days in October 2017
+from a telescope located
+in the far north of Norway.
+The remaining batch of 20
+was then transmitted
+over the course of another three
+days in May 2018 using the same facility.
+What makes this initiative a
+bit more interesting, though,
+is the fact that all 38 compositions
+were preceded by a primer.
+In fact, not just one,
+but several.
+The first one began with two lists of prime
+numbers intended to attract attention.
+ While the primes were
+technically expressed in binary,
+it would be more accurate to say that
+they're expressed in unary, repeated twice.
+So 0-0-1-1 for decimal 2,
+0-0-0-1-1-1 for decimal 3,
+0-0-0-0-0-1-1-1-1-1
+for decimal 5, and so on.
+This was followed by a
+simple count from 0 to 255
+expressed using eight-digit chunks
+of binary code, also known as a byte.
+So it goes from eight
+zeroes representing 0
+all the way up to eight
+ones representing 255,
+the highest value possible
+using 8-bit encoding.
+Okay, following that introductory
+sequence was a second primer
+that differed between
+the two sessions.
+The one included with the first
+batch of music was written such that
+all 256 bytes represented a
+unique number, word, or concept.
+These bytes were then used to
+convey increasingly complex ideas,
+much the same way it's been
+done in previous initiatives,
+starting with some basic math before
+delving into things like physics and sound.
+The one included with
+the second batch of music
+was nearly identical to the one created
+by Yvan Dutil and Stéphane Dumas
+for Cosmic Call II.
+Some of the components
+have been shuffled around,
+and there's some updated
+information about the telescope,
+but otherwise, it's
+exactly the same.
+Immediately following
+that was another bitmap
+that tried to graphically
+convey the concept of a byte
+by counting from
+0 to 255 once again.
+This was then followed
+by an image of a sine wave
+intended to visually convey
+the concept of sound and music.
+Now, the target of
+these transmissions was
+an ancient red dwarf
+known as Luyten's Star.
+It's a bit more than 12 lightyears
+away and harbors two confirmed planets.
+The outermost of which, Luyten b,
+is about three times the mass of Earth
+and orbits within the
+star's habitable zone.
+In fact, it is one of the nearest
+earthlike planets ever discovered,
+and it's the sole reason that
+this system was targeted.
+But as mentioned previously, the
+characteristic dimness of red dwarfs
+places the habitable
+zone very close to the star.
+In the case of Luyten b,
+it orbits about four times closer
+than Mercury orbits the Sun,
+takes less than 19 days
+to complete a revolution,
+and is all but guaranteed
+to be tidally locked.
+On the plus side, Luyten's Star exhibits
+minimal flaring due to its advanced age.
+Presuming Luyten b is inhabited
+by an advanced civilization,
+they'd have about 11 minutes per day
+for three consecutive days in early 2030
+to pick up the first
+batch of music,
+with the second arriving
+a few months later.
+Presuming they do so, we could hear
+back from the Luytenians as early as 2042.
+Okay, we've finally reached the
+most recent interstellar message
+as of the making
+of this documentary.
+Well, kind of.
+We'll get to that in a moment.
+Following the death of
+Stephen Hawking in early 2018,
+his ashes were interred at a famous
+church in London called Westminster Abbey.
+ As the memorial
+service came to a close,
+an original score set
+against Hawking's iconic voice
+and written by Greek
+composer Vangelis
+was simultaneously
+beamed into space
+from the Cebreros Deep Space
+Ground Station on June 15, 2018.
+The target was a binary system
+nearly five thousand lightyears away
+known as V616 Monocerotis.
+It's composed of a star with about
+one-third the mass of the Sun and...
+...a black hole.
+At the time, it was the nearest
+black hole to the Solar System,
+although it has since been dethroned
+by at least a few other candidates.
+Now, paying tribute
+to Stephen Hawking
+by beaming his voice into space
+may seem like an odd choice,
+considering he was a very
+outspoken critic of METI.
+But as explained
+by his daughter Lucy,
+the broadcast was a
+purely symbolic gesture
+intended not only to celebrate
+his scientific contributions,
+but also to fulfill his lifelong
+dream of going into space.
+This is further reflected
+by the transmission target,
+as Hawking dedicated much of
+his life to the study of black holes.
+Besides, we're hardly gonna
+make contact with aliens
+in the vicinity of a
+black hole, right?
+Well, so, about that...
+This is a view of
+the Solar System
+showing all five interstellar spacecraft
+that humanity has launched to date.
+If we zoom out a bit further,
+we can see 23 of the
+nearest star systems
+targeted by at least one of the radio
+transmissions mentioned in this video.
+But to see the two most distant targets,
+we have to zoom out to a galactic scale.
+Here we find V616 Monocerotis, the target
+of Stephen Hawking's Memorial Broadcast,
+and finally Messier 13, the
+target of the Arecibo Message.
+But this is by no
+means an exhaustive list.
+Some radio transmissions,
+marked here in grey,
+did not make the cut because
+they failed to meet one of two criteria
+that I made up for this video.
+The first one is that a transmission
+must be deliberately directed
+at an extrasolar target.
+After all, the goal of METI is
+to contact another intelligence,
+so projects that aimlessly
+blast messages into space with
+no particular target
+in mind do not count.
+This includes signals that
+could accidentally be detected,
+like those routinely
+transmitted by astronomers to
+communicate with spacecraft or map the
+surface of bodies within the Solar System.
+To give you an example,
+in late 1962,
+a group of Soviet astronomers
+used this absolute beast of a telescope
+to bounce radar signals
+off the surface of Venus.
+For a bit of fun, they decided
+to modulate the radar pulses
+to spell out the words MIR, LENIN,
+and USSR using Morse Code.
+This is sometimes described
+as the first interstellar message
+because a lot of that
+radiation went right past Venus
+and continued on
+into deep space.
+Now, if you read
+about this online,
+you'll find claims that some
+portion of that excess radiation
+is currently heading for an obscure
+binary system known as HD 131336
+that's well over a
+thousand lightyears away.
+The phrasing can often make
+it seem as though this was
+planned by the original
+scientists back in 1962,
+but that is not the case.
+The true source of this claim
+is a forum post from 2002
+in which an amateur astronomer did
+some quick back-of-the-napkin calculations
+to suggest HD 131336 might
+have been near the path of the signal
+depending on the precise time
+of transmission, which is unknown.
+Given the imprecision
+of that guesstimate
+and the fact that the
+intended target was Venus,
+I decided not to
+include it on my list.
+The second criterion is that the
+strength of a transmitted signal
+must be greater
+than 100 megawatts.
+Now, for any radio astronomers watching,
+here I'm not talking about output power,
+but the much more crucial parameter,
+which is the effective radiated power
+that accounts for things like transmission
+frequency and gain of the antenna.
+For anyone curious, you can find
+a spreadsheet in the references
+with all the incredibly
+exciting technical details.
+Anyway, there's nothing
+special about 100 megawatts.
+I just needed some way to filter
+out some of the weaker transmissions
+from the stronger ones, and this seemed
+like a nice even number to draw that line.
+It's neither so high that
+everything is excluded
+nor so low that
+everything is included.
+It's just a way to rein in
+the scope of this video.
+While I tried to be as forgiving
+as possible with these two criteria,
+you could, of course,
+be a lot more strict.
+For instance, it is very common
+to categorize METI experiments
+based on how earnest or frivolous
+most experts perceive them to be.
+Take the Doritos Broadcast
+Project as an example.
+It is typically not regarded
+as a genuine attempt at METI
+because transmitting a commercial into
+space is obviously just a publicity stunt.
+It's rather silly, unscientific,
+and utterly indecipherable.
+To use the terminology favored by
+Alexander Zaitsev, it's "pseudo-METI".
+But as I've stressed multiple
+times throughout this video,
+what we say isn't
+all that important
+because we're probably not
+going to be understood anyway.
+What is important is
+that the signal has been
+modulated or manipulated
+in such a way
+that it does not resemble
+anything else in the universe.
+As long as the recipients are unable
+to ascribe the signal to a natural source,
+they will have no choice but to entertain
+the possibility of intelligent design.
+Besides, the distinction between
+genuine and pseudo-METI
+is highly subjective
+and inconsistent.
+For instance, the Arecibo Message is
+usually upheld as a prime example of METI
+despite Frank Drake himself
+describing it as a publicity stunt,
+and much of it
+is indecipherable.
+Likewise, the Message to Altair is
+typically regarded as genuine METI
+even though the Doritos Broadcast Project
+was about five times more powerful
+and lasted six times longer.
+Another approach would be to sort
+METI experiments based on the distance to
+and habitability of the target.
+You could, for instance, exclude
+the Arecibo Message because
+M13 is extremely far away
+and unlikely to be habitable.
+Same thing with
+Stephen Hawking's Memorial Broadcast
+directed at a black hole many
+thousands of lightyears away.
+But here's where things
+get a bit tricky because
+how do we determine
+when a target is too far away?
+In other words, how do we know when
+a signal is too weak or sufficiently strong
+to be detected by an alien civilization
+of which we know nothing about?
+The simplest approach would be to assume
+the recipients are no more advanced than us
+and use our present level of
+technology and scientific understanding
+as a baseline for detectability.
+In other words, if we can't
+detect it, neither can they.
+If that's the case, they
+would definitely struggle
+if not be outright
+unable to detect
+some of the messages
+mentioned in this video.
+But should we really
+make that assumption?
+Well, to paraphrase
+Carl Sagan,
+any civilization even
+just slightly behind us
+wouldn't be able to
+receive or transmit,
+whereas any civilization on par
+with or billions of years ahead of us
+could be.
+Odds are they will
+be more advanced,
+making range and detectability estimates
+based on the assumption that they're not
+feel rather pointless.
+But it feels equally pointless to assume
+that they are more advanced because
+then it just comes down to who
+writes the best science fiction.
+Does more advanced mean they have
+instruments that are similar to our own
+but simply larger
+and more sensitive?
+Does it mean they have long
+since abandoned radio technology
+in favor of something
+else entirely?
+Does it mean they have a more
+sophisticated understanding of physics,
+and that their technology would
+appear to us as nothing short of magic?
+Habitability estimates suffer
+from a similar problem because
+we obviously don't know if
+what we regard as habitable
+is the same as what
+they regard as habitable.
+Even if we assume that intelligent
+life can exclusively emerge
+on earthlike planets
+orbiting sunlike stars,
+that does not mean
+they will stay there.
+Perhaps there comes a time
+in the lifespan of any civilization
+when their energy requirements outpace that
+which can be provided by sunlike stars?
+Perhaps life is destined to seek
+out more extreme environments
+that we would never even
+think of as being habitable today?
+Perhaps the messages we've sent
+towards places most unlike our own...
+...are the most likely
+to receive a response?
+All this ambiguity is, of course, a big
+reason why many are so opposed to METI
+because the unknown
+allows us to imagine the worst.
+For instance, in early 2010,
+Stephen Hawking cautioned against
+deliberate communication attempts
+out of concern that aliens
+might not be too dissimilar
+from our past and
+present selves.
+As we've already seen
+throughout this video,
+this pessimistic view on humanity
+and first contact is very common,
+and for good reason.
+There are plenty of examples
+throughout human history
+in which a less
+developed society
+suffered at the hands
+of a more advanced one.
+The problem with pessimism,
+though, is that it's one-sided.
+It would be just as easy to leverage
+more positive trends and behaviours
+in support of an
+optimistic outcome.
+For instance, consider this
+critique by philosopher Guy Kahane.
+Considering how much we've
+improved in a very short span of time,
+things like child mortality,
+homicides, and poverty are declining
+while access to clean water, electricity,
+and life expectancy are increasing
+we only have to look at ourselves to
+see how intelligent life might develop
+into something we
+would want to meet.
+Perhaps not humanity of today
+since, you know, there's still...
+...plenty of room
+for improvement.
+But if we project these positive trend
+lines sufficiently far into the future,
+it's possible that much older
+civilizations will have long since outgrown
+their more
+destructive tendencies.
+Just as Hawking justified his belief
+that aliens will be hostile by saying,
+"Look at all the bad
+things we've done,"
+Frank Drake justified his belief
+that aliens will be friendly by saying,
+"Look at our
+capacity for growth."
+Neither argument is more or
+less valid than the other because
+we're obviously
+capable of both.
+But as the anti-METI
+crowd will often point out,
+this uncertainty
+is the problem.
+They will often argue that the mere
+possibility of an existential threat
+outweighs any
+potential benefits.
+To reiterate a quote
+from much earlier in the video...
+A common counterargument
+among those in favor of METI is that
+it's too late to worry about
+hostile aliens because
+we've been leaking radio signals into
+space for the better part of a century.
+Anyone within about 100 lightyears
+of Earth could, in theory,
+detect our presence by
+intercepting our television broadcasts.
+But as opponents of METI
+are often quick to point out,
+this unintentional leakage is
+extremely faint and diffused.
+While it's impossible
+to say what signals are
+too faint for an alien
+civilization to detect,
+a weaker signal is obviously more
+difficult to detect than a stronger one.
+But it's not just about signal
+strength, it's also about intent.
+An archer blindly shooting
+arrows in random directions
+is a lot less likely
+to strike a bullseye
+than the archer
+aiming for the target.
+Sure, radio leakage could
+accidentally expose our presence,
+but METI goes out of its way
+to maximize that outcome.
+It's the difference
+between a ship lost at sea
+that happens to spot the
+faint glow of a coastal town...
+...and a lighthouse.
+There isn't much we
+can do about the former
+because it's merely a
+byproduct of our civilization.
+But there's plenty we
+could do about the latter,
+like, you know,
+not build a lighthouse.
+While some critics advocate for
+precisely that, a planetwide ban on METI,
+such proposals are often countered
+by what's known as the SETI Paradox.
+It goes something like this.
+If we conclude that
+METI is too risky,
+and other civilizations
+reach that same conclusion,
+what would be the point of
+SETI if no one is transmitting?
+To quote the man
+who coined the term...
+The obvious problem with this argument
+is the assumption that all civilizations
+independently and inevitably
+reach the same conclusion.
+Even if we decided to
+cease transmitting tomorrow,
+that doesn't mean all other
+civilizations must behave as we do.
+In fact, this argument doesn't work
+even if METI is universally rejected
+because an absence
+of deliberate emissions
+does not preclude the
+detection of unintentional ones,
+even if it's a lot less likely.
+So the SETI Paradox isn't
+much of a paradox at all.
+It makes perfect sense to keep listening
+even if we never send another message.
+But this is just a hypothetical,
+of course, because we
+probably will send more
+messages in the future.
+After all, a planetwide ban would
+be extremely difficult to enforce,
+which is why some critics seek not to
+keep quiet but to regulate the noise.
+While there's no consensus on what
+form such regulation should take,
+popular ideas include an
+international treaty or policy
+that places
+restrictions on METI,
+some sort of review board
+or oversight committee
+elected to make decisions
+on humanity's behalf,
+or a democratic
+process where
+presumably everyone in
+the world gets a vote?
+The logistics of which I don't
+even dare to think about.
+While different policies and
+regulations could go a long way
+to reduce the number
+of transmissions,
+they're unlikely to eliminate
+the practice entirely.
+If people want to do
+something badly enough,
+there will always
+be a way to do it.
+Outlaw METI in one country,
+and people will go to another.
+Make it illegal around the world,
+and people will do it in secret.
+Hell, I wouldn't be
+surprised if a few messages
+have been dispatched
+in secret already.
+Think about it.
+Radio telescopes have been
+around for well over half a century.
+You're telling me not a single
+person has had the means and motive
+to beam a quick text to Proxima Centauri
+when no one else was looking?
+I'm not saying it's
+common, of course, but...
+...not once?
+I don't know about that.
+As pointed out by evolutionary
+biologist Wallace Arthur,
+we are, for better or worse, a
+species that cannot stand not knowing.
+Whether it's the other
+side of a mountain,
+the other side of an ocean,
+or the other side of the galaxy,
+the unknown will always
+evoke fear in some,
+and irresistible
+curiosity in others.
+No amount of debating
+is going to change that.
+Now, fortunately for
+those of you in camp fear,
+METI is extraordinarily
+unlikely to succeed.
+The stars we've targeted so
+far only account for a tiny fraction
+of the hundreds of billions
+of stars in the galaxy.
+Most of which are within just a
+few tens of lightyears of Earth
+even though the galaxy is
+about 100 000 lightyears across.
+For one of our
+messages to be received,
+the Milky Way is either so jam-packed
+with communicative civilizations
+that it's basically
+impossible to miss,
+or we would need to be
+luckier than the combined luck
+of all humans who
+have ever lucked...
+...and then some.
+It's still fun to think
+about, of course,
+in the same way it's fun to think
+about other improbabilities like
+winning the lottery.
+It could happen,
+but it's probably not going to.
+So, in my view, it doesn't
+really matter either way.
+But if I had to pick a side,
+I think I'm more persuaded by the
+arguments against METI than those in favor.
+As much as I would like to have
+confirmation that we're not alone,
+tying one end of a
+rope around your waist
+and the other end
+around humanity
+before sprinting
+headfirst into a dark room
+hoping there isn't
+a hole in the floor
+is probably not the
+wisest approach.
+Thank you for watching.
