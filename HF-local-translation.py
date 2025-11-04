@@ -22,6 +22,7 @@ def toTaglish(text):
 
     return translation
 
+# Taglish translation multiprocessing (deprecated)
 def toTaglish_multiprocessing(text, taglish_tokenizer, taglish_model, semaphore):
     semaphore.acquire()
     inputs = taglish_tokenizer(text, return_tensors="pt").to(taglish_model.device)
@@ -49,6 +50,7 @@ def translate(text, target):
 
     return translation
 
+# Translate using multiprocessing (deprecated)
 def translate_multiprocessing(text, target, NLLB_tokenizer, NLLB_model, semaphore):
     semaphore.acquire()
     inputs = NLLB_tokenizer(text, return_tensors="pt").to(NLLB_model.device)
@@ -63,8 +65,7 @@ def translate_multiprocessing(text, target, NLLB_tokenizer, NLLB_model, semaphor
     print(translation, end=" ")
     semaphore.release()
 
-
-# split sentence based on punctuation
+# Split sentence based on punctuation (deprecated)
 def separate_sentences(text):
     split_sentence = []
     ph = ""
@@ -106,7 +107,30 @@ def separate_sentences(text):
 
     return split_sentence
 
+# Translate to all NLLB languages
+def translate_all():
+    text = input("Text: ")
+    doc = nlp(text)
+    languages = list(nllb_token.keys())
 
+    split_sentences = [sent.text for sent in doc.sents] #separate_sentences(text)
+    for lang in languages:
+        nllb_target = nllb_token.get(lang) # NLLB target token
+
+        start = time.perf_counter()
+        out = ""
+        batch = 2
+        for i in range(0, len(split_sentences), batch):
+            to_be_translated = split_sentences[i]       # Gets first sentence per batch
+            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
+            out += translate(to_be_translated, nllb_target)
+
+        print(f"{lang}:", out)
+        end = time.perf_counter()
+        print(f"Time: {end - start:.2f}")
+        print()
+
+# Main
 def translate_main():
     text = input("Input Text: ")
     to = input("to Language (refer to list): ").lower()
@@ -120,30 +144,6 @@ def translate_main():
     start = time.perf_counter()
     if to == "taglish":
         gtts_target = "tl"
-
-        # # No Multiprocessing
-        # out = ""
-        # for sentence in split_sentences:
-        #     out += (toTaglish(sentence) + " ")
-        #     # print(toTaglish(sentence), end=" ")
-        # print(out)
-        # end = time.perf_counter()
-        # print(f"\nTime 1: {end - start:.2f}")
-
-        # # With Multiprocessing
-        # processes = []
-        # semaphore = Semaphore(4)
-        # for sentence in split_sentences:
-        #     processes.append(Process(target=toTaglish_multiprocessing, args=(sentence, taglish_tokenizer, taglish_model, semaphore)))
-
-        # for process in processes:
-        #     process.start()
-
-        # for process in processes:
-        #     process.join()
-
-        # end = time.perf_counter()
-        # print(f"\nTime 2: {end - start:.2f}")
 
         # Batch Processing
         start = time.perf_counter()
@@ -166,23 +166,23 @@ def translate_main():
                     gtts_target = "af"
                 case "tigrinya":
                     gtts_target = "am"
-                case "tamazight" | "bambara" | "wolof":
+                case "central_atlas_tamazight" | "bambara" | "wolof" | "egyptian" | "fulfulde" | "kabyle" | "mesopotamian" | "moroccan" | "najdi" | "north_levantine" | "south_levantine" | "ta'izzi-adeni" | "tamasheq" | "tunisian":
                     gtts_target = "ar"
-                case "assamese":
+                case "assamese" | "meitei":
                     gtts_target = "bn"
                 case "yiddish":
                     gtts_target = "de"
                 case "armenian" | "georgian":
                     gtts_target = "el"
-                case "ayacucho_quechua" | "central_aymara" | "papiamento" | "guarani":
+                case "ayacucho_quechua" | "central_aymara" | "papiamento" | "guarani" | "asturian":
                     gtts_target = "es"
-                case "occitan":
+                case "occitan" | "mossi":
                     gtts_target = "fr"
-                case "bhojpuri" | "maithili" | "awadhi" | "santali":
+                case "bhojpuri" | "maithili" | "awadhi" | "santali" | "chhattisgarhi" | "eastern_punjabi" | "magahi":
                     gtts_target = "hi"
-                case "minangkabau" | "balinese" | "acehnese":
+                case "minangkabau" | "balinese" | "acehnese" | "banjar" | "buginese":
                     gtts_target = "id"
-                case "sicilian" | "friulian" | "ligurian" | "lombard" | "venetian" | "maltese":
+                case "sicilian" | "friulian" | "ligurian" | "lombard" | "venetian" | "maltese" | "sardinian":
                     gtts_target = "it"
                 case "latgalian":
                     gtts_target = "lt"
@@ -190,57 +190,38 @@ def translate_main():
                     gtts_target = "my"
                 case "limburgish" | "luxembourgish":
                     gtts_target = "nl"
-                case "faroese":
+                case "faroese" | "bokmal" | "nynorsk":
                     gtts_target = "no"
-                case "belarusian" | "kazakh" | "kyrgyz" | "tatar" | "bashkir" | "mongolian" | "crimean_tatar":
+                case "belarusian" | "kazakh" | "kyrgyz" | "tatar" | "bashkir" | "mongolian" | "crimean_tatar" | "halh_mongolian":
                     gtts_target = "ru"
                 case "slovenian":
                     gtts_target = "sk"
                 case "macedonian":
                     gtts_target = "sr"
-                case "somali" | "tswana" | "shona" | "lingala" | "nyanja" | "rundi" | "bemba" | "tumbuka" | "luo":
+                case "somali" | "tswana" | "shona" | "lingala" | "nyanja" | "rundi" | "bemba" | "tumbuka" | "luo" | "chokwe" | "kamba" | "kikongo" | "kikuyu" | "kimbundu" | "kinyarwanda":
                     gtts_target = "sw"
-                case "fon" | "ewe" | "kanuri" | "oromo" | "sango" | "yoruba" | "dyula" | "ganda" | "dinka_sw" | "nuer" | "igbo":
+                case "fon" | "ewe" | "kanuri" | "oromo" | "sango" | "yoruba" | "dyula" | "ganda" | "southwestern_dinka" | "nuer" | "igbo" | "akan" | "haitian_creole" | "kabiye":
                     gtts_target = "ha"
                 case "mizo" | "sanskrit":
                     gtts_target = "hi"
                 case "silesian":
                     gtts_target = "pl"
+                case "kabuverdianu":
+                    gtts_target = "pt"
                 case "odia":
                     gtts_target = "ta"
                 case "lao" | "dzongkha" | "tibetan":
                     gtts_target = "th"
                 case "ilocano" | "cebuano" | "pangasinan" | "waray":
                     gtts_target = "tl"
-                case "azerbaijani_north" | "azerbaijani_south" | "turkmen" | "uyghur" | "uzbek":
+                case "north_azerbaijani" | "south_azerbaijani" | "turkmen" | "uyghur" | "uzbek":
                     gtts_target = "tr"
-                case "sindhi" | "pashto" | "persian" | "dari" | "central_kurdish" | "tajik":
+                case "sindhi" | "pashto" | "persian" | "dari" | "central_kurdish" | "tajik" | "kashmiri":
                     gtts_target = "ur"
+                case "halh_mongolian" | "yue_chinese":
+                    gtts_target = "zh-CN"
                 case _:
                     gtts_target = "en"
-
-        # # No Multiprocessing
-        # out = ""
-        # for sentence in split_sentences:
-        #     out += (translate(sentence, nllb_target) + " ")
-        # print(out)
-        # end = time.perf_counter()
-        # print(f"\nTime 1: {end - start:.2f}")
-
-        # # With Multiprocessing
-        # processes = []
-        # semaphore = Semaphore(4)
-        # for sentence in split_sentences:
-        #     processes.append(Process(target=translate_multiprocessing, args=(sentence, nllb_target, NLLB_tokenizer, NLLB_model, semaphore)))
-
-        # for process in processes:
-        #     process.start()
-
-        # for process in processes:
-        #     process.join()
-
-        # end = time.perf_counter()
-        # print(f"\nTime 2: {end - start:.2f}")
 
         # Batch Processing
         start = time.perf_counter()
@@ -251,13 +232,11 @@ def translate_main():
             for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
             out += translate(to_be_translated, nllb_target)
 
-
         print(out)
         end = time.perf_counter()
         print(f"Time: {end - start:.2f}")
 
     return out, gtts_target
-
 
 
 if __name__ == "__main__":
@@ -274,41 +253,47 @@ if __name__ == "__main__":
     nllb_token = {
         "acehnese": "ace_Latn",
         "afrikaans": "afr_Latn",
-        "albanian": "als_Latn",
+        "akan": "aka_Latn",
         "amharic": "amh_Ethi",
         "arabic": "arb_Arab",
         "armenian": "hye_Armn",
         "assamese": "asm_Beng",
+        "asturian": "ast_Latn",
         "awadhi": "awa_Deva",
         "ayacucho_quechua": "quy_Latn",
-        "azerbaijani_north": "azj_Latn",
-        "azerbaijani_south": "azb_Arab",
         "balinese": "ban_Latn",
         "bambara": "bam_Latn",
+        "banjar": "bjn_Latn",
         "bashkir": "bak_Cyrl",
         "basque": "eus_Latn",
         "belarusian": "bel_Cyrl",
         "bemba": "bem_Latn",
         "bengali": "ben_Beng",
         "bhojpuri": "bho_Deva",
+        "bokmal": "nob_Latn",
         "bosnian": "bos_Latn",
+        "buginese": "bug_Latn",
         "bulgarian": "bul_Cyrl",
         "burmese": "mya_Mymr",
         "catalan": "cat_Latn",
         "cebuano": "ceb_Latn",
+        "central_atlas_tamazight": "tzm_Tfng",
         "central_aymara": "ayr_Latn",
         "central_kurdish": "ckb_Arab",
+        "chhattisgarhi": "hne_Deva",
         "chinese_simplified": "zho_Hans",
         "chinese_traditional": "zho_Hant",
+        "chokwe": "cjk_Latn",
         "crimean_tatar": "crh_Latn",
         "croatian": "hrv_Latn",
         "czech": "ces_Latn",
         "danish": "dan_Latn",
         "dari": "prs_Arab",
-        "dinka_sw": "dik_Latn",
         "dutch": "nld_Latn",
         "dyula": "dyu_Latn",
         "dzongkha": "dzo_Tibt",
+        "eastern_punjabi": "pan_Guru",
+        "egyptian": "arz_Arab",
         "english": "eng_Latn",
         "esperanto": "epo_Latn",
         "estonian": "est_Latn",
@@ -320,6 +305,7 @@ if __name__ == "__main__":
         "fon": "fon_Latn",
         "french": "fra_Latn",
         "friulian": "fur_Latn",
+        "fulfulde": "fuv_Latn",
         "galician": "glg_Latn",
         "ganda": "lug_Latn",
         "georgian": "kat_Geor",
@@ -327,6 +313,8 @@ if __name__ == "__main__":
         "greek": "ell_Grek",
         "guarani": "grn_Latn",
         "gujarati": "guj_Gujr",
+        "haitian_creole": "hat_Latn",
+        "halh_mongolian": "khk_Cyrl",
         "hausa": "hau_Latn",
         "hebrew": "heb_Hebr",
         "hindi": "hin_Deva",
@@ -340,12 +328,20 @@ if __name__ == "__main__":
         "japanese": "jpn_Jpan",
         "javanese": "jav_Latn",
         "jingpho": "kac_Latn",
+        "kabiye": "kbp_Latn",
+        "kabuverdianu": "kea_Latn",
+        "kabyle": "kab_Latn",
+        "kamba": "kam_Latn",
         "kannada": "kan_Knda",
         "kanuri": "knc_Latn",
+        "kashmiri": "knc_Arab",
         "kazakh": "kaz_Cyrl",
         "khmer": "khm_Khmr",
+        "kikongo": "kon_Latn",
+        "kikuyu": "kik_Latn",
+        "kimbundu": "kmb_Latn",
+        "kinyarwanda": "kin_Latn",
         "korean": "kor_Hang",
-        "kurdish_north": "kmr_Latn",
         "kyrgyz": "kir_Cyrl",
         "lao": "lao_Laoo",
         "latgalian": "ltg_Latn",
@@ -358,19 +354,30 @@ if __name__ == "__main__":
         "luo": "luo_Latn",
         "luxembourgish": "ltg_Latn",
         "macedonian": "mkd_Cyrl",
+        "magahi": "mag_Deva",
         "maithili": "mai_Deva",
         "malagasy": "plt_Latn",
         "malay": "zsm_Latn",
         "malayalam": "mal_Mlym",
         "maltese": "mlt_Latn",
+        "maori": "mri_Latn",
         "marathi": "mar_Deva",
+        "meitei": "mni_Beng",
+        "mesopotamian": "acm_Arab",
         "minangkabau": "min_Latn",
         "mizo": "lus_Latn",
         "mongolian": "khk_Cyrl",
+        "moroccan": "ary_Arab",
+        "mossi": "mos_Latn",
+        "najdi": "ars_Arab",
         "nepali": "npi_Deva",
-        "norwegian": "nob_Latn",
+        "north_azerbaijani": "azj_Latn",
+        "north_levantine": "apc_Arab",
+        "northern_kurdish": "kmr_Latn",
+        "northern_sotho": "nso_Latn",
         "nuer": "nus_Latn",
         "nyanja": "nya_Latn",
+        "nynorsk": "nno_Latn",
         "occitan": "oci_Latn",
         "odia": "ory_Orya",
         "oromo": "gaz_Latn",
@@ -387,6 +394,8 @@ if __name__ == "__main__":
         "sango": "sag_Latn",
         "sanskrit": "san_Deva",
         "santali": "sat_Beng",
+        "sardinian": "srd_Latn",
+        "scottish_gaelic": "gla_Latn",
         "serbian": "srp_Cyrl",
         "shan": "shn_Mymr",
         "shona": "sna_Latn",
@@ -397,13 +406,18 @@ if __name__ == "__main__":
         "slovak": "slk_Latn",
         "slovenian": "slv_Latn",
         "somali": "som_Latn",
+        "south_azerbaijani": "azb_Arab",
+        "south_levantine": "ajp_Arab",
+        "southern_sotho": "sot_Latn",
+        "southwestern_dinka": "dik_Latn",
         "spanish": "spa_Latn",
         "sundanese": "sun_Latn",
         "swahili": "swh_Latn",
         "swati": "ssw_Latn",
         "swedish": "swe_Latn",
+        "ta'izzi-adeni": "acq_Arab",
         "tajik": "tgk_Cyrl",
-        "tamazight": "tzm_Tfng",
+        "tamasheq": "taq_Tfng",
         "tamil": "tam_Taml",
         "tatar": "tat_Cyrl",
         "telugu": "tel_Telu",
@@ -411,11 +425,14 @@ if __name__ == "__main__":
         "tibetan": "bod_Tibt",
         "tigrinya": "tir_Ethi",
         "tok_pisin": "tpi_Latn",
+        "tosk_albanian": "als_Latn",
         "tsonga": "tso_Latn",
         "tswana": "tsn_Latn",
         "tumbuka": "tum_Latn",
+        "tunisian": "aeb_Arab",
         "turkish": "tur_Latn",
         "turkmen": "tuk_Latn",
+        "twi": "twi_Latn",
         "ukrainian": "ukr_Cyrl",
         "urdu": "urd_Arab",
         "uyghur": "uig_Arab",
@@ -428,7 +445,9 @@ if __name__ == "__main__":
         "xhosa": "xho_Latn",
         "yiddish": "ydd_Hebr",
         "yoruba": "yor_Latn",
+        "yue_chinese": "yue_Hant",
         "zulu": "zul_Latn"
+
     }
     langs_list = list(nllb_token.keys())
     langs_list.append('taglish')
