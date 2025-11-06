@@ -3,6 +3,7 @@ import gtts_t2s
 import torch
 import spacy
 import time
+import re
 import pandas as pd
 import numpy as np
 from tqdm.auto import tqdm
@@ -107,6 +108,26 @@ def separate_sentences(text):
 
     return split_sentence
 
+# Post-processing
+def post_process(text:str):
+    text = re.sub(r' \.', '.', text)        # periods
+    text = re.sub(r' \!', '!', text)        # exclamation
+    text = re.sub(r' \?', '?', text)        # question
+    text = re.sub(r' \(', '(', text)        # left parenthesis
+    text = re.sub(r' \)', ')', text)        # right parenthesis
+    text = re.sub(r'\s*,\s*', ', ', text)   # commas
+
+    doc = nlp(text)
+    out = ""
+
+    # Uppercase first word's letter
+    for sent in doc.sents:
+        ph = sent.text.lstrip()
+        out += " " + ph[0].upper() + ph[1:]
+    out = out.lstrip()
+
+    return out
+
 # Translate to all NLLB languages
 def translate_all():
     text = input("Text: ")
@@ -147,12 +168,17 @@ def translate_main():
 
         # Batch Processing
         start = time.perf_counter()
+        
         out = ""
         batch = 2
         for i in range(0, len(split_sentences), batch):
-            to_be_translated = split_sentences[i]       # Gets first sentence per batch
-            for sentence in split_sentences[i+1:i+batch]: to_be_translated += f" {sentence}"    # Preparing sentences to be translated
-            out += toTaglish(to_be_translated)
+            to_be_translated = ""
+            for sentence in split_sentences[i:i+batch]: to_be_translated += " " + sentence    # Preparing sentences to be translated
+            to_be_translated = to_be_translated.lstrip()
+            out += " " + toTaglish(to_be_translated)
+        
+        # Post Processing
+        out = post_process(out)
 
         print(out)
         end = time.perf_counter()
@@ -285,7 +311,7 @@ if __name__ == "__main__":
         "chinese_traditional": "zho_Hant",
         "chokwe": "cjk_Latn",
         "crimean_tatar": "crh_Latn",
-        "croatian": "hrv_Latn",
+        "croatian": "hrv_Latn", 
         "czech": "ces_Latn",
         "danish": "dan_Latn",
         "dari": "prs_Arab",
