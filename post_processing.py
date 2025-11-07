@@ -14,7 +14,7 @@ def extract_cap_split(split_sentences):
             if word == "":
                 break
 
-            if word[0].isupper():
+            if word.istitle():
                 word = re.sub(r'^[^\w\'&.-]+', '', word)
                 word = re.sub(r'[^\w\'&.-]+$', '', word)
 
@@ -23,8 +23,7 @@ def extract_cap_split(split_sentences):
     return capitalized
 
 # AS A STRING. Extracts capitalized word that is not at the start of the sentence. RETURNS DICTIONARY
-def extract_cap_text(text):
-    capitalized = {}
+def extract_cap_text(text, capitalized={}):
     isFirst = True
 
     for word in text.split():
@@ -33,10 +32,11 @@ def extract_cap_text(text):
             continue
         word = re.sub(r'^[^\w]+', '', word)     # removes punctuaions at start
         word = re.sub(r'[^\w]+$', '', word)     # removes punctuations at end
+        word = re.sub(r"\'s\b", '', word)       # removes 's at end of word
         if word == "":
             continue
 
-        if word[0].isupper():
+        if word.istitle():
             if word in capitalized:
                 capitalized[word] += 1
             else:
@@ -64,9 +64,9 @@ def post_process(text:str, capitalized_dictionary:dict, nlp):
 
     capitalized_words = list(capitalized_dictionary.keys())
     for word in capitalized_words:
-        word_lower = word.lower()
+        pattern = fr"\b{word.lower()}\b"
         count = capitalized_dictionary[word]
-        out = re.sub(word_lower, word, out, count=count)
+        out = re.sub(pattern, word, out, count=count)
 
     return out
 

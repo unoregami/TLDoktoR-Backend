@@ -159,7 +159,7 @@ def translate_main():
             for sentence in split_sentences[i:i+batch]: 
                 to_be_translated += " " + sentence      # concat to be translated sentences
                 
-                ph = pp.extract_cap_text(sentence)         # extract capitalized per sentence
+                ph = pp.extract_cap_text(sentence, capitalized_dictionary)         # extract capitalized per sentence
                 capitalized_dictionary = capitalized_dictionary | ph    # store to main dictionary
             to_be_translated = to_be_translated.lstrip()
 
