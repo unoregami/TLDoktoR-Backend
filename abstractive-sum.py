@@ -1,7 +1,6 @@
 from ollama import chat
 from ollama import ChatResponse
 import time
-
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
