@@ -1,9 +1,9 @@
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 import gtts_t2s
+import post_processing as pp
 import torch
 import spacy
 import time
-import re
 import pandas as pd
 import numpy as np
 from tqdm.auto import tqdm
@@ -108,26 +108,6 @@ def separate_sentences(text):
 
     return split_sentence
 
-# Post-processing
-def post_process(text:str):
-    text = re.sub(r' \.', '.', text)        # periods
-    text = re.sub(r' \!', '!', text)        # exclamation
-    text = re.sub(r' \?', '?', text)        # question
-    text = re.sub(r' \(', '(', text)        # left parenthesis
-    text = re.sub(r' \)', ')', text)        # right parenthesis
-    text = re.sub(r'\s*,\s*', ', ', text)   # commas
-
-    doc = nlp(text)
-    out = ""
-
-    # Uppercase first word's letter
-    for sent in doc.sents:
-        ph = sent.text.lstrip()
-        out += " " + ph[0].upper() + ph[1:]
-    out = out.lstrip()
-
-    return out
-
 # Translate to all NLLB languages
 def translate_all():
     text = input("Text: ")
@@ -171,14 +151,24 @@ def translate_main():
         
         out = ""
         batch = 2
+        capitalized_dictionary = {}
         for i in range(0, len(split_sentences), batch):
             to_be_translated = ""
-            for sentence in split_sentences[i:i+batch]: to_be_translated += " " + sentence    # Preparing sentences to be translated
+            
+            # Preparing sentences to be translated
+            for sentence in split_sentences[i:i+batch]: 
+                to_be_translated += " " + sentence      # concat to be translated sentences
+                
+                ph = pp.extract_cap_text(sentence)         # extract capitalized per sentence
+                capitalized_dictionary = capitalized_dictionary | ph    # store to main dictionary
             to_be_translated = to_be_translated.lstrip()
+
             out += " " + toTaglish(to_be_translated)
         
         # Post Processing
-        out = post_process(out)
+        # print(capitalized_dictionary)
+        # print()
+        out = pp.post_process(out, capitalized_dictionary, nlp)
 
         print(out)
         end = time.perf_counter()
