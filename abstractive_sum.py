@@ -55,8 +55,8 @@ def openai_summarize(text, length):
         """,
         input=f"{text}{length}",
     )
-
-    print(response.output_text)
+    
+    return response.output_text
 
 
 # Initialize openai api
@@ -66,24 +66,26 @@ client = OpenAI(
     api_key=os.environ.get("OPENAI_API_KEY"),
 )
 
-text = input("Text:")
-length = int(input("Length:"))
+if __name__ == "__main__":
 
-match length:
-    case 1:
-        length = "{1}"
-    case 2:
-        length = "{2}"
-    case 3:
-        length = "{3}"
-    case _:
-        length = "{2}"
+    text = input("Text:")
+    length = int(input("Length:"))
 
-start = time.perf_counter()
+    match length:
+        case 1:
+            length = "{1}"
+        case 2:
+            length = "{2}"
+        case 3:
+            length = "{3}"
+        case _:
+            length = "{2}"
 
-# oll_summarize(text, length)     # Local summarization using OLLAMA gptsum model
+    start = time.perf_counter()
 
-openai_summarize(text, length)  # OpenAI summarization using gpt-5-mini
+    # oll_summarize(text, length)     # Local summarization using OLLAMA gptsum model
 
-end = time.perf_counter()
-print(f"Time: {end - start:.2f}")
+    openai_summarize(text, length)  # OpenAI summarization using gpt-5-mini
+
+    end = time.perf_counter()
+    print(f"Time: {end - start:.2f}")

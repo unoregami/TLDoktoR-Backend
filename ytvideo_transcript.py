@@ -9,6 +9,10 @@
 # !pip install youtube_transcript_api
 
 from math import floor
+from youtube_transcript_api import YouTubeTranscriptApi
+from abstractive_sum import openai_summarize
+import os
+
 
 """# YOUTUBE VIDEOS TRANSCRIPTION VIA youtube_transcript_api"""
 
@@ -51,52 +55,65 @@ def getTranscript(transcript, timestamp, showTimestamp=False): # displays the ti
 
   return text, timestamp
 
-from youtube_transcript_api import YouTubeTranscriptApi
-ytt_api = YouTubeTranscriptApi()
-timeStart, timeEnd = 0, 0
-timestamp = list()
+if __name__ == "__main__":
+  ytt_api = YouTubeTranscriptApi()
+  timeStart, timeEnd = 0, 0
+  timestamp = list()
 
-url = input("YT URL: ")
+  url = input("YT URL: ")
 
 
-# Determine what kind of YT URL and extracts only the ID
-try:    # URL link
-  url.index("youtube")
-  url = url[url.index("=")+1:]
-except: # Share URL link
-  if "t=" in url:   # extract timestamp if there's one
-    timeStart = int(url[url.index("t=")+2:])
+  # Determine what kind of YT URL and extracts only the ID
+  try:    # URL link
+    url.index("youtube")
+    url = url[url.index("=")+1:]
+  except: # Share URL link
+    if "t=" in url:   # extract timestamp if there's one
+      timeStart = int(url[url.index("t=")+2:])
 
-  url = url[17:url.index("?")]
+    url = url[17:url.index("?")]
 
-if timeStart == 0:
+  if timeStart == 0:
+    try:
+      timeStart = int(input("Timestamp Start (in sec): "))
+    except:
+      timeStart = -1  # Extract all transcript
+
+  if timeStart != -1:
+    try:
+      timeEnd = int(input("Timestamp End (in sec): "))
+    except:
+      timeEnd = -1  # Extract until end
+
+  # if timeEnd < timeStart:
+  #   print("Invalid timestamp")
+
+  timestamp = [timeStart, timeEnd]
+
+  a = ytt_api.fetch(url)
+
   try:
-    timeStart = int(input("Timestamp Start (in sec): "))
+    text, timestamp = getTranscript(a, timestamp, showTimestamp=False)
   except:
-    timeStart = -1  # Extract all transcript
+    text = "NO CAPTIONS AVAILABLE"
 
-if timeStart != -1:
-  try:
-    timeEnd = int(input("Timestamp End (in sec): "))
-  except:
-    timeEnd = -1  # Extract until end
+  print(text)
+  # Create a txt file with the transcript
+  filename = "transcript.txt"
+  with open(filename, "a", encoding="utf-8") as f:
+    f.write(str(text))
 
-# if timeEnd < timeStart:
-#   print("Invalid timestamp")
+  print()
+  print("YouTube Video ID:", url)
+  print("Timestamp:", timestamp)
 
-timestamp = [timeStart, timeEnd]
+  length = input("Length (1 | 2 | 3): ")
+  print()
+  print("Summarizing...")
+  summary = openai_summarize(text, length)
 
-a = ytt_api.fetch(url)
+  print(summary)
 
-try:
-  text, timestamp = getTranscript(a, timestamp, showTimestamp=False)
-except:
-  text = "NO CAPTIONS AVAILABLE"
-
-print(text)
-with open(f"transcript.txt", "a", encoding="utf-8") as f:
-  f.write(str(text))
-
-print()
-print("YouTube Video ID:", url)
-print("Timestamp:", timestamp)
+  # Delete transcript txt
+  if os.path.exists(filename):
+        os.remove(filename)
