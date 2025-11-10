@@ -68,9 +68,9 @@ bert_model = AutoModel.from_pretrained("bert-base-uncased").to(device)
 print("Setup done.")
 text = input("")
 print(len(text.split()))
-print()
 # all_length(text)
 length = int(input("1 - short | 2 - medium | 3 - long\n"))
+print()
 
 match length:
     case 1:

@@ -3,7 +3,6 @@ import gtts_t2s
 import post_processing as pp
 import torch
 import spacy
-from spacy.lang.tl import Tagalog
 import time
 import pandas as pd
 import numpy as np
@@ -133,7 +132,13 @@ def translate_all():
         print()
 
 # Main
-def translate_main(text:str, to:str):
+def translate_main():
+    text = input("Input Text: ")
+    to = input("to Language (refer to list): ").lower()
+    while to not in langs_list:
+        print("LANGUAGE NOT AVAILABLE")
+        to = input("to Language (refer to list): ").lower()
+
     doc = nlp(text)
     split_sentences = [sent.text for sent in doc.sents] #separate_sentences(text)
 
@@ -163,7 +168,7 @@ def translate_main(text:str, to:str):
         # Post Processing
         # print(capitalized_dictionary)
         # print()
-        out = pp.post_process(out, capitalized_dictionary, nlp_tgl)
+        out = pp.post_process(out, capitalized_dictionary, nlp)
 
         print(out)
         end = time.perf_counter()
@@ -257,10 +262,6 @@ if __name__ == "__main__":
 
     # for sentence splitting
     nlp = spacy.load("en_core_web_sm")
-
-    # Initialize spacy Tagalog class and sentencizer
-    nlp_tgl = Tagalog()
-    nlp_tgl.add_pipe('sentencizer')
 
     # gtts language tokens
     gtts_token = gtts_t2s.langs
@@ -483,17 +484,7 @@ if __name__ == "__main__":
     print(f"Startup time: {time.perf_counter() - start:.2f}")
 
     while True:
-        text = input("Input Text: ")
-        to = input("to Language (refer to list): ").lower()
-        while to not in langs_list:
-            print("LANGUAGE NOT AVAILABLE")
-            to = input("to Language (refer to list): ").lower()
-        try: doVoice = input("Enable voice?: ").lower()
-        except: doVoice = ""
+        out, gtts_target = translate_main()
 
-        
-        out, gtts_target = translate_main(text, to)
-
-        if doVoice == "y" | doVoice == 'yes':
-            # Text-to-Speech
-            gtts_t2s.speech_text(out, "translation.mp3", gtts_target)
+        # Text-to-Speech
+        gtts_t2s.speech_text(out, "translation.mp3", gtts_target)
