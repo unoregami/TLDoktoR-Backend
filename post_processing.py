@@ -1,5 +1,6 @@
 import re
 import spacy
+from spacy.lang.tl import Tagalog
 
 
 # AS SPLIT SENTENCES. Extracts capitalized word that is not at the start of the sentence. RETURNS LIST
@@ -45,7 +46,8 @@ def extract_cap_text(text, capitalized={}):
     return capitalized
 
 # Post-processing
-def post_process(text:str, capitalized_dictionary:dict, nlp):
+def post_process(text:str, capitalized_dictionary:dict, nlp_tgl):
+
     text = re.sub(r' \.', '.', text)        # periods
     text = re.sub(r' \!', '!', text)        # exclamation
     text = re.sub(r' \?', '?', text)        # question
@@ -53,7 +55,7 @@ def post_process(text:str, capitalized_dictionary:dict, nlp):
     text = re.sub(r' \)', ')', text)        # right parenthesis
     text = re.sub(r'\s*,\s*', ', ', text)   # commas
 
-    doc = nlp(text)
+    doc = nlp_tgl(text)
     out = ""
 
     # Uppercase first word's letter
@@ -71,11 +73,16 @@ def post_process(text:str, capitalized_dictionary:dict, nlp):
     return out
 
 if __name__ == "__main__":
+    nlp = spacy.load("en_core_web_sm")
+    
+    # Initialize spacy Tagalog class and sentencizer
+    nlp_tgl = Tagalog()
+    nlp_tgl.add_pipe('sentencizer')
+    
     text = input("Input Text: ")
     split_sentences = []
     print()
 
-    nlp = spacy.load("en_core_web_sm")
     doc = nlp(text)
     split_sentences = [sentence.text for sentence in doc.sents]
     batch = 2
@@ -115,7 +122,8 @@ if __name__ == "__main__":
     print(test_capitalized_dictionary)
     print()
 
-    text_sample = post_process(text_sample, test_capitalized_dictionary, nlp)
+
+    text_sample = post_process(text_sample, test_capitalized_dictionary, nlp_tgl)
 
     print("POST-PROCESSED")
     print(text_sample)
