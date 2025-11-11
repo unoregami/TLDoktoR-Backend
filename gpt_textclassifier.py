@@ -4,7 +4,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 
 
-def classify(text:str):
+def classify(text:str, client):
     response = client.responses.create(
         model="gpt-5-nano",
         instructions="""
@@ -22,25 +22,26 @@ def classify(text:str):
         3. Don't add information that is not found within the text given, only look for the text given to you.
 
         OUTPUT FORMAT:
-        - Provide only the name of the domain with the highest percentage based on the mean percentage you calculated, without any additional comments or meta-commentary.
-        - Provide the number of the domain instead of its full categorical name.
+        - The result should be the domain with the highest percentage based on the mean percentage you calculated, without any additional comments or meta-commentary.
+        - Provide ONLY the number specified to the domain instead of its full categorical name. Refer to the DOMAIN list from before.
         """,
         input=f"{text}",
     )
 
     return response.output_text
 
-load_dotenv()
-client = OpenAI(
-    # This is the default and can be omitted
-    api_key=os.environ.get("OPENAI_API_KEY"),
-)
-
-text = input("Text:")
-
-start = time.perf_counter()
-output = classify(text)
-print(type(output), output)
-
-end = time.perf_counter()
-print(f"Time: {end - start:.2f}")
+if __name__ == "__main__":
+    load_dotenv()
+    client = OpenAI(
+        # This is the default and can be omitted
+        api_key=os.environ.get("OPENAI_API_KEY"),
+    )
+    
+    text = input("Text:")
+    
+    start = time.perf_counter()
+    output = classify(text, client)
+    print(type(output), output)
+    
+    end = time.perf_counter()
+    print(f"Time: {end - start:.2f}")

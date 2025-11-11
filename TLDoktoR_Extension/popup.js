@@ -45,17 +45,34 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Fetch to summarize text and length
   async function to_summarize(text, length) {
-    const response = await fetch('http://127.0.0.1:8000/to-summarize', {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        text: text,
-        length: length
-      })
-    });
-    return response.json()
+    try {
+      const response = await fetch('http://127.0.0.1:8000/to-summarize', {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          text: text,
+          length: length
+        })
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        console.error('Error:', error);
+        throw new Error(`Server responded with status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      console.log("Received data from server:", data);
+      
+      return data.summary;
+
+    } catch (error) {
+      console.error("Failed to fetch summary:", error);
+      return "Error occured while generating summary. Please check console."
+    }
   }
 
   // Fetch YouTube link validate
@@ -90,8 +107,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   function openSummaryWindow(summaryText) {
-    const encoded = encodeURIComponent(summaryText);
-  
     // Calculate center position for popup
     const width = 1000;
     const height = 800;
@@ -99,7 +114,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const top = Math.round((screen.availHeight - height) / 2);
 
     chrome.windows.create({
-      url: `output.html?summary=${encoded}`,
+      url: 'output.html',
       type: "popup",
       width,
       height,
@@ -217,7 +232,7 @@ updateLengthSlider();
   updateSlider();
 
   // === Summarize Text Placeholder ===
-  summarizeBtn.addEventListener('click', () => {
+  summarizeBtn.addEventListener('click', async () => {
     const length = parseInt(lengthSlider.value)
     const text = inputText.value.trim();
     if (!text) {
@@ -225,8 +240,10 @@ updateLengthSlider();
       return;
     }
 
-    openSummaryWindow(text);
-    to_summarize(text, length)
+    const summary = await to_summarize(text, length)
+    
+    await chrome.storage.local.set({ summaryToShow: summary });
+    await openSummaryWindow();
     // print_to_console(fakeSummary)      FASTAPI SAMPLE
   });
 

@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   const summaryText = document.getElementById('summaryText');
   const translateBtn = document.getElementById('translateBtn');
   const ttsBtn = document.getElementById('ttsBtn');
@@ -9,9 +9,13 @@ window.addEventListener('DOMContentLoaded', () => {
   const languageSearch = document.getElementById('languageSearch');
   const languageList = document.getElementById('languageList');
 
-  const params = new URLSearchParams(window.location.search);
-  const summary = decodeURIComponent(params.get('summary') || "No summary text found.");
+  console.log("Output window loaded. Attempting to retrieve summary from storage...");
+  const data = await chrome.storage.local.get('summaryToShow');
+  const summary = data.summaryToShow || "No summary text was found.";
   summaryText.value = summary;
+
+  await chrome.storage.local.remove('summaryToShow');
+  console.log("Summary loaded and storage has been cleared");
 
   const languages = [
   "Taglish",
@@ -257,9 +261,10 @@ document.addEventListener("click", (event) => {
   }
 });
 
-  translateBtn.addEventListener("click", () => {
+  translateBtn.addEventListener("click", async () => {
     const text = summaryText.value;
     const selected = dropdownLabel.textContent;
+    const original = summaryText.value;
     summaryText.value = `🌐 [Translated to ${selected}] ${summary}`;
 
     // Fetch text and language to backend

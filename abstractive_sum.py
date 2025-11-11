@@ -27,7 +27,7 @@ def oll_summarize(text, length):
     ])
     print(response['message']['content'])
 
-def openai_summarize(text, length):
+def openai_summarize(text, length, client):
     response = client.responses.create(
         model="gpt-5-mini",
         instructions="""
@@ -58,15 +58,13 @@ def openai_summarize(text, length):
     
     return response.output_text
 
-
-# Initialize openai api
-load_dotenv()
-client = OpenAI(
-    # This is the default and can be omitted
-    api_key=os.environ.get("OPENAI_API_KEY"),
-)
-
 if __name__ == "__main__":
+    # Initialize openai api
+    load_dotenv()
+    client = OpenAI(
+        # This is the default and can be omitted
+        api_key=os.environ.get("OPENAI_API_KEY"),
+    )
 
     text = input("Text:")
     length = int(input("Length:"))
@@ -85,7 +83,7 @@ if __name__ == "__main__":
 
     # oll_summarize(text, length)     # Local summarization using OLLAMA gptsum model
 
-    openai_summarize(text, length)  # OpenAI summarization using gpt-5-mini
+    openai_summarize(text, length, client)  # OpenAI summarization using gpt-5-mini
 
     end = time.perf_counter()
     print(f"Time: {end - start:.2f}")

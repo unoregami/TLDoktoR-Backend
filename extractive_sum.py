@@ -7,7 +7,7 @@ from transformers import AutoTokenizer, AutoModel
 nlp = spacy.load("en_core_web_sm")
 
 @torch.no_grad()
-def embed_sentences(sentences):
+def embed_sentences(sentences, bert_tokenizer, bert_model, device):
     embs = []
     for s in sentences:
         enc = bert_tokenizer(s, return_tensors="pt", truncation=True, max_length=512).to(device)
@@ -15,7 +15,7 @@ def embed_sentences(sentences):
         embs.append(out.last_hidden_state[:, 0, :].cpu().numpy())  # CLS token
     return np.vstack(embs)
 
-def summarize(text: str, compression_ratio=0.4, min_sentences=3, max_sentences=None):
+def summarize(text: str, compression_ratio, bert_tokenizer, bert_model, device, min_sentences=3, max_sentences=None):
     doc = nlp(text)
     sentences = [sent.text for sent in doc.sents]
     
@@ -31,7 +31,7 @@ def summarize(text: str, compression_ratio=0.4, min_sentences=3, max_sentences=N
         return text
 
     # get embeddings
-    sent_embs = embed_sentences(sentences)
+    sent_embs = embed_sentences(sentences, bert_tokenizer, bert_model, device)
     doc_emb = sent_embs.mean(axis=0, keepdims=True)
 
     # rank by similarity to doc
@@ -60,30 +60,30 @@ def all_length(text):
         print(compression_ratio, len(summary.split()))
         print()
 
-
-device = None or ("cuda" if torch.cuda.is_available() else "cpu")
-bert_tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
-bert_model = AutoModel.from_pretrained("bert-base-uncased").to(device)
-
-print("Setup done.")
-text = input("")
-print(len(text.split()))
-print()
-# all_length(text)
-length = int(input("1 - short | 2 - medium | 3 - long\n"))
-
-match length:
-    case 1:
-        compression_ratio = 0.2
-    case 2:
-        compression_ratio = 0.4
-    case 3:
-        compression_ratio = 0.65
-    case _:
-        compression_ratio = 0.4
-
-# Extract sentences, with at least 3 and at most 10
-summary = summarize(text, compression_ratio, min_sentences=3, max_sentences=10)
-
-print(summary)
-print()
+if __name__ == "__main__":
+    device = None or ("cuda" if torch.cuda.is_available() else "cpu")
+    bert_tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+    bert_model = AutoModel.from_pretrained("bert-base-uncased").to(device)
+    
+    print("Setup done.")
+    text = input("")
+    print(len(text.split()))
+    print()
+    # all_length(text)
+    length = int(input("1 - short | 2 - medium | 3 - long\n"))
+    
+    match length:
+        case 1:
+            compression_ratio = 0.2
+        case 2:
+            compression_ratio = 0.4
+        case 3:
+            compression_ratio = 0.65
+        case _:
+            compression_ratio = 0.4
+    
+    # Extract sentences, with at least 3 and at most 10
+    summary = summarize(text, compression_ratio, bert_tokenizer, bert_model, device, min_sentences=3, max_sentences=10)
+    
+    print(summary)
+    print()
