@@ -12,7 +12,7 @@ from multiprocessing import Process, Semaphore
 
 
 # English to Taglish translation
-def toTaglish(text):
+def toTaglish(text, taglish_tokenizer, taglish_model):
     inputs = taglish_tokenizer(text, return_tensors="pt").to(taglish_model.device)
 
     generated_tokens = taglish_model.generate(
@@ -40,7 +40,7 @@ def toTaglish_multiprocessing(text, taglish_tokenizer, taglish_model, semaphore)
     semaphore.release()
 
 # NLLB model
-def translate(text, target):
+def translate(text, target, NLLB_tokenizer, NLLB_model):
     inputs = NLLB_tokenizer(text, return_tensors="pt").to(NLLB_model.device)
 
     generated_tokens = NLLB_model.generate(
@@ -133,7 +133,7 @@ def translate_all():
         print()
 
 # Main
-def translate_main(text, to):
+def translate_main(text, to, nlp, nlp_tgl, gtts_token, nllb_token, taglish_tokenizer, taglish_model, NLLB_tokenizer, NLLB_model):
     doc = nlp(text)
     split_sentences = [sent.text for sent in doc.sents] #separate_sentences(text)
 
@@ -158,7 +158,7 @@ def translate_main(text, to):
                 capitalized_dictionary = capitalized_dictionary | ph    # store to main dictionary
             to_be_translated = to_be_translated.lstrip()
 
-            out += " " + toTaglish(to_be_translated)
+            out += " " + toTaglish(to_be_translated, taglish_tokenizer, taglish_model)
         
         # Post Processing
         # print(capitalized_dictionary)
@@ -242,7 +242,7 @@ def translate_main(text, to):
             to_be_translated = ""
             for sentence in split_sentences[i:i+batch]: to_be_translated += " " + sentence    # Preparing sentences to be translated
             to_be_translated = to_be_translated.lstrip()
-            out += translate(to_be_translated, nllb_target)
+            out += translate(to_be_translated, nllb_target, NLLB_tokenizer, NLLB_model)
 
         print(out)
         end = time.perf_counter()
@@ -250,23 +250,8 @@ def translate_main(text, to):
 
     return out, gtts_target
 
-
-if __name__ == "__main__":
-    # Time startup
-    start = time.perf_counter()
-
-    # for sentence splitting
-    nlp = spacy.load("en_core_web_sm")
-
-    # Tagalog spacy nlp
-    nlp_tgl = Tagalog()
-    nlp_tgl.add_pipe('sentencizer')
-
-    # gtts language tokens
-    gtts_token = gtts_t2s.langs
-
-    # NLLB LANGUAGE TOKENS
-    nllb_token = {
+# NLLB LANGUAGE TOKENS
+nllb_token = {
         "acehnese": "ace_Latn",
         "afrikaans": "afr_Latn",
         "akan": "aka_Latn",
@@ -463,8 +448,22 @@ if __name__ == "__main__":
         "yoruba": "yor_Latn",
         "yue_chinese": "yue_Hant",
         "zulu": "zul_Latn"
-
     }
+
+if __name__ == "__main__":
+    # Time startup
+    start = time.perf_counter()
+
+    # for sentence splitting
+    nlp = spacy.load("en_core_web_sm")
+
+    # Tagalog spacy nlp
+    nlp_tgl = Tagalog()
+    nlp_tgl.add_pipe('sentencizer')
+
+    # gtts language tokens
+    gtts_token = gtts_t2s.langs
+
     langs_list = list(nllb_token.keys())
     langs_list.append('taglish')
 
@@ -490,7 +489,7 @@ if __name__ == "__main__":
             to = input("to Language (refer to list): ").lower()
         doVoice = input("Enable voice?: ").lower()
 
-        out, gtts_target = translate_main(text, to)
+        out, gtts_target = translate_main(text, to, nlp, nlp_tgl, gtts_token, nllb_token, taglish_tokenizer, taglish_model, NLLB_tokernizer, NLLB_model)
 
         # Text-to-Speech
         if doVoice == "y" or doVoice == "yes":

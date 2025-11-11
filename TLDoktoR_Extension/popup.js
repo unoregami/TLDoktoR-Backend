@@ -242,6 +242,9 @@ updateLengthSlider();
 
     summarizeBtn.textContent = "Summarizing...";
     summarizeBtn.disabled = true;
+    lengthSlider.disabled = true;
+    fetchYoutubeBtn.disabled = true;
+    inputText.readOnly = true;
     setTimeout( async () => {
       const summary = await to_summarize(text, length)
     
@@ -251,6 +254,9 @@ updateLengthSlider();
       setTimeout(() => {
         summarizeBtn.textContent = "Summarize Text";
         summarizeBtn.disabled = false;
+        lengthSlider.disabled = false;
+        fetchYoutubeBtn.disabled = false;
+        inputText.readOnly = false;
       }, 3000);
     }, 800);
   });
@@ -266,6 +272,9 @@ fetchYoutubeBtn.addEventListener('click', async () => {
   // Validate fetching
   fetchYoutubeBtn.textContent = "Fetching...";
   fetchYoutubeBtn.disabled = true;
+  summarizeBtn.disabled = true;
+  youtubeUrl.disabled = true;
+
   YT = await validate_YT(url)
 
   setTimeout(() => {
@@ -295,6 +304,8 @@ fetchYoutubeBtn.addEventListener('click', async () => {
     setTimeout(() => {
       fetchYoutubeBtn.textContent = "Fetch";
       fetchYoutubeBtn.disabled = false;
+      summarizeBtn.disabled = false;
+      youtubeUrl.disabled = false;
     }, 3000);
   }, 800);
 });
@@ -312,6 +323,13 @@ fetchYoutubeBtn.addEventListener('click', async () => {
 
     summarizeYoutubeBtn.textContent = "Summarizing...";
     summarizeYoutubeBtn.disabled = true;
+    fetchYoutubeBtn.disabled = true;
+    youtubeUrl.disabled = true;
+    minSlider.disabled = true;
+    maxSlider.disabled = true;
+    startTimeInput.disabled = true;
+    endTimeInput.disabled = true;
+
     setTimeout( async () => {
       // Fetch YT link and timestamp range
       const yt_summary = await to_summarize_YT(YTData, start, end)
@@ -322,6 +340,12 @@ fetchYoutubeBtn.addEventListener('click', async () => {
       setTimeout(() => {
         summarizeYoutubeBtn.textContent = "Summarize Video";
         summarizeYoutubeBtn.disabled = false;
+        fetchYoutubeBtn.disabled = false;
+        youtubeUrl.disabled = false;
+        minSlider.disabled = false;
+        maxSlider.disabled = false;
+        startTimeInput.disabled = false;
+        endTimeInput.disabled = false;
       }, 3000);
     }, 800);
   });

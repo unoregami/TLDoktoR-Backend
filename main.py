@@ -8,9 +8,14 @@ from pydantic import BaseModel, Field
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
-from transformers import AutoTokenizer, AutoModel
+from transformers import AutoTokenizer, AutoModel, AutoModelForSeq2SeqLM
 import torch
 from youtube_transcript_api import YouTubeTranscriptApi
+from translation import nllb_token, translate_main
+import spacy
+from spacy.lang.tl import Tagalog
+import gtts_t2s
+import re
 # SYSTEM features methods
 from abstractive_sum import openai_summarize
 from extractive_sum import summarize
@@ -28,12 +33,27 @@ client = OpenAI(
 )
 
 # Extractive BERT model
-device = None or ("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 bert_tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 bert_model = AutoModel.from_pretrained("bert-base-uncased").to(device)
 
 # YT-transcript-api
 ytt_api = YouTubeTranscriptApi()
+
+# Translation
+nlp = spacy.load("en_core_web_sm")
+nlp_tgl = Tagalog()
+nlp_tgl.add_pipe('sentencizer')
+gtts_token = gtts_t2s.langs
+# Taglish model
+taglish_model_name = "touno/english_to_taglish_8483_v2"
+taglish_tokenizer = AutoTokenizer.from_pretrained(taglish_model_name)
+taglish_model = AutoModelForSeq2SeqLM.from_pretrained(taglish_model_name).to(device)
+# NLLB model
+NLLB_model_name = "facebook/nllb-200-distilled-1.3B"
+NLLB_tokenizer = AutoTokenizer.from_pretrained(NLLB_model_name)
+NLLB_model = AutoModelForSeq2SeqLM.from_pretrained(NLLB_model_name).to(device)
+
 
 # Features
 app = FastAPI()
@@ -134,6 +154,7 @@ async def to_summarize(data: TextSumLen):
 # Validate YouTube link, returns YT transcript data and max timestamp
 @app.post('/validate/YT')
 async def validate_YT(link: Text):
+    print("Validating Link...")
     link = link.value
     print("Link", link)
     try:
@@ -210,6 +231,38 @@ async def to_summarize_YT(yt: YTLinkRange):
 # Translation method
 @app.post('/to-translate')
 async def to_translate(data: TextLanguage):
-    text = data.text
-    to = data.lang.lower()
-    print(f"Text: {text}\nLanguage: {to}")
+    print("Start translation.")
+    
+    try:
+        text = data.text
+        to = data.lang.lower()
+        to = re.sub(" ", "_", to)
+        print(f"To {to}")
+
+        translated_text, gtts_target = await run_in_threadpool(
+                translate_main,
+                text,
+                to,
+                nlp,
+                nlp_tgl,
+                gtts_token,
+                nllb_token,
+                taglish_tokenizer,
+                taglish_model,
+                NLLB_tokenizer,
+                NLLB_model
+            )
+        print("Translation successful.")
+        print("GTTS target:", gtts_target)
+        return {
+            "text": translated_text,
+            "gtts_target": gtts_target
+            }
+    except Exception as e:
+        print(f"AN ERROR OCCURRED in /to-translate: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"An internal error occurred: {str(e)}"
+        )
