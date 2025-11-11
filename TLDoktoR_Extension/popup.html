@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TLDoktoR</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===  === */
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #3d8d7a;
+      color: #3d8d7a;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+ /* === BACKGROUND COLORS === */
+    .container {
+      background: #ffffff;
+      border: 2px solid #3d8d7a;
+      border-radius: 0px;
+      box-shadow: 0 0 0 2px #3d8d7a, 0 4px 14px rgba(0, 0, 0, 0.1);
+      padding: 20px 30px 30px 30px;
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      box-sizing: border-box;
+    }
+ /* === TITLE === */
+    .title {
+  display: block;
+  margin: auto;
+  width: 30px;       /* ⬅️ make smaller (try 20–40px range) */
+  height: auto;      /* keeps correct proportions */
+  margin-bottom: 2px;
+    }
+   .subtitle {
+    font-size: 1rem; /* small text */
+    color: #307464;     /* optional color */
+    text-align: left;   /* left-aligned */
+    margin: 1px 0 4px 0; /* adjust spacing from divider and next elements */
+    font-weight: bold;
+    }   
+   .subtitle2 {
+      font-size: 0.9rem;
+      color: #2e7d32;      /* same tone as title, or tweak as needed */
+      margin-top: -8px;    /* pull it closer to the title */
+      margin-bottom: 2px;  /* small gap before divider */
+      text-align: center;
+      font-weight: 500;
+    }
+
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      border: 1px solid #c8e6c9;
+      border-radius: 10px;
+      padding: 10px;
+      background: #fafafa;
+      font-size: 0.95rem;
+      color: #1b5e20;
+      outline: none;
+      transition: all 0.2s;
+      resize: none;
+      box-sizing: border-box;
+    }
+ /* === TEXT AREA PAG NAG TYPE === */
+
+ 
+    textarea:focus,
+    input[type="text"]:focus {
+      border-color: #66bb6a;
+      background: #ffffff;
+      box-shadow: 0 0 6px rgba(102, 187, 106, 0.3);
+    }
+ /* === SUMMARIZE BUTTON === */
+    .primary-btn,
+    .secondary-btn {
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      box-sizing: border-box;
+    }
+
+    .primary-btn {
+      background: #e1bc29;
+      color: #fff;
+    }
+    
+
+    .primary-btn:hover {
+      background: #be7f01;
+      transform: translateY(-1px);
+    }
+ /* === FETCH BUTTON === */
+    .secondary-btn {
+      background: #e1bc29;
+      color: #fff;
+    }
+
+    .secondary-btn:hover {
+      background: #be7f01;
+      transform: translateY(-1px);
+    }
+
+    .divider {
+      height: 2px;
+      background: #3d8d7a;
+      margin: 8px 0 8px;
+    }
+ /* === LABELS IF FETCHED === */
+    label {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: #3d8d7a;
+    }
+
+    .yt-controls,
+    #youtubeControls {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: center;
+      justify-content: flex-end !important;
+    }
+
+    #youtubeControls {
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* === Summary Length Slider === */
+    .summary-length-container {
+      width: 100%;
+      padding: 10px 0;
+      margin-bottom: 10px;
+    }
+
+    .summary-length-container label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .length-slider-wrapper {
+      position: relative;
+      margin: 15px 0;
+    }
+
+    .length-slider-track {
+      position: relative;
+      height: 6px;
+      background: #e0f2f1;
+      border-radius: 3px;
+    }
+
+    .length-slider-fill {
+      position: absolute;
+      height: 100%;
+      background: linear-gradient(90deg, #3d8d7a 0%, #3d8d7a 100%);
+      border-radius: 3px;
+      width: 0%;
+      transition: width 0s ease-in-out;
+    }
+
+
+    .length-slider {
+      position: absolute;
+      width: 100%;
+      height: 6px;
+      background: none;
+      pointer-events: all;
+      -webkit-appearance: none;
+      appearance: none;
+      top: 0;
+      cursor: pointer;
+    }
+
+    .length-slider::-webkit-slider-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #3d8d7a;
+      background: white;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .length-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      border-color: #be7f01;
+    }
+
+    .length-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #3d8d7a;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .length-slider::-moz-range-thumb:hover {
+      transform: scale(1.15);
+      border-color: #3d8d7a;
+    }
+
+    .length-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #3d8d7a;
+      margin-top: 6px;
+      font-weight: 600;
+    }
+
+    .length-labels span.active {
+      color: #e69b00; /* highlight color for selected option */
+      font-weight: 700;
+    }
+
+    .length-display {
+      text-align: center;
+      margin-top: 8px;
+      background: #f1f8f4;
+      border: 1px solid #c8e6c9;
+      padding: 8px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #3d8d7a;
+    }
+    /* === Double Range Slider === */
+    .range-slider-container {
+      width: 100%;
+      padding: 10px 0;
+      display: none;
+    }
+
+    .range-slider-container.show {
+      display: block;
+    }
+
+    .slider-track-wrapper {
+      position: relative;
+      margin: 20px 0;
+    }
+
+    .slider-track {
+      position: relative;
+      height: 6px;
+      background: #e0f2f1;
+      border-radius: 3px;
+    }
+
+    .slider-range {
+      position: absolute;
+      height: 100%;
+      background: linear-gradient(90deg, #3d8d7a 0%, #3d8d7a 100%);
+      border-radius: 3px;
+    }
+
+    .slider-input {
+      position: absolute;
+      width: 100%;
+      height: 6px;
+      background: none;
+      pointer-events: none;
+      -webkit-appearance: none;
+      appearance: none;
+      top: 0;
+    }
+
+    .slider-input::-webkit-slider-thumb {
+      pointer-events: all;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #3d8d7a;
+      background: white;
+      cursor: pointer;
+      -webkit-appearance: none;
+      appearance: none;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .slider-input::-webkit-slider-thumb:hover {
+      transform: scale(1.15);
+      border-color: #be7f01;
+    }
+
+    .slider-input::-moz-range-thumb {
+      pointer-events: all;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 3px solid #43a047;
+      background: white;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      transition: transform 0.2s;
+    }
+
+    .slider-input::-moz-range-thumb:hover {
+      transform: scale(1.15);
+      border-color: #2e7d32;
+    }
+
+    .range-values {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+      gap: 8px;
+    }
+
+    .range-value-box {
+      background: #f1f8f4;
+      border: 1px solid #c8e6c9;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #2e7d32;
+      min-width: 60px;
+      text-align: center;
+    }
+
+    .range-separator {
+      color: #81c784;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    /* === Time Input Fields === */
+    .time-inputs {
+      display: flex;
+      gap: 12px;           /* space between start and end */
+      margin-top: 8px;
+      justify-content: flex-start; /* align to left */
+    }
+
+    .time-input-group {
+      flex: 0 0 auto;       /* prevent stretching */
+      display: flex;
+      flex-direction: column;
+      gap: 2px;             /* smaller gap between label and input */
+    }
+
+    .time-input-group label {
+      font-size: 0.65rem;   /* smaller label */
+      text-align: left;
+      margin-bottom: 2px;
+    }
+
+    .time-input-group input {
+      width: 60px;          /* smaller input box */
+      padding: 4px 6px;     /* smaller padding */
+      font-size: 0.75rem;   /* smaller text */
+      text-align: left;     /* text aligned to left */
+    }
+
+    .time-input-group input:focus {
+      border-color: #66bb6a;
+      background: #ffffff;
+      box-shadow: 0 0 4px rgba(102, 187, 106, 0.3);
+      outline: none;
+      color: #be7f01;
+    }
+    
+
+    /* === Modal === */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+    }
+
+    .modal-content {
+      background-color: #ffffff;
+      margin: 8% auto;
+      padding: 20px;
+      border: 1px solid #a5d6a7;
+      border-radius: 14px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    .modal-content h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .close {
+      color: #555;
+      position: absolute;
+      right: 16px;
+      top: 10px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .close:hover {
+      color: #1b5e20;
+    }
+
+    .dropdown {
+      position: relative;
+      width: 100%;
+      margin-bottom: 8px;
+    }
+
+    #dropdownToggle {
+      background: #fafafa;
+      border: 1px solid #c8e6c9;
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #1b5e20;
+      font-weight: 500;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      width: 100%;
+      background: #ffffff;
+      border: 1px solid #a5d6a7;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-height: 140px;
+      overflow-y: auto;
+      z-index: 10;
+    }
+
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content input {
+      width: calc(100% - 12px);
+      margin: 6px;
+      padding: 6px;
+      border: 1px solid #c8e6c9;
+      border-radius: 6px;
+      font-size: 0.9rem;
+    }
+
+    .dropdown-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .dropdown-content li {
+      padding: 6px 10px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .dropdown-content li:hover {
+      background: #c8e6c9;
+    }
+
+    #summaryText {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+      border: 1px solid #a5d6a7;
+      padding: 10px;
+      resize: none;
+      color: #1b5e20;
+      background: #fafafa;
+    }
+
+    .modal-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="logo-container"><img src="logo.png" alt="TLDoktoR Logo" class="logo"></h1>
+    <div class="divider"></div>
+    <p class="subtitle">Text Summarizer</p>
+
+    <!-- Text Summarization -->
+    <textarea id="inputText" placeholder="Enter or paste text here..." rows="6"></textarea>
+    
+    <!-- Summary Length Slider -->
+  <div class="summary-length-container">
+    <label>Summary Length:</label>
+    
+    <div class="length-slider-wrapper">
+      <div class="length-slider-track">
+        <div class="length-slider-fill" id="lengthSliderFill"></div>
+      </div>
+      <input type="range" min="0" max="2" value="0" step="1" class="length-slider" id="lengthSlider">
+
+    </div>
+    
+    <div class="length-labels">
+      <span id="labelShort">Short</span>
+      <span id="labelMedium">Medium</span>
+      <span id="labelLong">Long</span>
+    </div>
+  </div>
+
+    <button id="summarizeBtn" class="primary-btn">Summarize Text</button>
+
+    <div class="divider"></div>
+
+    <!-- YouTube Summarization -->
+    <p class="subtitle">YouTube Video Summarizer</p>
+    <input type="text" id="youtubeUrl" placeholder="Paste YouTube link here..." />
+    <div class="yt-controls">
+      <button id="fetchYoutubeBtn" class="secondary-btn">Fetch</button>
+    </div>
+
+    <!-- Double Range Slider (Hidden initially) -->
+    <div id="rangeSliderContainer" class="range-slider-container">
+      <label>Select Time Range:</label>
+      <div class="slider-track-wrapper">
+        <div class="slider-track">
+          <div class="slider-range" id="sliderRange"></div>
+        </div>
+        <input type="range" min="0" max="300" value="0" class="slider-input" id="minSlider">
+        <input type="range" min="0" max="300" value="300" class="slider-input" id="maxSlider">
+      </div>
+      <div class="range-values"  style="display:none;" >
+        <div class="range-value-box"><span id="minValue">0:00</span></div>
+        <span class="range-separator">—</span>
+        <div class="range-value-box"><span id="maxValue">5:00</span></div>
+      </div>
+
+      <!-- Time Input Fields -->
+      <div class="time-inputs">
+        <div class="time-input-group">
+          <label>Start (mm:ss)</label>
+          <input type="text" id="startTimeInput" placeholder="0:00" maxlength="5">
+        </div>
+        <p class="" style="padding-top:10px; padding-right:8px">–</p>
+        <div class="time-input-group">
+          <label>End (mm:ss)</label>
+          <input type="text" id="endTimeInput" placeholder="5:00" maxlength="5">
+        </div>
+      </div>
+    </div>
+
+    <div id="youtubeControls" style="display: none;">
+      <button id="summarizeYoutubeBtn" class="primary-btn">Summarize Video</button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="outputModal" class="modal">
+    <div class="modal-content">
+      <span id="modalClose" class="close">&times;</span>
+      <h2>Summary Output</h2>
+
+      <div class="dropdown" id="languageDropdown">
+        <div id="dropdownToggle">
+          <span id="dropdownLabel">English</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="dropdown-content">
+          <input type="text" id="languageSearch" placeholder="Search language..." />
+          <ul id="languageList"></ul>
+        </div>
+      </div>
+
+      <button id="translateBtn" class="secondary-btn">Translate</button>
+
+      <textarea id="summaryText" disabled rows="8"></textarea>
+
+      <div class="modal-actions">
+        <button id="ttsBtn" class="secondary-btn">🔊 Speak</button>
+        <button id="copyBtn" class="secondary-btn">📋 Copy</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

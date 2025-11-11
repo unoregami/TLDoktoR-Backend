@@ -1,0 +1,265 @@
+/* === Global Styles === */
+body {
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: #e8f5e9;
+  color: #1b5e20;
+  margin: 0;
+  padding: 0;
+  width: 360px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* === Titles === */
+.title {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+/* === Inputs === */
+textarea,
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  background: #ffffff;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  resize: none;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+
+textarea:focus,
+input[type="text"]:focus {
+  box-shadow: 0 0 4px 1px #81c784;
+}
+
+/* === Buttons === */
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.primary-btn {
+  background-color: #43a047;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.primary-btn:hover {
+  background-color: #388e3c;
+}
+
+.secondary-btn {
+  background-color: #a5d6a7;
+  color: #1b5e20;
+}
+
+.secondary-btn:hover {
+  background-color: #81c784;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.divider {
+  height: 1px;
+  background-color: #c8e6c9;
+  margin: 20px 0;
+}
+
+/* === Modal === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(27, 94, 32, 0.2);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 340px;
+  border: 2px solid #a5d6a7;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  color: #1b5e20;
+}
+
+.close {
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 1.4rem;
+  color: #2e7d32;
+  cursor: pointer;
+}
+
+/* === Dropdown === */
+.dropdown {
+  position: relative;
+  margin: 10px 0;
+}
+
+#dropdownToggle {
+  background: #e8f5e9;
+  padding: 8px;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: #1b5e20;
+}
+
+.arrow {
+  font-size: 0.8rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background: white;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  top: 105%;
+  left: 0;
+  max-height: 160px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+#languageSearch {
+  width: 90%;
+  margin: 6px;
+  padding: 6px;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+}
+
+#languageList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#languageList li {
+  padding: 8px;
+  cursor: pointer;
+  color: #1b5e20;
+}
+
+#languageList li:hover {
+  background: #c8e6c9;
+}
+
+/* === Summary Text === */
+#summaryText {
+  width: 100%;
+  resize: none;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #a5d6a7;
+  background: #f9fff9;
+  color: #1b5e20;
+  overflow-y: auto;
+}
+
+/* === Modal Actions === */
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+#ttsBtn.active {
+  background-color: #66bb6a;
+}
+
+/* === Range sliders === */
+input[type="range"] {
+  width: 100%;
+  accent-color: #43a047;
+}
+/* Output popup styling */
+.output-body {
+  background: #e8f5e9;
+  color: #1b5e20;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.output-container {
+  width: 90%;
+  padding: 20px;
+}
+
+.output-container h1 {
+  color: #2e7d32;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.output-container textarea {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #a5d6a7;
+  background: #ffffff;
+  margin-top: 10px;
+  color: #1b5e20;
+}
+
+/* === lOGO === */
+
+.logo {
+  width: 240px;        
+  height: auto;
+  display: inline-block;
+}
+
+.logo-container {
+  text-align: center;  /* centers the logo horizontally */
+  margin: 0;
+}
