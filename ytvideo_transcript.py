@@ -23,7 +23,7 @@ def getText(transcript): # Get text of transcription
 
   return text
 
-def getTranscript(transcript, timestamp, showTimestamp=False): # displays the timestamp and the text
+def getTranscriptLocal(transcript: dict, timestamp, showTimestamp=False): # displays the timestamp and the text
   text = ""
   if timestamp[0] == -1:
     text = getText(transcript)
@@ -55,6 +55,29 @@ def getTranscript(transcript, timestamp, showTimestamp=False): # displays the ti
 
   return text, timestamp
 
+def getTranscript(transcript: dict, timestamp, showTimestamp=False): # displays the timestamp and the text
+  text = ""
+
+  for i in transcript["snippets"]:
+    time = i['start']    # retrieve timestamp (in sec)
+    if timestamp[0] <= time <= timestamp[1]:    # retrieves only in range of the given timestamp
+      if time >= 60:
+        sec = str(floor(time % 60))
+        if len(sec) < 2:
+          sec = "0" + sec
+
+        time = f"{str(int(time // 60))}:{sec}"
+        text += f"{i['text']}\n"
+        if showTimestamp:
+          print(f"({time})", i['text'], end="\n")
+        continue
+
+      text += f"{i['text']}\n"
+      if showTimestamp:
+        print(f"({floor(time)})", i['text'], end="\n")
+
+  return text
+
 if __name__ == "__main__":
   ytt_api = YouTubeTranscriptApi()
   timeStart, timeEnd = 0, 0
@@ -64,14 +87,23 @@ if __name__ == "__main__":
 
 
   # Determine what kind of YT URL and extracts only the ID
-  try:    # URL link
-    url.index("youtube")
-    url = url[url.index("=")+1:]
-  except: # Share URL link
-    if "t=" in url:   # extract timestamp if there's one
-      timeStart = int(url[url.index("t=")+2:])
+  try:
+    if "youtube" in url:      # URL Link
+      url = url[url.index("=")+1:]
+    elif "youtu.be" in url:   # Share Link
+      if "t=" in url:         # with start time
+        timeStart = int(url[url.index("t=")+2:])
+      url = url[17:url.index("?")]
+  except Exception as e:
+    print("Failed fetching. Error:", e)
 
-    url = url[17:url.index("?")]
+  # try:    # URL link
+  #   url.index("youtube")
+  #   url = url[url.index("=")+1:]
+  # except: # Share URL link
+  #   if "t=" in url:   # extract timestamp if there's one
+  #     timeStart = int(url[url.index("t=")+2:])
+  #   url = url[17:url.index("?")]
 
   if timeStart == 0:
     try:
@@ -90,10 +122,11 @@ if __name__ == "__main__":
 
   timestamp = [timeStart, timeEnd]
 
+  
   a = ytt_api.fetch(url)
 
   try:
-    text, timestamp = getTranscript(a, timestamp, showTimestamp=False)
+    text, timestamp = getTranscriptLocal(a, timestamp, showTimestamp=False)
   except:
     text = "NO CAPTIONS AVAILABLE"
 

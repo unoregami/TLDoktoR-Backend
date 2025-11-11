@@ -90,14 +90,14 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   // Fetch YouTube link and timestamp range to summarize
-  async function to_summarize_YT(link, start, end) {
+  async function to_summarize_YT(data, start, end) {
     const response = await fetch('http://127.0.0.1:8000/to-summarize/YT', {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        link: link,
+        data: data,
         start: start,
         end: end
       })
@@ -240,15 +240,23 @@ updateLengthSlider();
       return;
     }
 
-    const summary = await to_summarize(text, length)
+    summarizeBtn.textContent = "Summarizing...";
+    summarizeBtn.disabled = true;
+    setTimeout( async () => {
+      const summary = await to_summarize(text, length)
     
-    await chrome.storage.local.set({ summaryToShow: summary });
-    await openSummaryWindow();
-    // print_to_console(fakeSummary)      FASTAPI SAMPLE
+      await chrome.storage.local.set({ summaryToShow: summary });
+      await openSummaryWindow();
+      
+      setTimeout(() => {
+        summarizeBtn.textContent = "Summarize Text";
+        summarizeBtn.disabled = false;
+      }, 3000);
+    }, 800);
   });
 
   // === Fetch YouTube Placeholder ===
-fetchYoutubeBtn.addEventListener('click', () => {
+fetchYoutubeBtn.addEventListener('click', async () => {
   const url = youtubeUrl.value.trim();
   if (!url) {
     alert("⚠️ Please paste a YouTube URL first.");
@@ -258,14 +266,31 @@ fetchYoutubeBtn.addEventListener('click', () => {
   // Validate fetching
   fetchYoutubeBtn.textContent = "Fetching...";
   fetchYoutubeBtn.disabled = true;
-  validate_YT(url)
+  YT = await validate_YT(url)
 
   setTimeout(() => {
-    fetchYoutubeBtn.textContent = "Fetched ✓";
-    rangeSliderContainer.classList.add('show');
-    youtubeControls.style.display = "flex";
-    updateSlider();
+    if (YT.status) {
+      console.log("Valid YouTube link.")
+      // Update min/maxSlider max & value
+      maxTime = YT.maxTime
+      startTime = YT.startTime
+      
+      minSlider.max = maxTime
+      maxSlider.max = maxTime
+      minSlider.value = startTime
+      maxSlider.value = maxTime
+    
+      fetchYoutubeBtn.textContent = "Fetched ✓";
+      rangeSliderContainer.classList.add('show');
+      youtubeControls.style.display = "flex";
+      updateSlider();
 
+    } else {
+      console.log("Invalid YouTube link.")
+      fetchYoutubeBtn.textContent = "Invalid ❌";
+      rangeSliderContainer.classList.remove('show');
+      youtubeControls.style.display = "none";
+    }
     // After 1 second, revert back to Fetch
     setTimeout(() => {
       fetchYoutubeBtn.textContent = "Fetch";
@@ -275,8 +300,8 @@ fetchYoutubeBtn.addEventListener('click', () => {
 });
 
   // === Summarize YouTube Placeholder ===
-  summarizeYoutubeBtn.addEventListener('click', () => {
-    const url = youtubeUrl.value.trim();
+  summarizeYoutubeBtn.addEventListener('click', async () => {
+    const YTData = YT.data
     const start = parseInt(timeToSeconds(startTimeInput.value))
     const end = parseInt(timeToSeconds(endTimeInput.value))
 
@@ -285,10 +310,19 @@ fetchYoutubeBtn.addEventListener('click', () => {
       return;
     }
 
-    // Fetch YT link and timestamp range
-    to_summarize_YT(url, start, end)
+    summarizeYoutubeBtn.textContent = "Summarizing...";
+    summarizeYoutubeBtn.disabled = true;
+    setTimeout( async () => {
+      // Fetch YT link and timestamp range
+      const yt_summary = await to_summarize_YT(YTData, start, end)
 
-    const fakeSummary = `🎥 Placeholder ${selectedLength.toLowerCase()} summary for YouTube video from ${secondsToTime(minVal)} to ${secondsToTime(maxVal)}.`;
-    openSummaryWindow(fakeSummary);
+      await chrome.storage.local.set({ summaryToShow: yt_summary });
+      await openSummaryWindow();
+
+      setTimeout(() => {
+        summarizeYoutubeBtn.textContent = "Summarize Video";
+        summarizeYoutubeBtn.disabled = false;
+      }, 3000);
+    }, 800);
   });
 });

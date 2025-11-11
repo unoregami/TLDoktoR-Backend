@@ -64,7 +64,7 @@ class TextSumLen(BaseModel):
 
 # YT link - Range pair
 class YTLinkRange(BaseModel):
-    link: str
+    data: dict
     start: int
     end : int
 
@@ -131,18 +131,81 @@ async def to_summarize(data: TextSumLen):
             detail=f"An internal error occurred: {str(e)}"
         )
 
-# Validate YouTube link
+# Validate YouTube link, returns YT transcript data and max timestamp
 @app.post('/validate/YT')
 async def validate_YT(link: Text):
-    print(link.value)
+    link = link.value
+    print("Link", link)
+    try:
+        if "youtube" in link:   # URL Link
+            print("URL link")
+            id = link[link.index("=")+1:]
+            data = ytt_api.fetch(id)
+            maxTimestamp = round(data[-1].start)
+
+            print("Success fetching.")
+            return {
+                "status": True,
+                "data": data,
+                "maxTime": maxTimestamp,
+                "startTime": 0
+                }
+        elif "youtu.be" in link:    # Share link
+            print("Share link")
+            id = link[17:link.index("?")]
+            data = ytt_api.fetch(id)
+            startTime = 0
+            maxTimestamp = round(data[-1].start)
+
+            if "t=" in link:
+                startTime = int(link[link.index("t=")+2:])
+
+            print("Success fetching.")
+            return {
+                "status": True,
+                "data": data,
+                "maxTime": maxTimestamp,
+                "startTime": startTime
+                }
+        return { "status": False }
+    except Exception as e:
+        print(f"AN ERROR OCCURRED in /validate/YT: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"An internal error occurred: {str(e)}"
+        )
 
 # Summarize YouTube Video
 @app.post('/to-summarize/YT')
-async def to_summarize_YT(data: YTLinkRange):
-    link = data.link
-    timestamp = [data.start, data.end]
-
-    print(f"Link: {link}\nTimestamp: {timestamp}")
+async def to_summarize_YT(yt: YTLinkRange):
+    try:
+        yt_data = yt.data
+        timestamp = [yt.start, yt.end]
+        print("YT Data Fetched.")
+        print("Timestamp:", timestamp)
+        transcript = await run_in_threadpool(
+            getTranscript,
+            yt_data,
+            timestamp
+        )
+        
+        summary = await run_in_threadpool(
+                openai_summarize,
+                transcript,
+                2,
+                client
+            )
+        return {"summary": summary}
+    except Exception as e:
+        print(f"AN ERROR OCCURRED in /to-summarize/YT: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(
+            status_code=500, 
+            detail=f"An internal error occurred: {str(e)}"
+        )
 
 # Translation method
 @app.post('/to-translate')

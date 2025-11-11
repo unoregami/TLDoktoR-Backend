@@ -11,8 +11,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   console.log("Output window loaded. Attempting to retrieve summary from storage...");
   const data = await chrome.storage.local.get('summaryToShow');
-  const summary = data.summaryToShow || "No summary text was found.";
-  summaryText.value = summary;
+  const summaryObject = data.summaryToShow || "No summary text was found.";
+  const summaryTextContent = (typeof summaryObject === 'object' && summaryObject.summary) ? summaryObject.summary : summaryObject;
+
+  summaryText.value = summaryTextContent;
 
   await chrome.storage.local.remove('summaryToShow');
   console.log("Summary loaded and storage has been cleared");
