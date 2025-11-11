@@ -206,6 +206,19 @@ window.addEventListener('DOMContentLoaded', () => {
   "Zulu"
 ];
 
+  async function to_translate(text, lang) {
+    const response = await fetch('http://127.0.0.1:8000/to-translate', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        text: text,
+        lang: lang
+      })
+    });
+    return response.json()
+  }
 
   function renderLanguages(list) {
     languageList.innerHTML = "";
@@ -245,8 +258,12 @@ document.addEventListener("click", (event) => {
 });
 
   translateBtn.addEventListener("click", () => {
+    const text = summaryText.value;
     const selected = dropdownLabel.textContent;
     summaryText.value = `🌐 [Translated to ${selected}] ${summary}`;
+
+    // Fetch text and language to backend
+    to_translate(text, selected)
   });
 
   copyBtn.addEventListener("click", () => {

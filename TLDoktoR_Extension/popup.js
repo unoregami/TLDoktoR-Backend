@@ -31,6 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
   let selectedLength = 'Short';
 
   // === Helper Functions ===
+  // SAMPLE
   async function print_to_console(summaryText) {
     const response = await fetch('http://127.0.0.1:8000/print', {
       method: "POST",
@@ -41,6 +42,52 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     return response.json()
   }
+
+  // Fetch to summarize text and length
+  async function to_summarize(text, length) {
+    const response = await fetch('http://127.0.0.1:8000/to-summarize', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        text: text,
+        length: length
+      })
+    });
+    return response.json()
+  }
+
+  // Fetch YouTube link validate
+  async function validate_YT(link) {
+    const response = await fetch('http://127.0.0.1:8000/validate/YT', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        value: link
+      })
+    });
+    return response.json()
+  }
+
+  // Fetch YouTube link and timestamp range to summarize
+  async function to_summarize_YT(link, start, end) {
+    const response = await fetch('http://127.0.0.1:8000/to-summarize/YT', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        link: link,
+        start: start,
+        end: end
+      })
+    });
+    return response.json()
+  }
+
 
   function openSummaryWindow(summaryText) {
     const encoded = encodeURIComponent(summaryText);
@@ -86,8 +133,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const value = parseInt(lengthSlider.value);
     selectedLength = lengthOptions[value];
 
-    // Update fill bar (0 = 0%, 1 = 50%, 2 = 100%)
-    const percent = value * 50;
+    // Update fill bar (1 = 0%, 2 = 50%, 3 = 100%)
+    const percent = (value - 1) * 50;
     lengthSliderFill.style.width = percent + '%';
 
     // Remove active state from all labels
@@ -96,9 +143,9 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById('labelLong').classList.remove('active');
 
     // Add active state to selected label
-    if (value === 0) document.getElementById('labelShort').classList.add('active');
-    if (value === 1) document.getElementById('labelMedium').classList.add('active');
-    if (value === 2) document.getElementById('labelLong').classList.add('active');
+    if (value === 1) document.getElementById('labelShort').classList.add('active');
+    if (value === 2) document.getElementById('labelMedium').classList.add('active');
+    if (value === 3) document.getElementById('labelLong').classList.add('active');
   }
 lengthSlider.addEventListener('input', updateLengthSlider);
 updateLengthSlider();
@@ -171,19 +218,16 @@ updateLengthSlider();
 
   // === Summarize Text Placeholder ===
   summarizeBtn.addEventListener('click', () => {
+    const length = parseInt(lengthSlider.value)
     const text = inputText.value.trim();
     if (!text) {
       alert("⚠️ Please enter text to summarize.");
       return;
     }
 
-    const fakeSummary = `
-
-Ang matter ay anumang may mass at sumasakop sa space, ibig sabihin ay may volume. Ito ang "stuff" na gawa ng universe mula sa hangin na inaagos natin hanggang sa lupa na ating tinatahak at binubuo ng mga fundamental particles tulad ng atoms at molecules .Ang pinaka-karaniwang estado ng bagay ay solid, liquid, at gas, bagaman may iba pang mga estado tulad ng plasma
-
-`;
-    // openSummaryWindow(fakeSummary);
-    print_to_console(fakeSummary)
+    openSummaryWindow(text);
+    to_summarize(text, length)
+    // print_to_console(fakeSummary)      FASTAPI SAMPLE
   });
 
   // === Fetch YouTube Placeholder ===
@@ -194,9 +238,10 @@ fetchYoutubeBtn.addEventListener('click', () => {
     return;
   }
 
-  // Simulate fetching process
+  // Validate fetching
   fetchYoutubeBtn.textContent = "Fetching...";
   fetchYoutubeBtn.disabled = true;
+  validate_YT(url)
 
   setTimeout(() => {
     fetchYoutubeBtn.textContent = "Fetched ✓";
@@ -214,10 +259,17 @@ fetchYoutubeBtn.addEventListener('click', () => {
 
   // === Summarize YouTube Placeholder ===
   summarizeYoutubeBtn.addEventListener('click', () => {
+    const url = youtubeUrl.value.trim();
+    const start = parseInt(timeToSeconds(startTimeInput.value))
+    const end = parseInt(timeToSeconds(endTimeInput.value))
+
     if (youtubeControls.style.display !== "flex") {
       alert("⚠️ Fetch video first.");
       return;
     }
+
+    // Fetch YT link and timestamp range
+    to_summarize_YT(url, start, end)
 
     const fakeSummary = `🎥 Placeholder ${selectedLength.toLowerCase()} summary for YouTube video from ${secondsToTime(minVal)} to ${secondsToTime(maxVal)}.`;
     openSummaryWindow(fakeSummary);
