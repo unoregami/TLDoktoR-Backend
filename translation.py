@@ -489,7 +489,7 @@ if __name__ == "__main__":
             to = input("to Language (refer to list): ").lower()
         doVoice = input("Enable voice?: ").lower()
 
-        out, gtts_target = translate_main(text, to, nlp, nlp_tgl, gtts_token, nllb_token, taglish_tokenizer, taglish_model, NLLB_tokernizer, NLLB_model)
+        out, gtts_target = translate_main(text, to, nlp, nlp_tgl, gtts_token, nllb_token, taglish_tokenizer, taglish_model, NLLB_tokenizer, NLLB_model)
 
         # Text-to-Speech
         if doVoice == "y" or doVoice == "yes":

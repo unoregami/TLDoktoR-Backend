@@ -2,7 +2,8 @@
 from typing import Union
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.concurrency import run_in_threadpool
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Form
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel, Field
 # SYSTEM intialization libraries
 import os
@@ -14,8 +15,10 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from translation import nllb_token, translate_main
 import spacy
 from spacy.lang.tl import Tagalog
-import gtts_t2s
+import gtts_t2s as t2s
 import re
+from gtts import gTTS
+import io
 # SYSTEM features methods
 from abstractive_sum import openai_summarize
 from extractive_sum import summarize
@@ -44,7 +47,7 @@ ytt_api = YouTubeTranscriptApi()
 nlp = spacy.load("en_core_web_sm")
 nlp_tgl = Tagalog()
 nlp_tgl.add_pipe('sentencizer')
-gtts_token = gtts_t2s.langs
+gtts_token = t2s.langs
 # Taglish model
 taglish_model_name = "touno/english_to_taglish_8483_v2"
 taglish_tokenizer = AutoTokenizer.from_pretrained(taglish_model_name)
@@ -105,6 +108,7 @@ async def print_to_console(text: Text):
 # Summarization method
 @app.post('/to-summarize')
 async def to_summarize(data: TextSumLen):
+    print("Summarizing text...")
     try:
         text = data.text
         length = data.length
@@ -201,6 +205,7 @@ async def validate_YT(link: Text):
 # Summarize YouTube Video
 @app.post('/to-summarize/YT')
 async def to_summarize_YT(yt: YTLinkRange):
+    print("Summarizing YouTube video...")
     try:
         yt_data = yt.data
         timestamp = [yt.start, yt.end]
@@ -218,6 +223,7 @@ async def to_summarize_YT(yt: YTLinkRange):
                 2,
                 client
             )
+        print("Summarization sucess.")
         return {"summary": summary}
     except Exception as e:
         print(f"AN ERROR OCCURRED in /to-summarize/YT: {e}")
@@ -266,3 +272,15 @@ async def to_translate(data: TextLanguage):
             status_code=500, 
             detail=f"An internal error occurred: {str(e)}"
         )
+
+# Play speech
+@app.post('/play-speech')
+async def play_speech(text: str = Form(...), lang: str = Form('en')):
+    mp3_fp = io.BytesIO()
+
+    tts = gTTS(text, lang=lang)
+    tts.write_to_fp(mp3_fp)
+
+    mp3_fp.seek(0)
+
+    return StreamingResponse(mp3_fp, media_type="audio/mpeg")

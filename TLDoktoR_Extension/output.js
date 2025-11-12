@@ -221,6 +221,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 ];
   const original = summaryText.value;
 
+  // Translation function
   async function to_translate(text, lang) {
     const response = await fetch('http://127.0.0.1:8000/to-translate', {
       method: "POST",
@@ -233,7 +234,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       })
     });
     return response.json()
-  }
+  }  
 
   function renderLanguages(list) {
     languageList.innerHTML = "";
@@ -272,6 +273,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
+  let currentLanguageCode = 'en'; // Global lang code variable
   translateBtn.addEventListener("click", async () => {
     const text = original;
     const selected = dropdownLabel.textContent;
@@ -285,6 +287,7 @@ document.addEventListener("click", (event) => {
       const translated = await to_translate(text, selected);
 
       summaryText.value = translated.text;
+      currentLanguageCode = translated.gtts_target;
       dropdownLabel.textContent = `${selected} (Original)`;
 
       setTimeout(() => {
@@ -318,22 +321,68 @@ document.addEventListener("click", (event) => {
   //});
 
 
-  let ttsActive = false;
-  ttsBtn.addEventListener("click", () => {
-    if (ttsActive) {
-      speechSynthesis.cancel();
-      ttsActive = false;
-      ttsBtn.classList.remove("tts-active");
-    } else {
-      const utterance = new SpeechSynthesisUtterance(summaryText.value);
-      utterance.lang = "en-US";
-      speechSynthesis.speak(utterance);
-      ttsActive = true;
-      ttsBtn.classList.add("tts-active");
-      utterance.onend = () => {
-        ttsActive = false;
-        ttsBtn.classList.remove("tts-active");
-      };
+  let audioContext = null;
+  let currentAudioSource = null;
+  ttsBtn.addEventListener("click", async () => {
+    if (currentAudioSource) {
+      console.log("Stopping TTS.");
+      currentAudioSource.stop();
+      currentAudioSource = null;
+      ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
+      return
     }
+    
+    const textToSpeech = summaryText.value
+    const selectedLanguage = currentLanguageCode;
+
+    if (!textToSpeech.trim()) {
+      console.log("Text empty, not playing speech.");
+      return;
+    }
+
+    const formData = new URLSearchParams();
+    formData.append('text', textToSpeech);
+    formData.append('lang', selectedLanguage);
+
+    ttsBtn.innerHTML = '<span class="material-symbols-outlined">cycle</span>';
+
+    await fetch('http://127.0.0.1:8000/play-speech', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: formData
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.arrayBuffer();
+      })
+      .then(arrayBuffer => {
+        if (!audioContext) {
+          audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        }
+        audioContext.decodeAudioData(arrayBuffer, (buffer) => {
+          const source = audioContext.createBufferSource();
+          source.buffer = buffer;
+          source.connect(audioContext.destination);
+
+          currentAudioSource = source;
+          source.onended = () => {
+            console.log("Audio finished playing.");
+            currentAudioSource = null;
+          };
+
+          ttsBtn.innerHTML = '<span class="material-symbols-outlined">brand_awareness</span>';
+          source.start(0);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching or playing audio:', error);
+        ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
+    }); 
+    
+    ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
   });
 });
