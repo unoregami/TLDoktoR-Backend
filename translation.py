@@ -165,7 +165,6 @@ def translate_main(text, to, nlp, nlp_tgl, gtts_token, nllb_token, taglish_token
         # print()
         out = pp.post_process(out, capitalized_dictionary, nlp_tgl)
 
-        print(out)
         end = time.perf_counter()
         print(f"Time: {end - start:.2f}")
     else:
@@ -490,6 +489,7 @@ if __name__ == "__main__":
         doVoice = input("Enable voice?: ").lower()
 
         out, gtts_target = translate_main(text, to, nlp, nlp_tgl, gtts_token, nllb_token, taglish_tokenizer, taglish_model, NLLB_tokenizer, NLLB_model)
+        print(out)
 
         # Text-to-Speech
         if doVoice == "y" or doVoice == "yes":

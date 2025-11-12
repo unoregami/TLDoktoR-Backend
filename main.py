@@ -112,6 +112,8 @@ async def to_summarize(data: TextSumLen):
     try:
         text = data.text
         length = data.length
+        compression_ratio = 0.4
+        text_domain = ""
 
         match length:
             case 1:
@@ -127,6 +129,11 @@ async def to_summarize(data: TextSumLen):
         summary = ""
         match text_type:
             case "1" | "4":
+                if text_type == "1":
+                    text_domain = "Science"
+                else:
+                    text_domain = "Mathematics"
+
                 summary = await run_in_threadpool(
                     summarize,
                     text,
@@ -135,8 +142,13 @@ async def to_summarize(data: TextSumLen):
                     bert_model,
                     device
                 )
-                print(f"{text_type} Extractive Summarization done.")
+                print(f"{text_domain} Extractive Summarization done.")
             case "2" | "3":
+                if text_type == "2":
+                    text_domain = "Programming"
+                else:
+                    text_domain = "English Literature"
+
                 summary = await run_in_threadpool(
                     openai_summarize,
                     text,
@@ -160,7 +172,7 @@ async def to_summarize(data: TextSumLen):
 async def validate_YT(link: Text):
     print("Validating Link...")
     link = link.value
-    print("Link", link)
+    print("Link:", link)
     try:
         if "youtube" in link:   # URL Link
             print("URL link")
@@ -237,7 +249,7 @@ async def to_summarize_YT(yt: YTLinkRange):
 # Translation method
 @app.post('/to-translate')
 async def to_translate(data: TextLanguage):
-    print("Start translation.")
+    print("Starting translation...")
     
     try:
         text = data.text

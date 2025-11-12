@@ -234,7 +234,28 @@ window.addEventListener('DOMContentLoaded', async () => {
       })
     });
     return response.json()
-  }  
+  }
+
+  // Audio buffer
+  async function playAudioBuffer(buffer) {
+    if (audioContext.state === 'suspended') {
+      audioContext.resume();
+    }
+
+    const source = audioContext.createBufferSource();
+    source.buffer = buffer;
+    source.connect(audioContext.destination);
+
+    currentAudioSource = source;
+
+    source.onended = () => {
+      currentAudioSource = null;
+      ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
+    };
+
+    source.start(0);
+    ttsBtn.innerHTML = '<span class="material-symbols-outlined">brand_awareness</span>';
+  }
 
   function renderLanguages(list) {
     languageList.innerHTML = "";
@@ -323,22 +344,30 @@ document.addEventListener("click", (event) => {
 
   let audioContext = null;
   let currentAudioSource = null;
+  let currentAudioBuffer = null;
+  let cachedText = null;
+
   ttsBtn.addEventListener("click", async () => {
     if (currentAudioSource) {
       console.log("Stopping TTS.");
       currentAudioSource.stop();
-      currentAudioSource = null;
-      ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
       return
     }
     
     const textToSpeech = summaryText.value
-    const selectedLanguage = currentLanguageCode;
-
     if (!textToSpeech.trim()) {
       console.log("Text empty, not playing speech.");
       return;
     }
+
+    if (cachedText === textToSpeech && currentAudioBuffer) {
+      console.log("Playing audio from cache.");
+      playAudioBuffer(currentAudioBuffer);
+      return;
+    }
+
+    console.log("Fetching new audio from server.");
+    const selectedLanguage = currentLanguageCode;
 
     const formData = new URLSearchParams();
     formData.append('text', textToSpeech);
@@ -364,22 +393,17 @@ document.addEventListener("click", (event) => {
           audioContext = new (window.AudioContext || window.webkitAudioContext)();
         }
         audioContext.decodeAudioData(arrayBuffer, (buffer) => {
-          const source = audioContext.createBufferSource();
-          source.buffer = buffer;
-          source.connect(audioContext.destination);
+          currentAudioBuffer = buffer;
+          cachedText = textToSpeech;
 
-          currentAudioSource = source;
-          source.onended = () => {
-            console.log("Audio finished playing.");
-            currentAudioSource = null;
-          };
-
-          ttsBtn.innerHTML = '<span class="material-symbols-outlined">brand_awareness</span>';
-          source.start(0);
+          playAudioBuffer(currentAudioBuffer);
         });
       })
       .catch(error => {
         console.error('Error fetching or playing audio:', error);
+        currentAudioSource = null;
+        currentAudioBuffer = null;
+        cachedText = null;
         ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
     }); 
     
