@@ -19,6 +19,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   await chrome.storage.local.remove('summaryToShow');
   console.log("Summary loaded and storage has been cleared");
 
+  // Languages list
   const languages = [
     "Taglish",
     "Filipino",
@@ -257,6 +258,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     ttsBtn.innerHTML = '<span class="material-symbols-outlined">brand_awareness</span>';
   }
 
+  // Language dropdown render
   function renderLanguages(list) {
     languageList.innerHTML = "";
     list.forEach(lang => {
@@ -272,12 +274,14 @@ window.addEventListener('DOMContentLoaded', async () => {
 
   renderLanguages(languages);
 
+  // Choose language on click
   dropdownToggle.addEventListener("click", () => {
     dropdown.classList.toggle("open");
     languageSearch.value = "";
     renderLanguages(languages);
   });
 
+  // Collapse language dropdown when out of focus
   languageSearch.addEventListener("input", () => {
     const query = languageSearch.value.toLowerCase();
     const filtered = languages.filter(l => l.toLowerCase().includes(query));
@@ -285,7 +289,7 @@ window.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Close dropdown when clicking outside
-document.addEventListener("click", (event) => {
+  document.addEventListener("click", (event) => {
   if (
     !dropdown.contains(event.target) && // click is outside the dropdown
     !dropdownToggle.contains(event.target) // and not the toggle button
@@ -294,11 +298,22 @@ document.addEventListener("click", (event) => {
   }
 });
 
+  // Translation
   let currentLanguageCode = 'en'; // Global lang code variable
   translateBtn.addEventListener("click", async () => {
+    // Stop tts when active
+    if (currentAudioSource) {
+      currentAudioSource.stop();
+      ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
+    }
+
     const text = original;
     const selected = dropdownLabel.textContent;
-    
+
+    if (selected.includes("Original")) {
+      alert("Please choose a language.");
+      return;
+    }
     
     translateBtn.textContent = "Translating...";
     translateBtn.disabled = true;
@@ -320,6 +335,7 @@ document.addEventListener("click", (event) => {
     
   });
 
+  // Copy
   copyBtn.addEventListener("click", () => {
     navigator.clipboard.writeText(summaryText.value).then(() => {
       const toast = document.getElementById("copyToast");
@@ -328,25 +344,11 @@ document.addEventListener("click", (event) => {
     });
   });
 
-
-
-
-  //copyBtn.addEventListener("click", () => {
-   // navigator.clipboard.writeText(summaryText.value).then(() => {
-      // optional: console.log or a toast instead of changing button text
-   //   console.log("Copied to clipboard!");
-   //   copyBtn.classList.add('show');
-  //  }).catch(err => {
-    //  console.error("Failed to copy: ", err);
-   // });
-  //});
-
-
+  // Text-to-Speech
   let audioContext = null;
   let currentAudioSource = null;
   let currentAudioBuffer = null;
   let cachedText = null;
-
   ttsBtn.addEventListener("click", async () => {
     if (currentAudioSource) {
       console.log("Stopping TTS.");
@@ -365,6 +367,10 @@ document.addEventListener("click", (event) => {
       playAudioBuffer(currentAudioBuffer);
       return;
     }
+
+    // Disable buttons during audio creation
+    translateBtn.disabled = true;
+    ttsBtn.disabled = true;
 
     console.log("Fetching new audio from server.");
     const selectedLanguage = currentLanguageCode;
@@ -396,6 +402,10 @@ document.addEventListener("click", (event) => {
           currentAudioBuffer = buffer;
           cachedText = textToSpeech;
 
+          // Enable translate and TTS button
+          translateBtn.disabled = false;
+          ttsBtn.disabled = false;
+
           playAudioBuffer(currentAudioBuffer);
         });
       })
@@ -405,6 +415,8 @@ document.addEventListener("click", (event) => {
         currentAudioBuffer = null;
         cachedText = null;
         ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
+        translateBtn.disabled = false;
+        ttsBtn.disabled = false;
     }); 
     
     ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';

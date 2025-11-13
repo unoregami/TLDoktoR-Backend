@@ -155,7 +155,7 @@ async def to_summarize(data: TextSumLen):
                     length,
                     client
                 )
-                print(f"{text_type} Abstractive Summarization done.")
+                print(f"{text_domain} Abstractive Summarization done.")
         
         return {"summary": summary}
     except Exception as e:

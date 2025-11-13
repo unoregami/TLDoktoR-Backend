@@ -31,18 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
   let selectedLength = 'Short';
 
   // === Helper Functions ===
-  // SAMPLE
-  async function print_to_console(summaryText) {
-    const response = await fetch('http://127.0.0.1:8000/print', {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({value: summaryText})
-    });
-    return response.json()
-  }
-
   // Fetch to summarize text and length
   async function to_summarize(text, length) {
     try {
@@ -105,7 +93,7 @@ window.addEventListener('DOMContentLoaded', () => {
     return response.json()
   }
 
-
+  // Open summary window
   function openSummaryWindow(summaryText) {
     // Calculate center position for popup
     const width = 1000;
@@ -143,7 +131,7 @@ window.addEventListener('DOMContentLoaded', () => {
     return mins * 60 + secs;
   }
 
-  // === Summary Length Slider Logic ===
+  // Summary Length Slider Logic
   function updateLengthSlider() {
     const value = parseInt(lengthSlider.value);
     selectedLength = lengthOptions[value];
@@ -199,7 +187,7 @@ updateLengthSlider();
   minSlider.addEventListener('input', updateSlider);
   maxSlider.addEventListener('input', updateSlider);
 
-  // === Time Input Fields Logic ===
+  // Time Input Fields Logic
   startTimeInput.addEventListener('change', () => {
     const seconds = timeToSeconds(startTimeInput.value);
     
@@ -231,7 +219,7 @@ updateLengthSlider();
   // Initialize slider
   updateSlider();
 
-  // === Summarize Text Placeholder ===
+  // Summarize Text Placeholder
   summarizeBtn.addEventListener('click', async () => {
     const length = parseInt(lengthSlider.value)
     const text = inputText.value.trim();
@@ -261,7 +249,7 @@ updateLengthSlider();
     }, 800);
   });
 
-  // === Fetch YouTube Placeholder ===
+  // Fetch YouTube Placeholder 
 fetchYoutubeBtn.addEventListener('click', async () => {
   const url = youtubeUrl.value.trim();
   if (!url) {
