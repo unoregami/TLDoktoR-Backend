@@ -6,7 +6,7 @@ chrome.runtime.onInstalled.addListener(() => {
   });
 });
 
-chrome.contextMenus.onClicked.addListener(async (info) => {
+chrome.contextMenus.onClicked.addListener(async (info, tab) => {
   // Fetch to summarize text and length
   async function to_summarize(text) {
     try {
@@ -53,16 +53,37 @@ chrome.contextMenus.onClicked.addListener(async (info) => {
   }
 
   if (info.menuItemId === "summarizeText") {
+    const cursorToWait = () => {
+      document.body.style.cursor = "wait";
+    }
     const selectedText = info.selectionText;
 
     if (!selectedText) {
       alert("No text selected!");
       return;
     }
+    
+    // Change cursor to wait
+    chrome.scripting.executeScript({
+      target: {tabId: tab.id},
+      function: cursorToWait
+    });
 
-    const summary = await to_summarize(selectedText)
+    setTimeout( async () => {
+      const restoreCursor = () => {
+        document.body.style.cursor = 'auto';
+      };
+
+      const summary = await to_summarize(selectedText)
     
       await chrome.storage.local.set({ summaryToShow: summary });
       await openSummaryWindow();
+
+      // Change cursor to normal
+      chrome.scripting.executeScript({
+        target: {tabId: tab.id},
+        function: restoreCursor
+      });
+    }, 1000);
   }
 });

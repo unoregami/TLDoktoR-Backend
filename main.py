@@ -176,7 +176,8 @@ async def validate_YT(link: Text):
     try:
         if "youtube" in link:   # URL Link
             print("URL link")
-            id = link[link.index("=")+1:]
+            id_start = link.index("=")+1
+            id = link[id_start:id_start+11]
             data = ytt_api.fetch(id)
             maxTimestamp = round(data[-1].start)
 
@@ -194,6 +195,7 @@ async def validate_YT(link: Text):
             startTime = 0
             maxTimestamp = round(data[-1].start)
 
+            # If start timestamp is available
             if "t=" in link:
                 startTime = int(link[link.index("t=")+2:])
 

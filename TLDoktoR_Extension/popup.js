@@ -219,7 +219,7 @@ updateLengthSlider();
   // Initialize slider
   updateSlider();
 
-  // Summarize Text Placeholder
+  // Summarize Text 
   summarizeBtn.addEventListener('click', async () => {
     const length = parseInt(lengthSlider.value)
     const text = inputText.value.trim();
@@ -228,6 +228,8 @@ updateLengthSlider();
       return;
     }
 
+    // Summarization in progress
+    document.body.style.cursor = "wait";
     summarizeBtn.textContent = "Summarizing...";
     summarizeBtn.disabled = true;
     lengthSlider.disabled = true;
@@ -240,6 +242,7 @@ updateLengthSlider();
       await openSummaryWindow();
       
       setTimeout(() => {
+        document.body.style.cursor = "auto";
         summarizeBtn.textContent = "Summarize Text";
         summarizeBtn.disabled = false;
         lengthSlider.disabled = false;
@@ -258,6 +261,7 @@ fetchYoutubeBtn.addEventListener('click', async () => {
   }
 
   // Validate fetching
+  document.body.style.cursor = "wait";
   fetchYoutubeBtn.textContent = "Fetching...";
   fetchYoutubeBtn.disabled = true;
   summarizeBtn.disabled = true;
@@ -288,6 +292,8 @@ fetchYoutubeBtn.addEventListener('click', async () => {
       rangeSliderContainer.classList.remove('show');
       youtubeControls.style.display = "none";
     }
+
+    document.body.style.cursor = "auto";
     // After 1 second, revert back to Fetch
     setTimeout(() => {
       fetchYoutubeBtn.textContent = "Fetch";
@@ -309,6 +315,7 @@ fetchYoutubeBtn.addEventListener('click', async () => {
       return;
     }
 
+    document.body.style.cursor = "wait";
     summarizeYoutubeBtn.textContent = "Summarizing...";
     summarizeYoutubeBtn.disabled = true;
     fetchYoutubeBtn.disabled = true;
@@ -326,6 +333,7 @@ fetchYoutubeBtn.addEventListener('click', async () => {
       await openSummaryWindow();
 
       setTimeout(() => {
+        document.body.style.cursor = "auto";
         summarizeYoutubeBtn.textContent = "Summarize Video";
         summarizeYoutubeBtn.disabled = false;
         fetchYoutubeBtn.disabled = false;

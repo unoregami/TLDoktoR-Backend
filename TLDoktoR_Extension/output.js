@@ -304,6 +304,7 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Stop tts when active
     if (currentAudioSource) {
       currentAudioSource.stop();
+      ttsBtn.title = "Text-to-Speech";
       ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
     }
 
@@ -315,6 +316,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       return;
     }
     
+    document.body.style.cursor = "wait";
     translateBtn.textContent = "Translating...";
     translateBtn.disabled = true;
     dropdownToggle.disabled = true;
@@ -327,6 +329,7 @@ window.addEventListener('DOMContentLoaded', async () => {
       dropdownLabel.textContent = `${selected} (Original)`;
 
       setTimeout(() => {
+        document.body.style.cursor = "auto";
         translateBtn.textContent = "Translate";
         translateBtn.disabled = false;
         dropdownToggle.disabled = false;
@@ -379,6 +382,8 @@ window.addEventListener('DOMContentLoaded', async () => {
     formData.append('text', textToSpeech);
     formData.append('lang', selectedLanguage);
 
+    // Creating tts audio
+    ttsBtn.title = "Loading...";
     ttsBtn.innerHTML = '<span class="material-symbols-outlined">cycle</span>';
 
     await fetch('http://127.0.0.1:8000/play-speech', {
@@ -406,6 +411,7 @@ window.addEventListener('DOMContentLoaded', async () => {
           translateBtn.disabled = false;
           ttsBtn.disabled = false;
 
+          ttsBtn.title = "Playing";
           playAudioBuffer(currentAudioBuffer);
         });
       })
@@ -414,11 +420,13 @@ window.addEventListener('DOMContentLoaded', async () => {
         currentAudioSource = null;
         currentAudioBuffer = null;
         cachedText = null;
+        ttsBtn.title = "Text-to-Speech";
         ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
         translateBtn.disabled = false;
         ttsBtn.disabled = false;
     }); 
     
+    ttsBtn.title = "Text-to-Speech";
     ttsBtn.innerHTML = '<span class="material-symbols-outlined">volume_mute</span>';
   });
 });

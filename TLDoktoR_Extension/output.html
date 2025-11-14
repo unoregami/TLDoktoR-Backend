@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="style.css">
   <link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@400,1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <style>
     body {
@@ -102,7 +103,7 @@
 
     textarea {
       width: 80vmax;
-      height: 50vmin;
+      height: 60vh;
       padding: 14px;
       border-radius: 10px;
       border: 1px solid #a5d6a7;
@@ -199,7 +200,7 @@
   </style>
 </head>
 <body>
-  <h1>Summary Result</h1>
+  <h1><b>Summary Result</b></h1>
   
   <div class="container">
     <div class="dropdown" id="languageDropdown">
@@ -216,10 +217,10 @@
 
     <div class="button-row">
       <div class="left-buttons">
-        <button id="ttsBtn" class="icon-btn">
+        <button id="ttsBtn" class="icon-btn" data-toggle="tooltip" data-placement="top" title="Text-to-Speech">
           <span class="material-symbols-outlined">volume_mute</span>
         </button>
-        <button id="copyBtn" class="icon-btn">
+        <button id="copyBtn" class="icon-btn" data-toggle="tooltip" data-placement="top" title="Copy">
           <span class="material-symbols-outlined">content_copy</span>
         </button>
         <div id="copyToast" class="toast">Copied to clipboard</div>
